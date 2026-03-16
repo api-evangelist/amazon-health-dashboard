@@ -1,0 +1,72 @@
+aid: amazon-health-dashboard
+name: Amazon Health Dashboard
+description: >-
+  AWS Health Dashboard provides ongoing visibility into the status of your AWS
+  services, and alerts and remediation guidance when AWS is experiencing
+  events that may affect your operations. It delivers personalized information
+  about events that might affect your specific AWS resources and accounts.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Health Monitoring
+  - Service Status
+  - Operations
+  - Notifications
+  - AWS
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/amazon-health-dashboard/refs/heads/main/apis.yml
+created: '2026-03-16'
+modified: '2026-03-16'
+specificationVersion: '0.19'
+apis:
+  - aid: amazon-health-dashboard:aws-health-api
+    name: AWS Health API
+    description: >-
+      The AWS Health API provides programmatic access to AWS Health information
+      to get data about events, affected entities, and event descriptions that
+      impact your AWS services and accounts.
+    humanURL: https://aws.amazon.com/health/
+    baseURL: https://health.amazonaws.com
+    tags:
+      - Health Monitoring
+      - Service Status
+      - Operations
+    properties:
+      - type: Documentation
+        url: https://docs.aws.amazon.com/health/latest/APIReference/Welcome.html
+      - type: OpenAPI
+        url: https://api.apis.guru/v2/specs/amazonaws.com/health/2016-08-04/openapi.yaml
+      - type: Getting Started
+        url: https://docs.aws.amazon.com/health/latest/ug/getting-started-api.html
+      - type: Pricing
+        url: https://aws.amazon.com/premiumsupport/pricing/
+      - type: FAQ
+        url: https://aws.amazon.com/premiumsupport/faqs/
+common:
+  - type: Portal
+    url: https://aws.amazon.com/health/
+  - type: Website
+    url: https://aws.amazon.com/health/
+  - type: Documentation
+    url: https://docs.aws.amazon.com/health/
+  - type: Terms of Service
+    url: https://aws.amazon.com/service-terms/
+  - type: Privacy Policy
+    url: https://aws.amazon.com/privacy/
+  - type: Support
+    url: https://aws.amazon.com/premiumsupport/
+  - type: GitHub Organization
+    url: https://github.com/aws
+  - type: Console
+    url: https://health.aws.amazon.com/health/home
+  - type: Sign Up
+    url: https://portal.aws.amazon.com/billing/signup
+  - type: Login
+    url: https://signin.aws.amazon.com/
+  - type: Status
+    url: https://health.aws.amazon.com/health/status
+  - type: Contact
+    url: https://aws.amazon.com/contact-us/
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

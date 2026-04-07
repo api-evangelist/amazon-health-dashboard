@@ -8,11 +8,11 @@ description: >-
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Health Monitoring
-  - Service Status
-  - Operations
-  - Notifications
   - AWS
+  - Health Monitoring
+  - Notifications
+  - Operations
+  - Service Status
 url: >-
   https://raw.githubusercontent.com/api-evangelist/amazon-health-dashboard/refs/heads/main/apis.yml
 created: '2026-03-16'
@@ -29,8 +29,8 @@ apis:
     baseURL: https://health.amazonaws.com
     tags:
       - Health Monitoring
-      - Service Status
       - Operations
+      - Service Status
     properties:
       - type: Documentation
         url: https://docs.aws.amazon.com/health/latest/APIReference/Welcome.html

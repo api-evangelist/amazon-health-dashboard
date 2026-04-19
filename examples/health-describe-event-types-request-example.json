@@ -1,0 +1,6 @@
+{
+  "filter": "example-filter",
+  "locale": "example-locale",
+  "nextToken": "example-nextToken",
+  "maxResults": "example-maxResults"
+}

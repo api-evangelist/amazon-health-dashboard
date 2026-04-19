@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-health-dashboard/refs/heads/main/json-schema/health-event-aggregate-schema.json",
+  "title": "EventAggregate",
+  "description": "The number of events of each issue type. Returned by the <a href=\"https://docs.aws.amazon.com/health/latest/APIReference/API_DescribeEventAggregates.html\">DescribeEventAggregates</a> operation.",
+  "type": "object",
+  "properties": {
+    "aggregateValue": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/aggregateValue"
+        },
+        {
+          "description": "The issue type for the associated count."
+        }
+      ]
+    },
+    "count": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/count"
+        },
+        {
+          "description": "The number of events of the associated issue type."
+        }
+      ]
+    }
+  }
+}

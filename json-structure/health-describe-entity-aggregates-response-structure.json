@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-health-dashboard/refs/heads/main/json-structure/health-describe-entity-aggregates-response-structure.json",
+  "name": "DescribeEntityAggregatesResponse",
+  "description": "DescribeEntityAggregatesResponse schema from Amazon Health Dashboard API",
+  "type": "object",
+  "properties": {
+    "entityAggregates": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EntityAggregateList"
+        },
+        {
+          "description": "The number of entities that are affected by each of the specified events."
+        }
+      ]
+    }
+  }
+}

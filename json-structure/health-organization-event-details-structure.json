@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-health-dashboard/refs/heads/main/json-structure/health-organization-event-details-structure.json",
+  "name": "OrganizationEventDetails",
+  "description": "Detailed information about an event. A combination of an <a href=\"https://docs.aws.amazon.com/health/latest/APIReference/API_Event.html\">Event</a> object, an <a href=\"https://docs.aws.amazon.com/health/latest/APIReference/API_EventDescription.html\">EventDescription</a> object, and additional metadata about the event. Returned by the <a href=\"https://docs.aws.amazon.com/health/latest/APIReference/API_DescribeEventDetailsForOrganization.html\">DescribeEventDetailsForOrganization</a> operation.",
+  "type": "object",
+  "properties": {
+    "awsAccountId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/accountId"
+        },
+        {
+          "description": "The 12-digit Amazon Web Services account numbers that contains the affected entities."
+        }
+      ]
+    },
+    "event": {
+      "$ref": "#/components/schemas/Event"
+    },
+    "eventDescription": {
+      "$ref": "#/components/schemas/EventDescription"
+    },
+    "eventMetadata": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/eventMetadata"
+        },
+        {
+          "description": "Additional metadata about the event."
+        }
+      ]
+    }
+  }
+}

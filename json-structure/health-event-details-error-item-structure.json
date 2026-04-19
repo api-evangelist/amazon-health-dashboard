@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-health-dashboard/refs/heads/main/json-structure/health-event-details-error-item-structure.json",
+  "name": "EventDetailsErrorItem",
+  "description": "Error information returned when a <a href=\"https://docs.aws.amazon.com/health/latest/APIReference/API_DescribeEventDetails.html\">DescribeEventDetails</a> operation can't find a specified event.",
+  "type": "object",
+  "properties": {
+    "eventArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/eventArn"
+        },
+        {
+          "description": "<p>The unique identifier for the event. The event ARN has the <code>arn:aws:health:<i>event-region</i>::event/<i>SERVICE</i>/<i>EVENT_TYPE_CODE</i>/<i>EVENT_TYPE_PLUS_ID</i> </code> format.</p> <p>For example, an event ARN might look like the following:</p> <p> <code>arn:aws:health:us-east-1::event/EC2/EC2_INSTANCE_RETIREMENT_SCHEDULED/EC2_INSTANCE_RETIREMENT_SCHEDULED_ABC123-DEF456</code> </p>"
+        }
+      ]
+    },
+    "errorName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/string"
+        },
+        {
+          "description": "The name of the error."
+        }
+      ]
+    },
+    "errorMessage": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/string"
+        },
+        {
+          "description": "A message that describes the error."
+        }
+      ]
+    }
+  }
+}

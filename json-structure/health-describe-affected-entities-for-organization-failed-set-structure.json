@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-health-dashboard/refs/heads/main/json-structure/health-describe-affected-entities-for-organization-failed-set-structure.json",
+  "name": "DescribeAffectedEntitiesForOrganizationFailedSet",
+  "description": "DescribeAffectedEntitiesForOrganizationFailedSet schema from Amazon Health Dashboard API",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/OrganizationAffectedEntitiesErrorItem"
+  }
+}

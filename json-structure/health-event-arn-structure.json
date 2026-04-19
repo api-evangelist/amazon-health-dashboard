@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-health-dashboard/refs/heads/main/json-structure/health-event-arn-structure.json",
+  "name": "eventArn",
+  "description": "eventArn schema from Amazon Health Dashboard API",
+  "type": "string",
+  "pattern": "arn:aws(-[a-z]+(-[a-z]+)?)?:health:[^:]*:[^:]*:event(?:/[\\w-]+){3}"
+}

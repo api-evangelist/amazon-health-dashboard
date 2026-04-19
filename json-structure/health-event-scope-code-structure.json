@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-health-dashboard/refs/heads/main/json-structure/health-event-scope-code-structure.json",
+  "name": "eventScopeCode",
+  "description": "eventScopeCode schema from Amazon Health Dashboard API",
+  "type": "string",
+  "enum": [
+    "PUBLIC",
+    "ACCOUNT_SPECIFIC",
+    "NONE"
+  ]
+}

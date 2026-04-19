@@ -1,0 +1,5 @@
+{
+  "eventArn": "arn:aws:health:us-east-1::event/EC2/AWS_EC2_INSTANCE_ISSUE/abc123",
+  "errorName": "EC2",
+  "errorMessage": "example-errorMessage"
+}

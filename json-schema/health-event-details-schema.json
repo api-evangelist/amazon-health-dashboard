@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-health-dashboard/refs/heads/main/json-schema/health-event-details-schema.json",
+  "title": "EventDetails",
+  "description": "Detailed information about an event. A combination of an <a href=\"https://docs.aws.amazon.com/health/latest/APIReference/API_Event.html\">Event</a> object, an <a href=\"https://docs.aws.amazon.com/health/latest/APIReference/API_EventDescription.html\">EventDescription</a> object, and additional metadata about the event. Returned by the <a href=\"https://docs.aws.amazon.com/health/latest/APIReference/API_DescribeEventDetails.html\">DescribeEventDetails</a> operation.",
+  "type": "object",
+  "properties": {
+    "event": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Event"
+        },
+        {
+          "description": "Summary information about the event."
+        }
+      ]
+    },
+    "eventDescription": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EventDescription"
+        },
+        {
+          "description": "The most recent description of the event."
+        }
+      ]
+    },
+    "eventMetadata": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/eventMetadata"
+        },
+        {
+          "description": "Additional metadata about the event."
+        }
+      ]
+    }
+  }
+}

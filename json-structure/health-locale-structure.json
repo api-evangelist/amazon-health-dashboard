@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-health-dashboard/refs/heads/main/json-structure/health-locale-structure.json",
+  "name": "locale",
+  "description": "locale schema from Amazon Health Dashboard API",
+  "type": "string",
+  "pattern": ".{2,256}"
+}

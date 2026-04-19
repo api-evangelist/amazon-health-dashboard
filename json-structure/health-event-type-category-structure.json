@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-health-dashboard/refs/heads/main/json-structure/health-event-type-category-structure.json",
+  "name": "eventTypeCategory",
+  "description": "eventTypeCategory schema from Amazon Health Dashboard API",
+  "type": "string",
+  "enum": [
+    "issue",
+    "accountNotification",
+    "scheduledChange",
+    "investigation"
+  ]
+}

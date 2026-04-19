@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-health-dashboard/refs/heads/main/json-schema/health-availability-zone-schema.json",
+  "title": "availabilityZone",
+  "description": "availabilityZone schema from Amazon Health Dashboard API",
+  "type": "string",
+  "pattern": "[a-z]{2}\\-[0-9a-z\\-]{4,16}"
+}

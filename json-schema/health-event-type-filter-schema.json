@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-health-dashboard/refs/heads/main/json-schema/health-event-type-filter-schema.json",
+  "title": "EventTypeFilter",
+  "description": "The values to use to filter results from the <a href=\"https://docs.aws.amazon.com/health/latest/APIReference/API_DescribeEventTypes.html\">DescribeEventTypes</a> operation.",
+  "type": "object",
+  "properties": {
+    "eventTypeCodes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EventTypeCodeList"
+        },
+        {
+          "description": "A list of event type codes."
+        }
+      ]
+    },
+    "services": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/serviceList"
+        },
+        {
+          "description": "The Amazon Web Services services associated with the event. For example, <code>EC2</code>, <code>RDS</code>."
+        }
+      ]
+    },
+    "eventTypeCategories": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EventTypeCategoryList"
+        },
+        {
+          "description": "A list of event type category codes. Possible values are <code>issue</code>, <code>accountNotification</code>, or <code>scheduledChange</code>. Currently, the <code>investigation</code> value isn't supported at this time."
+        }
+      ]
+    }
+  }
+}

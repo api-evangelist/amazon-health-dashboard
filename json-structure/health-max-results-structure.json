@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-health-dashboard/refs/heads/main/json-structure/health-max-results-structure.json",
+  "name": "maxResults",
+  "description": "maxResults schema from Amazon Health Dashboard API",
+  "type": "int32",
+  "minimum": 10,
+  "maximum": 100
+}

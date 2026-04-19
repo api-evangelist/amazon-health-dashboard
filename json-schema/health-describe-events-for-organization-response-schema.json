@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-health-dashboard/refs/heads/main/json-schema/health-describe-events-for-organization-response-schema.json",
+  "title": "DescribeEventsForOrganizationResponse",
+  "description": "DescribeEventsForOrganizationResponse schema from Amazon Health Dashboard API",
+  "type": "object",
+  "properties": {
+    "events": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OrganizationEventList"
+        },
+        {
+          "description": "The events that match the specified filter criteria."
+        }
+      ]
+    },
+    "nextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/nextToken"
+        },
+        {
+          "description": "If the results of a search are large, only a portion of the results are returned, and a <code>nextToken</code> pagination token is returned in the response. To retrieve the next batch of results, reissue the search request and include the returned token. When all results have been returned, the response does not contain a pagination token value."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-health-dashboard/refs/heads/main/json-schema/health-organization-event-detail-filters-list-schema.json",
+  "title": "OrganizationEventDetailFiltersList",
+  "description": "OrganizationEventDetailFiltersList schema from Amazon Health Dashboard API",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/EventAccountFilter"
+  }
+}

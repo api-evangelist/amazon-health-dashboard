@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-health-dashboard/refs/heads/main/json-structure/health-affected-entity-structure.json",
+  "name": "AffectedEntity",
+  "description": "Information about an entity that is affected by a Health event.",
+  "type": "object",
+  "properties": {
+    "entityArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/entityArn"
+        },
+        {
+          "description": "The unique identifier for the entity. Format: <code>arn:aws:health:<i>entity-region</i>:<i>aws-account</i>:entity/<i>entity-id</i> </code>. Example: <code>arn:aws:health:us-east-1:111222333444:entity/AVh5GGT7ul1arKr1sE1K</code> "
+        }
+      ]
+    },
+    "eventArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/eventArn"
+        },
+        {
+          "description": "<p>The unique identifier for the event. The event ARN has the <code>arn:aws:health:<i>event-region</i>::event/<i>SERVICE</i>/<i>EVENT_TYPE_CODE</i>/<i>EVENT_TYPE_PLUS_ID</i> </code> format.</p> <p>For example, an event ARN might look like the following:</p> <p> <code>arn:aws:health:us-east-1::event/EC2/EC2_INSTANCE_RETIREMENT_SCHEDULED/EC2_INSTANCE_RETIREMENT_SCHEDULED_ABC123-DEF456</code> </p>"
+        }
+      ]
+    },
+    "entityValue": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/entityValue"
+        },
+        {
+          "description": "The ID of the affected entity."
+        }
+      ]
+    },
+    "entityUrl": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/entityUrl"
+        },
+        {
+          "description": "The URL of the affected entity."
+        }
+      ]
+    },
+    "awsAccountId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/accountId"
+        },
+        {
+          "description": "The 12-digit Amazon Web Services account number that contains the affected entity."
+        }
+      ]
+    },
+    "lastUpdatedTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/timestamp"
+        },
+        {
+          "description": "The most recent time that the entity was updated."
+        }
+      ]
+    },
+    "statusCode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/entityStatusCode"
+        },
+        {
+          "description": "The most recent status of the entity affected by the event. The possible values are <code>IMPAIRED</code>, <code>UNIMPAIRED</code>, and <code>UNKNOWN</code>."
+        }
+      ]
+    },
+    "tags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/tagSet"
+        },
+        {
+          "description": "<p>A map of entity tags attached to the affected entity.</p> <note> <p>Currently, the <code>tags</code> property isn't supported.</p> </note>"
+        }
+      ]
+    }
+  }
+}

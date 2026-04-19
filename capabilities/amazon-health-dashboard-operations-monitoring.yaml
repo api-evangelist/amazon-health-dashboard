@@ -1,0 +1,132 @@
+naftiko: "1.0.0-alpha1"
+
+info:
+  label: Amazon Health Dashboard Operations Monitoring
+  description: >-
+    Workflow capability for operations teams using AWS Health Dashboard to monitor
+    AWS service health, track events affecting resources, and coordinate incident
+    response to AWS infrastructure events.
+  tags:
+    - Amazon Health Dashboard
+    - Operations
+    - Monitoring
+    - Incident Response
+    - AWS
+  created: "2026-04-19"
+  modified: "2026-04-19"
+
+binds:
+  - namespace: env
+    keys:
+      AWS_ACCESS_KEY_ID: AWS_ACCESS_KEY_ID
+      AWS_SECRET_ACCESS_KEY: AWS_SECRET_ACCESS_KEY
+      AWS_REGION: AWS_REGION
+
+capability:
+  consumes:
+    - import: amazon-health-dashboard
+      location: ./shared/amazon-health-dashboard.yaml
+
+  exposes:
+    - type: rest
+      port: 8086
+      namespace: health-ops-api
+      description: Unified REST API for AWS Health Dashboard operations monitoring.
+      resources:
+        - path: /v1/events
+          name: events
+          description: AWS health events
+          operations:
+            - method: GET
+              name: list-events
+              description: List AWS service health events
+              call: amazon-health-dashboard.DescribeEvents
+              outputParameters:
+                - type: object
+                  mapping: "$."
+        - path: /v1/affected-entities
+          name: affected-entities
+          description: Resources affected by health events
+          operations:
+            - method: GET
+              name: list-affected-entities
+              description: Get affected AWS resources
+              call: amazon-health-dashboard.DescribeAffectedEntities
+              outputParameters:
+                - type: object
+                  mapping: "$."
+        - path: /v1/org-events
+          name: org-events
+          description: Organization-wide events
+          operations:
+            - method: GET
+              name: list-org-events
+              description: List events across the organization
+              call: amazon-health-dashboard.DescribeEventsForOrganization
+              outputParameters:
+                - type: object
+                  mapping: "$."
+
+    - type: mcp
+      port: 9096
+      namespace: health-ops-mcp
+      transport: http
+      description: MCP server for AI-assisted AWS Health Dashboard operations monitoring.
+      tools:
+        - name: list-health-events
+          description: List AWS health events filtering by service, region, or status
+          hints:
+            readOnly: true
+            openWorld: true
+          call: amazon-health-dashboard.DescribeEvents
+          outputParameters:
+            - type: object
+              mapping: "$."
+        - name: get-event-details
+          description: Get comprehensive details about specific AWS health events including description and guidance
+          hints:
+            readOnly: true
+          call: amazon-health-dashboard.DescribeEventDetails
+          outputParameters:
+            - type: object
+              mapping: "$."
+        - name: get-affected-resources
+          description: Get AWS resources affected by specific health events
+          hints:
+            readOnly: true
+          call: amazon-health-dashboard.DescribeAffectedEntities
+          outputParameters:
+            - type: object
+              mapping: "$."
+        - name: get-event-types
+          description: Get the catalog of all AWS health event type codes and categories
+          hints:
+            readOnly: true
+          call: amazon-health-dashboard.DescribeEventTypes
+          outputParameters:
+            - type: object
+              mapping: "$."
+        - name: list-org-health-events
+          description: List health events across all accounts in an AWS Organization
+          hints:
+            readOnly: true
+          call: amazon-health-dashboard.DescribeEventsForOrganization
+          outputParameters:
+            - type: object
+              mapping: "$."
+        - name: get-org-affected-entities
+          description: Get resources affected by health events across the organization
+          hints:
+            readOnly: true
+          call: amazon-health-dashboard.DescribeAffectedEntitiesForOrganization
+          outputParameters:
+            - type: object
+              mapping: "$."
+        - name: get-org-event-details
+          description: Get detailed health event information for organization-level events
+          hints:
+            readOnly: true
+          call: amazon-health-dashboard.DescribeEventDetailsForOrganization
+          outputParameters:
+            - type: object
+              mapping: "$."

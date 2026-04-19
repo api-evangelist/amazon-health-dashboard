@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-health-dashboard/refs/heads/main/json-structure/health-tag-value-structure.json",
+  "name": "tagValue",
+  "description": "tagValue schema from Amazon Health Dashboard API",
+  "type": "string",
+  "pattern": ".{0,255}"
+}

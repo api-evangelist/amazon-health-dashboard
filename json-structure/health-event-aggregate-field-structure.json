@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-health-dashboard/refs/heads/main/json-structure/health-event-aggregate-field-structure.json",
+  "name": "eventAggregateField",
+  "description": "eventAggregateField schema from Amazon Health Dashboard API",
+  "type": "string",
+  "enum": [
+    "eventTypeCategory"
+  ]
+}

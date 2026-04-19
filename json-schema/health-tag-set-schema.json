@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-health-dashboard/refs/heads/main/json-schema/health-tag-set-schema.json",
+  "title": "tagSet",
+  "description": "tagSet schema from Amazon Health Dashboard API",
+  "type": "object",
+  "additionalProperties": {
+    "$ref": "#/components/schemas/tagValue"
+  }
+}

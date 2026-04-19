@@ -1,0 +1,275 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "health": "https://aws.amazon.com/health/schema/",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "DescribeEventDetailsForOrganizationRequest": "health:DescribeEventDetailsForOrganizationRequest",
+    "EventAggregate": "health:EventAggregate",
+    "EventTypeFilter": "health:EventTypeFilter",
+    "DescribeEntityAggregatesResponse": "health:DescribeEntityAggregatesResponse",
+    "OrganizationEventDetailsErrorItem": "health:OrganizationEventDetailsErrorItem",
+    "DescribeEntityAggregatesRequest": "health:DescribeEntityAggregatesRequest",
+    "EntityAggregate": "health:EntityAggregate",
+    "DescribeEventsResponse": "health:DescribeEventsResponse",
+    "EventAccountFilter": "health:EventAccountFilter",
+    "OrganizationAffectedEntitiesErrorItem": "health:OrganizationAffectedEntitiesErrorItem",
+    "EventDetails": "health:EventDetails",
+    "DescribeEventDetailsRequest": "health:DescribeEventDetailsRequest",
+    "EventFilter": "health:EventFilter",
+    "DescribeEventAggregatesResponse": "health:DescribeEventAggregatesResponse",
+    "DescribeEventsForOrganizationRequest": "health:DescribeEventsForOrganizationRequest",
+    "DescribeEventTypesResponse": "health:DescribeEventTypesResponse",
+    "DescribeAffectedEntitiesResponse": "health:DescribeAffectedEntitiesResponse",
+    "DescribeAffectedAccountsForOrganizationResponse": "health:DescribeAffectedAccountsForOrganizationResponse",
+    "eventMetadata": {
+      "@id": "health:eventMetadata",
+      "@type": "xsd:string"
+    },
+    "tagSet": "health:tagSet",
+    "EventDetailsErrorItem": "health:EventDetailsErrorItem",
+    "Event": "health:Event",
+    "DescribeEventTypesRequest": "health:DescribeEventTypesRequest",
+    "DescribeAffectedEntitiesRequest": "health:DescribeAffectedEntitiesRequest",
+    "EntityFilter": "health:EntityFilter",
+    "DescribeEventDetailsForOrganizationResponse": "health:DescribeEventDetailsForOrganizationResponse",
+    "DescribeAffectedAccountsForOrganizationRequest": "health:DescribeAffectedAccountsForOrganizationRequest",
+    "DateTimeRange": "health:DateTimeRange",
+    "DescribeEventAggregatesRequest": "health:DescribeEventAggregatesRequest",
+    "EventDescription": "health:EventDescription",
+    "DescribeEventsForOrganizationResponse": "health:DescribeEventsForOrganizationResponse",
+    "AffectedEntity": "health:AffectedEntity",
+    "DescribeAffectedEntitiesForOrganizationResponse": "health:DescribeAffectedEntitiesForOrganizationResponse",
+    "OrganizationEventDetails": "health:OrganizationEventDetails",
+    "DescribeEventsRequest": "health:DescribeEventsRequest",
+    "DescribeHealthServiceStatusForOrganizationResponse": "health:DescribeHealthServiceStatusForOrganizationResponse",
+    "OrganizationEventFilter": "health:OrganizationEventFilter",
+    "DescribeEventDetailsResponse": "health:DescribeEventDetailsResponse",
+    "DescribeAffectedEntitiesForOrganizationRequest": "health:DescribeAffectedEntitiesForOrganizationRequest",
+    "OrganizationEvent": "health:OrganizationEvent",
+    "organizationEventDetailFilters": {
+      "@id": "health:organizationEventDetailFilters",
+      "@type": "xsd:string"
+    },
+    "locale": {
+      "@id": "health:locale",
+      "@type": "xsd:string"
+    },
+    "aggregateValue": {
+      "@id": "health:aggregateValue",
+      "@type": "xsd:string"
+    },
+    "count": {
+      "@id": "health:count",
+      "@type": "xsd:string"
+    },
+    "eventTypeCodes": {
+      "@id": "health:eventTypeCodes",
+      "@type": "xsd:string"
+    },
+    "services": {
+      "@id": "health:services",
+      "@type": "xsd:string"
+    },
+    "eventTypeCategories": {
+      "@id": "health:eventTypeCategories",
+      "@type": "xsd:string"
+    },
+    "entityAggregates": {
+      "@id": "health:entityAggregates",
+      "@type": "xsd:string"
+    },
+    "awsAccountId": {
+      "@id": "health:awsAccountId",
+      "@type": "xsd:string"
+    },
+    "eventArn": {
+      "@id": "health:eventArn",
+      "@type": "xsd:string"
+    },
+    "errorName": {
+      "@id": "health:errorName",
+      "@type": "xsd:string"
+    },
+    "errorMessage": {
+      "@id": "health:errorMessage",
+      "@type": "xsd:string"
+    },
+    "eventArns": {
+      "@id": "health:eventArns",
+      "@type": "xsd:string"
+    },
+    "events": {
+      "@id": "health:events",
+      "@type": "xsd:string"
+    },
+    "nextToken": {
+      "@id": "health:nextToken",
+      "@type": "xsd:string"
+    },
+    "event": {
+      "@id": "health:event",
+      "@type": "xsd:string"
+    },
+    "eventDescription": {
+      "@id": "health:eventDescription",
+      "@type": "xsd:string"
+    },
+    "regions": {
+      "@id": "health:regions",
+      "@type": "xsd:string"
+    },
+    "availabilityZones": {
+      "@id": "health:availabilityZones",
+      "@type": "xsd:string"
+    },
+    "startTimes": {
+      "@id": "health:startTimes",
+      "@type": "xsd:string"
+    },
+    "endTimes": {
+      "@id": "health:endTimes",
+      "@type": "xsd:string"
+    },
+    "lastUpdatedTimes": {
+      "@id": "health:lastUpdatedTimes",
+      "@type": "xsd:string"
+    },
+    "entityArns": {
+      "@id": "health:entityArns",
+      "@type": "xsd:string"
+    },
+    "entityValues": {
+      "@id": "health:entityValues",
+      "@type": "xsd:string"
+    },
+    "tags": {
+      "@id": "health:tags",
+      "@type": "xsd:string"
+    },
+    "eventStatusCodes": {
+      "@id": "health:eventStatusCodes",
+      "@type": "xsd:string"
+    },
+    "eventAggregates": {
+      "@id": "health:eventAggregates",
+      "@type": "xsd:string"
+    },
+    "filter": {
+      "@id": "health:filter",
+      "@type": "xsd:string"
+    },
+    "maxResults": {
+      "@id": "health:maxResults",
+      "@type": "xsd:string"
+    },
+    "eventTypes": {
+      "@id": "health:eventTypes",
+      "@type": "xsd:string"
+    },
+    "entities": {
+      "@id": "health:entities",
+      "@type": "xsd:string"
+    },
+    "affectedAccounts": {
+      "@id": "health:affectedAccounts",
+      "@type": "xsd:string"
+    },
+    "eventScopeCode": {
+      "@id": "health:eventScopeCode",
+      "@type": "xsd:string"
+    },
+    "arn": {
+      "@id": "health:arn",
+      "@type": "xsd:string"
+    },
+    "service": {
+      "@id": "health:service",
+      "@type": "xsd:string"
+    },
+    "eventTypeCode": {
+      "@id": "health:eventTypeCode",
+      "@type": "xsd:string"
+    },
+    "eventTypeCategory": {
+      "@id": "health:eventTypeCategory",
+      "@type": "xsd:string"
+    },
+    "region": {
+      "@id": "health:region",
+      "@type": "xsd:string"
+    },
+    "availabilityZone": {
+      "@id": "health:availabilityZone",
+      "@type": "xsd:string"
+    },
+    "startTime": {
+      "@id": "health:startTime",
+      "@type": "xsd:string"
+    },
+    "endTime": {
+      "@id": "health:endTime",
+      "@type": "xsd:string"
+    },
+    "lastUpdatedTime": {
+      "@id": "health:lastUpdatedTime",
+      "@type": "xsd:string"
+    },
+    "statusCode": {
+      "@id": "health:statusCode",
+      "@type": "xsd:string"
+    },
+    "statusCodes": {
+      "@id": "health:statusCodes",
+      "@type": "xsd:string"
+    },
+    "successfulSet": {
+      "@id": "health:successfulSet",
+      "@type": "xsd:string"
+    },
+    "failedSet": {
+      "@id": "health:failedSet",
+      "@type": "xsd:string"
+    },
+    "from": {
+      "@id": "health:from",
+      "@type": "xsd:string"
+    },
+    "to": {
+      "@id": "health:to",
+      "@type": "xsd:string"
+    },
+    "aggregateField": {
+      "@id": "health:aggregateField",
+      "@type": "xsd:string"
+    },
+    "latestDescription": {
+      "@id": "health:latestDescription",
+      "@type": "xsd:string"
+    },
+    "entityArn": {
+      "@id": "health:entityArn",
+      "@type": "xsd:string"
+    },
+    "entityValue": {
+      "@id": "health:entityValue",
+      "@type": "xsd:string"
+    },
+    "entityUrl": {
+      "@id": "health:entityUrl",
+      "@type": "xsd:string"
+    },
+    "healthServiceAccessStatusForOrganization": {
+      "@id": "health:healthServiceAccessStatusForOrganization",
+      "@type": "xsd:string"
+    },
+    "awsAccountIds": {
+      "@id": "health:awsAccountIds",
+      "@type": "xsd:string"
+    },
+    "organizationEntityFilters": {
+      "@id": "health:organizationEntityFilters",
+      "@type": "xsd:string"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-health-dashboard/refs/heads/main/json-structure/health-count-structure.json",
+  "name": "count",
+  "description": "count schema from Amazon Health Dashboard API",
+  "type": "int32"
+}

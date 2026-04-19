@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-health-dashboard/refs/heads/main/json-structure/health-entity-value-structure.json",
+  "name": "entityValue",
+  "description": "entityValue schema from Amazon Health Dashboard API",
+  "type": "string",
+  "pattern": ".{0,1224}"
+}

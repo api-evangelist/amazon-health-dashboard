@@ -1,0 +1,6 @@
+{
+  "awsAccountId": "example-awsAccountId",
+  "event": "example-event",
+  "eventDescription": "example-eventDescrip",
+  "eventMetadata": "example-eventMetadat"
+}

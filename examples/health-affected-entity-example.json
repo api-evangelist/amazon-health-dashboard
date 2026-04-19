@@ -1,0 +1,8 @@
+{
+  "entityArn": "arn:aws:health:us-east-1::event/EC2/AWS_EC2_INSTANCE_ISSUE/abc123",
+  "eventArn": "arn:aws:health:us-east-1::event/EC2/AWS_EC2_INSTANCE_ISSUE/abc123",
+  "entityValue": "example-entityValue",
+  "entityUrl": "example-entityUrl",
+  "awsAccountId": "example-awsAccountId",
+  "lastUpdatedTime": "example-lastUpdatedT"
+}

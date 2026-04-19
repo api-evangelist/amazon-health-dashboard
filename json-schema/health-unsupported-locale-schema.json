@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-health-dashboard/refs/heads/main/json-schema/health-unsupported-locale-schema.json",
+  "title": "UnsupportedLocale",
+  "description": "UnsupportedLocale schema from Amazon Health Dashboard API"
+}

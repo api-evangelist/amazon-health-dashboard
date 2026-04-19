@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-health-dashboard/refs/heads/main/json-structure/health-event-description-structure.json",
+  "name": "EventDescription",
+  "description": "The detailed description of the event. Included in the information returned by the <a href=\"https://docs.aws.amazon.com/health/latest/APIReference/API_DescribeEventDetails.html\">DescribeEventDetails</a> operation.",
+  "type": "object",
+  "properties": {
+    "latestDescription": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/eventDescription"
+        },
+        {
+          "description": "The most recent description of the event."
+        }
+      ]
+    }
+  }
+}

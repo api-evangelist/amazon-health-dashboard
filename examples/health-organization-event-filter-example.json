@@ -1,0 +1,8 @@
+{
+  "eventTypeCodes": "example-eventTypeCod",
+  "awsAccountIds": "example-awsAccountId",
+  "services": "EC2",
+  "regions": "example-regions",
+  "startTime": "example-startTime",
+  "endTime": "example-endTime"
+}

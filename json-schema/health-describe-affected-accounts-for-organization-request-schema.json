@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-health-dashboard/refs/heads/main/json-schema/health-describe-affected-accounts-for-organization-request-schema.json",
+  "title": "DescribeAffectedAccountsForOrganizationRequest",
+  "description": "DescribeAffectedAccountsForOrganizationRequest schema from Amazon Health Dashboard API",
+  "type": "object",
+  "properties": {
+    "eventArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/eventArn"
+        },
+        {
+          "description": "<p>The unique identifier for the event. The event ARN has the <code>arn:aws:health:<i>event-region</i>::event/<i>SERVICE</i>/<i>EVENT_TYPE_CODE</i>/<i>EVENT_TYPE_PLUS_ID</i> </code> format.</p> <p>For example, an event ARN might look like the following:</p> <p> <code>arn:aws:health:us-east-1::event/EC2/EC2_INSTANCE_RETIREMENT_SCHEDULED/EC2_INSTANCE_RETIREMENT_SCHEDULED_ABC123-DEF456</code> </p>"
+        }
+      ]
+    },
+    "nextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/nextToken"
+        },
+        {
+          "description": "If the results of a search are large, only a portion of the results are returned, and a <code>nextToken</code> pagination token is returned in the response. To retrieve the next batch of results, reissue the search request and include the returned token. When all results have been returned, the response does not contain a pagination token value."
+        }
+      ]
+    },
+    "maxResults": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/maxResults"
+        },
+        {
+          "description": "The maximum number of items to return in one batch, between 10 and 100, inclusive."
+        }
+      ]
+    }
+  },
+  "required": [
+    "eventArn"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-health-dashboard/refs/heads/main/json-schema/health-describe-event-details-response-schema.json",
+  "title": "DescribeEventDetailsResponse",
+  "description": "DescribeEventDetailsResponse schema from Amazon Health Dashboard API",
+  "type": "object",
+  "properties": {
+    "successfulSet": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DescribeEventDetailsSuccessfulSet"
+        },
+        {
+          "description": "Information about the events that could be retrieved."
+        }
+      ]
+    },
+    "failedSet": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DescribeEventDetailsFailedSet"
+        },
+        {
+          "description": "Error messages for any events that could not be retrieved."
+        }
+      ]
+    }
+  }
+}

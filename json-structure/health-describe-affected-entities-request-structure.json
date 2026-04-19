@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-health-dashboard/refs/heads/main/json-structure/health-describe-affected-entities-request-structure.json",
+  "name": "DescribeAffectedEntitiesRequest",
+  "description": "DescribeAffectedEntitiesRequest schema from Amazon Health Dashboard API",
+  "type": "object",
+  "properties": {
+    "filter": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EntityFilter"
+        },
+        {
+          "description": "Values to narrow the results returned. At least one event ARN is required."
+        }
+      ]
+    },
+    "locale": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/locale"
+        },
+        {
+          "description": "The locale (language) to return information in. English (en) is the default and the only supported value at this time."
+        }
+      ]
+    },
+    "nextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/nextToken"
+        },
+        {
+          "description": "If the results of a search are large, only a portion of the results are returned, and a <code>nextToken</code> pagination token is returned in the response. To retrieve the next batch of results, reissue the search request and include the returned token. When all results have been returned, the response does not contain a pagination token value."
+        }
+      ]
+    },
+    "maxResults": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/maxResults"
+        },
+        {
+          "description": "The maximum number of items to return in one batch, between 10 and 100, inclusive."
+        }
+      ]
+    }
+  },
+  "required": [
+    "filter"
+  ]
+}

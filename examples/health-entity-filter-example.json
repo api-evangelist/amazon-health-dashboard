@@ -1,0 +1,8 @@
+{
+  "eventArns": "arn:aws:health:us-east-1::event/EC2/AWS_EC2_INSTANCE_ISSUE/abc123",
+  "entityArns": "arn:aws:health:us-east-1::event/EC2/AWS_EC2_INSTANCE_ISSUE/abc123",
+  "entityValues": "example-entityValues",
+  "lastUpdatedTimes": "example-lastUpdatedT",
+  "tags": "example-tags",
+  "statusCodes": "open"
+}

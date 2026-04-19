@@ -1,0 +1,109 @@
+vocabulary: "1.0.0"
+
+info:
+  provider: Amazon Health Dashboard
+  description: Vocabulary for Amazon Health Dashboard / AWS Health service status and event APIs
+  created: "2026-04-19"
+  modified: "2026-04-19"
+
+operational:
+  apis:
+    - namespace: amazon-health-dashboard
+      version: "2016-08-04"
+      baseUrl: https://health.us-east-1.amazonaws.com
+      status: active
+
+  resources:
+    - name: events
+      description: AWS health events affecting services or accounts
+      actions: [list, describe]
+    - name: event-types
+      description: Catalog of AWS health event type codes
+      actions: [list]
+    - name: affected-entities
+      description: AWS resources affected by health events
+      actions: [list]
+    - name: org-events
+      description: Organization-wide health events across all accounts
+      actions: [list, describe]
+
+  actions:
+    - name: list
+      httpMethod: POST
+      pattern: read
+    - name: describe
+      httpMethod: POST
+      pattern: read
+
+  enums:
+    event-status:
+      - open
+      - closed
+      - upcoming
+    event-category:
+      - issue
+      - accountNotification
+      - scheduledChange
+      - investigation
+    entity-status:
+      - IMPAIRED
+      - UNIMPAIRED
+      - UNKNOWN
+      - PENDING
+      - RESOLVED
+
+capability:
+  workflows:
+    - name: Amazon Health Dashboard Operations Monitoring
+      file: capabilities/amazon-health-dashboard-operations-monitoring.yaml
+      apis: [amazon-health-dashboard]
+      tools: 7
+      personas: [Operations Engineer, DevOps Engineer, Cloud Administrator]
+
+  personas:
+    - id: operations-engineer
+      name: Operations Engineer
+      description: Monitors AWS service health and coordinates response to events
+    - id: devops-engineer
+      name: DevOps Engineer
+      description: Tracks events affecting CI/CD and deployment infrastructure
+    - id: cloud-administrator
+      name: Cloud Administrator
+      description: Manages organization-wide health visibility and notifications
+
+  domains:
+    - name: Event Monitoring
+      resources: [events, event-types]
+    - name: Impact Assessment
+      resources: [affected-entities]
+    - name: Organization Health
+      resources: [org-events]
+
+  namespaces:
+    - namespace: amazon-health-dashboard
+      type: consumed
+    - namespace: health-ops-api
+      type: rest-exposed
+      port: 8086
+    - namespace: health-ops-mcp
+      type: mcp-exposed
+      port: 9096
+
+  binds:
+    - AWS_ACCESS_KEY_ID
+    - AWS_SECRET_ACCESS_KEY
+    - AWS_REGION
+
+crossReference:
+  - resource: events
+    operations: [DescribeEvents, DescribeEventDetails]
+    workflows: [Amazon Health Dashboard Operations Monitoring]
+    personas: [Operations Engineer, DevOps Engineer]
+  - resource: affected-entities
+    operations: [DescribeAffectedEntities]
+    workflows: [Amazon Health Dashboard Operations Monitoring]
+    personas: [Operations Engineer, Cloud Administrator]
+  - resource: org-events
+    operations: [DescribeEventsForOrganization, DescribeEventDetailsForOrganization, DescribeAffectedEntitiesForOrganization]
+    workflows: [Amazon Health Dashboard Operations Monitoring]
+    personas: [Cloud Administrator]

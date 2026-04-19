@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-health-dashboard/refs/heads/main/json-structure/health-event-list-structure.json",
+  "name": "EventList",
+  "description": "EventList schema from Amazon Health Dashboard API",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/Event"
+  }
+}

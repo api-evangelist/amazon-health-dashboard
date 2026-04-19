@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-health-dashboard/refs/heads/main/json-schema/health-describe-affected-accounts-for-organization-response-schema.json",
+  "title": "DescribeAffectedAccountsForOrganizationResponse",
+  "description": "DescribeAffectedAccountsForOrganizationResponse schema from Amazon Health Dashboard API",
+  "type": "object",
+  "properties": {
+    "affectedAccounts": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/affectedAccountsList"
+        },
+        {
+          "description": "A JSON set of elements of the affected accounts."
+        }
+      ]
+    },
+    "eventScopeCode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/eventScopeCode"
+        },
+        {
+          "description": "<p>This parameter specifies if the Health event is a public Amazon Web Services service event or an account-specific event.</p> <ul> <li> <p>If the <code>eventScopeCode</code> value is <code>PUBLIC</code>, then the <code>affectedAccounts</code> value is always empty.</p> </li> <li> <p>If the <code>eventScopeCode</code> value is <code>ACCOUNT_SPECIFIC</code>, then the <code>affectedAccounts</code> value lists the affected Amazon Web Services accounts in your organization. For example, if an event affects a service such as Amazon Elastic Compute Cloud and you have Amazon Web Services accounts that use that service, those account IDs appear in the response.</p> </li> <li> <p>If the <code>eventScopeCode</code> value is <code>NONE</code>, then the <code>eventArn</code> that you specified in the request is invalid or doesn't exist.</p> </li> </ul>"
+        }
+      ]
+    },
+    "nextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/nextToken"
+        },
+        {
+          "description": "If the results of a search are large, only a portion of the results are returned, and a <code>nextToken</code> pagination token is returned in the response. To retrieve the next batch of results, reissue the search request and include the returned token. When all results have been returned, the response does not contain a pagination token value."
+        }
+      ]
+    }
+  }
+}

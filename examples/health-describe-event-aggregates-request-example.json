@@ -1,0 +1,6 @@
+{
+  "filter": "example-filter",
+  "aggregateField": "example-aggregateFie",
+  "maxResults": "example-maxResults",
+  "nextToken": "example-nextToken"
+}

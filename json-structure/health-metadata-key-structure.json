@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-health-dashboard/refs/heads/main/json-structure/health-metadata-key-structure.json",
+  "name": "metadataKey",
+  "description": "metadataKey schema from Amazon Health Dashboard API",
+  "type": "string"
+}

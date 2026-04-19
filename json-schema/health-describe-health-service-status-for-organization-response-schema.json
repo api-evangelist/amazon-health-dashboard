@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-health-dashboard/refs/heads/main/json-schema/health-describe-health-service-status-for-organization-response-schema.json",
+  "title": "DescribeHealthServiceStatusForOrganizationResponse",
+  "description": "DescribeHealthServiceStatusForOrganizationResponse schema from Amazon Health Dashboard API",
+  "type": "object",
+  "properties": {
+    "healthServiceAccessStatusForOrganization": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/healthServiceAccessStatusForOrganization"
+        },
+        {
+          "description": "<p>Information about the status of enabling or disabling the Health organizational view feature in your organization.</p> <p>Valid values are <code>ENABLED | DISABLED | PENDING</code>. </p>"
+        }
+      ]
+    }
+  }
+}

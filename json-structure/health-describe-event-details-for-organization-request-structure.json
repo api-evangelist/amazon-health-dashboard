@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-health-dashboard/refs/heads/main/json-structure/health-describe-event-details-for-organization-request-structure.json",
+  "name": "DescribeEventDetailsForOrganizationRequest",
+  "description": "DescribeEventDetailsForOrganizationRequest schema from Amazon Health Dashboard API",
+  "type": "object",
+  "properties": {
+    "organizationEventDetailFilters": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OrganizationEventDetailFiltersList"
+        },
+        {
+          "description": "A set of JSON elements that includes the <code>awsAccountId</code> and the <code>eventArn</code>."
+        }
+      ]
+    },
+    "locale": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/locale"
+        },
+        {
+          "description": "The locale (language) to return information in. English (en) is the default and the only supported value at this time."
+        }
+      ]
+    }
+  },
+  "required": [
+    "organizationEventDetailFilters"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-health-dashboard/refs/heads/main/json-schema/health-event-status-code-list-schema.json",
+  "title": "eventStatusCodeList",
+  "description": "eventStatusCodeList schema from Amazon Health Dashboard API",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/eventStatusCode"
+  }
+}

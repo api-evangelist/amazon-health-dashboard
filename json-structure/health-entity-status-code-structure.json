@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-health-dashboard/refs/heads/main/json-structure/health-entity-status-code-structure.json",
+  "name": "entityStatusCode",
+  "description": "entityStatusCode schema from Amazon Health Dashboard API",
+  "type": "string",
+  "enum": [
+    "IMPAIRED",
+    "UNIMPAIRED",
+    "UNKNOWN"
+  ]
+}

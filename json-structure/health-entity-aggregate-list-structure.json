@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-health-dashboard/refs/heads/main/json-structure/health-entity-aggregate-list-structure.json",
+  "name": "EntityAggregateList",
+  "description": "EntityAggregateList schema from Amazon Health Dashboard API",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/EntityAggregate"
+  }
+}

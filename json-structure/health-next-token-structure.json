@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-health-dashboard/refs/heads/main/json-structure/health-next-token-structure.json",
+  "name": "nextToken",
+  "description": "nextToken schema from Amazon Health Dashboard API",
+  "type": "string",
+  "pattern": "[a-zA-Z0-9=/+_.-]{4,10000}"
+}

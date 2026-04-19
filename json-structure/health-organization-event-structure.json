@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-health-dashboard/refs/heads/main/json-structure/health-organization-event-structure.json",
+  "name": "OrganizationEvent",
+  "description": "Summary information about an event, returned by the <a href=\"https://docs.aws.amazon.com/health/latest/APIReference/API_DescribeEventsForOrganization.html\">DescribeEventsForOrganization</a> operation.",
+  "type": "object",
+  "properties": {
+    "arn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/eventArn"
+        },
+        {
+          "description": "<p>The unique identifier for the event. The event ARN has the <code>arn:aws:health:<i>event-region</i>::event/<i>SERVICE</i>/<i>EVENT_TYPE_CODE</i>/<i>EVENT_TYPE_PLUS_ID</i> </code> format.</p> <p>For example, an event ARN might look like the following:</p> <p> <code>arn:aws:health:us-east-1::event/EC2/EC2_INSTANCE_RETIREMENT_SCHEDULED/EC2_INSTANCE_RETIREMENT_SCHEDULED_ABC123-DEF456</code> </p>"
+        }
+      ]
+    },
+    "service": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/service"
+        },
+        {
+          "description": "The Amazon Web Services service that is affected by the event, such as EC2 and RDS."
+        }
+      ]
+    },
+    "eventTypeCode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/eventTypeCode"
+        },
+        {
+          "description": "The unique identifier for the event type. The format is <code>AWS_SERVICE_DESCRIPTION</code>. For example, <code>AWS_EC2_SYSTEM_MAINTENANCE_EVENT</code>."
+        }
+      ]
+    },
+    "eventTypeCategory": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/eventTypeCategory"
+        },
+        {
+          "description": "A list of event type category codes. Possible values are <code>issue</code>, <code>accountNotification</code>, or <code>scheduledChange</code>. Currently, the <code>investigation</code> value isn't supported at this time."
+        }
+      ]
+    },
+    "eventScopeCode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/eventScopeCode"
+        },
+        {
+          "description": "<p>This parameter specifies if the Health event is a public Amazon Web Services service event or an account-specific event.</p> <ul> <li> <p>If the <code>eventScopeCode</code> value is <code>PUBLIC</code>, then the <code>affectedAccounts</code> value is always empty.</p> </li> <li> <p>If the <code>eventScopeCode</code> value is <code>ACCOUNT_SPECIFIC</code>, then the <code>affectedAccounts</code> value lists the affected Amazon Web Services accounts in your organization. For example, if an event affects a service such as Amazon Elastic Compute Cloud and you have Amazon Web Services accounts that use that service, those account IDs appear in the response.</p> </li> <li> <p>If the <code>eventScopeCode</code> value is <code>NONE</code>, then the <code>eventArn</code> that you specified in the request is invalid or doesn't exist.</p> </li> </ul>"
+        }
+      ]
+    },
+    "region": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/region"
+        },
+        {
+          "description": "The Amazon Web Services Region name of the event."
+        }
+      ]
+    },
+    "startTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/timestamp"
+        },
+        {
+          "description": "The date and time that the event began."
+        }
+      ]
+    },
+    "endTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/timestamp"
+        },
+        {
+          "description": "The date and time that the event ended."
+        }
+      ]
+    },
+    "lastUpdatedTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/timestamp"
+        },
+        {
+          "description": "The most recent date and time that the event was updated."
+        }
+      ]
+    },
+    "statusCode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/eventStatusCode"
+        },
+        {
+          "description": "The most recent status of the event. Possible values are <code>open</code>, <code>closed</code>, and <code>upcoming</code>."
+        }
+      ]
+    }
+  }
+}

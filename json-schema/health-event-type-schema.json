@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-health-dashboard/refs/heads/main/json-schema/health-event-type-schema.json",
+  "title": "eventType",
+  "description": "eventType schema from Amazon Health Dashboard API",
+  "type": "string",
+  "pattern": "[^:/]{3,100}"
+}

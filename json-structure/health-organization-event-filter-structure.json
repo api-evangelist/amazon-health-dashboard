@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-health-dashboard/refs/heads/main/json-structure/health-organization-event-filter-structure.json",
+  "name": "OrganizationEventFilter",
+  "description": "The values to filter results from the <a href=\"https://docs.aws.amazon.com/health/latest/APIReference/API_DescribeEventsForOrganization.html\">DescribeEventsForOrganization</a> operation.",
+  "type": "object",
+  "properties": {
+    "eventTypeCodes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/eventTypeList"
+        },
+        {
+          "description": "A list of unique identifiers for event types. For example, <code>\"AWS_EC2_SYSTEM_MAINTENANCE_EVENT\",\"AWS_RDS_MAINTENANCE_SCHEDULED\".</code> "
+        }
+      ]
+    },
+    "awsAccountIds": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/awsAccountIdsList"
+        },
+        {
+          "description": "A list of 12-digit Amazon Web Services account numbers that contains the affected entities."
+        }
+      ]
+    },
+    "services": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/serviceList"
+        },
+        {
+          "description": "The Amazon Web Services services associated with the event. For example, <code>EC2</code>, <code>RDS</code>."
+        }
+      ]
+    },
+    "regions": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/regionList"
+        },
+        {
+          "description": "A list of Amazon Web Services Regions."
+        }
+      ]
+    },
+    "startTime": {
+      "$ref": "#/components/schemas/DateTimeRange"
+    },
+    "endTime": {
+      "$ref": "#/components/schemas/DateTimeRange"
+    },
+    "lastUpdatedTime": {
+      "$ref": "#/components/schemas/DateTimeRange"
+    },
+    "entityArns": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/entityArnList"
+        },
+        {
+          "description": "A list of entity ARNs (unique identifiers)."
+        }
+      ]
+    },
+    "entityValues": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/entityValueList"
+        },
+        {
+          "description": "A list of entity identifiers, such as EC2 instance IDs (i-34ab692e) or EBS volumes (vol-426ab23e)."
+        }
+      ]
+    },
+    "eventTypeCategories": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/eventTypeCategoryList"
+        },
+        {
+          "description": "A list of event type category codes. Possible values are <code>issue</code>, <code>accountNotification</code>, or <code>scheduledChange</code>. Currently, the <code>investigation</code> value isn't supported at this time."
+        }
+      ]
+    },
+    "eventStatusCodes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/eventStatusCodeList"
+        },
+        {
+          "description": "A list of event status codes."
+        }
+      ]
+    }
+  }
+}

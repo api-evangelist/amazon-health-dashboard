@@ -1,0 +1,5 @@
+{
+  "eventTypeCodes": "example-eventTypeCod",
+  "services": "EC2",
+  "eventTypeCategories": "example-eventTypeCat"
+}

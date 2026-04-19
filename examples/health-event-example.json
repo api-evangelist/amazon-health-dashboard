@@ -1,0 +1,8 @@
+{
+  "arn": "arn:aws:health:us-east-1::event/EC2/AWS_EC2_INSTANCE_ISSUE/abc123",
+  "service": "EC2",
+  "eventTypeCode": "example-eventTypeCod",
+  "eventTypeCategory": "example-eventTypeCat",
+  "region": "example-region",
+  "availabilityZone": "example-availability"
+}

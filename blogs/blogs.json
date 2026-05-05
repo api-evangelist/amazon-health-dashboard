@@ -1,0 +1,13 @@
+{
+  "repo": "amazon-health-dashboard",
+  "feeds": [
+    {
+      "source": "https://aws.amazon.com/blogs/mt/",
+      "feed_url": "https://aws.amazon.com/blogs/mt/feed/",
+      "saved": 10,
+      "title": "AWS Cloud Operations Blog"
+    }
+  ],
+  "post_count": 10,
+  "fetched": "2026-05-03T23:21:26Z"
+}

@@ -4,10 +4,10 @@
     {
       "source": "https://aws.amazon.com/blogs/mt/",
       "feed_url": "https://aws.amazon.com/blogs/mt/feed/",
-      "saved": 10,
-      "title": "AWS Cloud Operations Blog"
+      "title": "AWS Cloud Operations Blog",
+      "saved": 1
     }
   ],
-  "post_count": 10,
-  "fetched": "2026-05-03T23:21:26Z"
+  "post_count": 11,
+  "fetched": "2026-05-09T20:17:51Z"
 }

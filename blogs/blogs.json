@@ -2,12 +2,20 @@
   "repo": "amazon-health-dashboard",
   "feeds": [
     {
-      "source": "https://aws.amazon.com/blogs/mt/",
+      "source": "https://aws.amazon.com/blogs/mt/feed/",
       "feed_url": "https://aws.amazon.com/blogs/mt/feed/",
-      "title": "AWS Cloud Operations Blog",
-      "saved": 16
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
+      "source": "https://aws.amazon.com/premiumsupport/",
+      "feed_url": "https://aws.amazon.com/premiumsupport/",
+      "title": "",
+      "saved": 0,
+      "method": "none"
     }
   ],
-  "post_count": 27,
-  "fetched": "2026-05-17T20:20:35Z"
+  "post_count": 29,
+  "fetched": "2026-06-01T23:35:02Z"
 }

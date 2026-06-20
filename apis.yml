@@ -4,7 +4,7 @@ description: AWS Health Dashboard provides ongoing visibility into the status of
   guidance when AWS is experiencing events that may affect your operations. It delivers personalized information about events
   that might affect your specific AWS resources and accounts.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
 - AWS
 - Health Monitoring

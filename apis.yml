@@ -47,6 +47,12 @@ apis:
   - type: X-NaftikoCapability
     url: capabilities/amazon-health-dashboard.yaml
 common:
+- type: VulnerabilityDisclosure
+  url: security/amazon-health-dashboard-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/amazon-health-dashboard-domain-security.yml
+- type: Authentication
+  url: authentication/amazon-health-dashboard-authentication.yml
 - type: Portal
   url: https://health.aws.amazon.com/health/home
 - type: Documentation

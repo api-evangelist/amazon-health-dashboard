@@ -47,6 +47,8 @@ apis:
   - type: X-NaftikoCapability
     url: capabilities/amazon-health-dashboard.yaml
 common:
+- type: AgenticAccess
+  url: agentic-access/amazon-health-dashboard-agentic-access.yml
 - type: VulnerabilityDisclosure
   url: security/amazon-health-dashboard-vulnerability-disclosure.yml
 - type: DomainSecurity

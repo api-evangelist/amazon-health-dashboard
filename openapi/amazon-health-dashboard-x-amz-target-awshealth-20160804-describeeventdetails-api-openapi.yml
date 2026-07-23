@@ -1,0 +1,366 @@
+openapi: 3.0.0
+info:
+  version: 2016-08-04
+  x-release: v4
+  title: 'AWS Health APIs and Notifications #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeEventDetails API'
+  description: <fullname>Health</fullname> <p>The Health API provides programmatic access to the Health information that appears in the <a href="https://phd.aws.amazon.com/phd/home#/">Personal Health Dashboard</a>. You can use the API operations to get information about events that might affect your Amazon Web Services services and resources.</p> <note> <ul> <li> <p>You must have a Business, Enterprise On-Ramp, or Enterprise Support plan from <a href="http://aws.amazon.com/premiumsupport/">Amazon Web Services Support</a> to use the Health API. If you call the Health API from an Amazon Web Services account that doesn't have a Business, Enterprise On-Ramp, or Enterprise Support plan, you receive a <code>SubscriptionRequiredException</code> error.</p> </li> <li> <p>You can use the Health endpoint health.us-east-1.amazonaws.com (HTTPS) to call the Health API operations. Health supports a multi-Region application architecture and has two regional endpoints in an active-passive configuration. You can use the high availability endpoint example to determine which Amazon Web Services Region is active, so that you can get the latest information from the API. For more information, see <a href="https://docs.aws.amazon.com/health/latest/ug/health-api.html">Accessing the Health API</a> in the <i>Health User Guide</i>.</p> </li> </ul> </note> <p>For authentication of requests, Health uses the <a href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4 Signing Process</a>.</p> <p>If your Amazon Web Services account is part of Organizations, you can use the Health organizational view feature. This feature provides a centralized view of Health events across all accounts in your organization. You can aggregate Health events in real time to identify accounts in your organization that are affected by an operational event or get notified of security vulnerabilities. Use the organizational view API operations to enable this feature and return event information. For more information, see <a href="https://docs.aws.amazon.com/health/latest/ug/aggregate-events.html">Aggregating Health events</a> in the <i>Health User Guide</i>.</p> <note> <p>When you use the Health API operations to return Health events, see the following recommendations:</p> <ul> <li> <p>Use the <a href="https://docs.aws.amazon.com/health/latest/APIReference/API_Event.html#AWSHealth-Type-Event-eventScopeCode">eventScopeCode</a> parameter to specify whether to return Health events that are public or account-specific.</p> </li> <li> <p>Use pagination to view all events from the response. For example, if you call the <code>DescribeEventsForOrganization</code> operation to get all events in your organization, you might receive several page results. Specify the <code>nextToken</code> in the next request to return more results.</p> </li> </ul> </note>
+  x-logo:
+    url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: health
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/health-2016-08-04.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: https://health.us-east-1.amazonaws.com
+  variables: {}
+  description: The general AWSHealth multi-region endpoint
+- url: http://health.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The AWSHealth endpoint for China (Beijing) and China (Ningxia)
+- url: https://health.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The AWSHealth endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: '#X Amz Target=AWSHealth 20160804.DescribeEventDetails'
+paths:
+  /#X-Amz-Target=AWSHealth_20160804.DescribeEventDetails:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: DescribeEventDetails
+      description: <p>Returns detailed information about one or more specified events. Information includes standard event data (Amazon Web Services Region, service, and so on, as returned by <a href="https://docs.aws.amazon.com/health/latest/APIReference/API_DescribeEvents.html">DescribeEvents</a>), a detailed event description, and possible additional metadata that depends upon the nature of the event. Affected entities are not included. To retrieve the entities, use the <a href="https://docs.aws.amazon.com/health/latest/APIReference/API_DescribeAffectedEntities.html">DescribeAffectedEntities</a> operation.</p> <p>If a specified event can't be retrieved, an error message is returned for that event.</p> <note> <p>This operation supports resource-level permissions. You can use this operation to allow or deny access to specific Health events. For more information, see <a href="https://docs.aws.amazon.com/health/latest/ug/security_iam_id-based-policy-examples.html#resource-action-based-conditions">Resource- and action-based conditions</a> in the <i>Health User Guide</i>.</p> </note>
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DescribeEventDetailsResponse'
+              examples:
+                DescribeEventDetails200Example:
+                  summary: Default DescribeEventDetails 200 response
+                  x-microcks-default: true
+                  value:
+                    eventArn: arn:aws:health:us-east-1::event/EC2/AWS_EC2_INSTANCE_ISSUE/abc
+                    statusCode: open
+        '480':
+          description: UnsupportedLocale
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UnsupportedLocale'
+              examples:
+                DescribeEventDetails480Example:
+                  summary: Default DescribeEventDetails 480 response
+                  x-microcks-default: true
+                  value:
+                    eventArn: arn:aws:health:us-east-1::event/EC2/AWS_EC2_INSTANCE_ISSUE/abc
+                    statusCode: open
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DescribeEventDetailsRequest'
+      parameters:
+      - name: X-Amz-Target
+        in: header
+        required: true
+        schema:
+          type: string
+          enum:
+          - AWSHealth_20160804.DescribeEventDetails
+      summary: Amazon Health Dashboard Describe Event Details
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - '#X Amz Target=AWSHealth 20160804.DescribeEventDetails'
+components:
+  schemas:
+    eventScopeCode:
+      type: string
+      enum:
+      - PUBLIC
+      - ACCOUNT_SPECIFIC
+      - NONE
+    EventDetailsErrorItem:
+      type: object
+      properties:
+        eventArn:
+          allOf:
+          - $ref: '#/components/schemas/eventArn'
+          - description: <p>The unique identifier for the event. The event ARN has the <code>arn:aws:health:<i>event-region</i>::event/<i>SERVICE</i>/<i>EVENT_TYPE_CODE</i>/<i>EVENT_TYPE_PLUS_ID</i> </code> format.</p> <p>For example, an event ARN might look like the following:</p> <p> <code>arn:aws:health:us-east-1::event/EC2/EC2_INSTANCE_RETIREMENT_SCHEDULED/EC2_INSTANCE_RETIREMENT_SCHEDULED_ABC123-DEF456</code> </p>
+        errorName:
+          allOf:
+          - $ref: '#/components/schemas/string'
+          - description: The name of the error.
+        errorMessage:
+          allOf:
+          - $ref: '#/components/schemas/string'
+          - description: A message that describes the error.
+      description: Error information returned when a <a href="https://docs.aws.amazon.com/health/latest/APIReference/API_DescribeEventDetails.html">DescribeEventDetails</a> operation can't find a specified event.
+    eventDescription:
+      type: string
+    availabilityZone:
+      type: string
+      pattern: '[a-z]{2}\-[0-9a-z\-]{4,16}'
+      minLength: 6
+      maxLength: 18
+    eventMetadata:
+      type: object
+      additionalProperties:
+        $ref: '#/components/schemas/metadataValue'
+    eventStatusCode:
+      type: string
+      enum:
+      - open
+      - closed
+      - upcoming
+    metadataValue:
+      type: string
+      maxLength: 32766
+    timestamp:
+      type: string
+      format: date-time
+    region:
+      type: string
+      pattern: '[^:/]{2,25}'
+      minLength: 2
+      maxLength: 25
+    eventTypeCode:
+      type: string
+      pattern: '[a-zA-Z0-9\_\-]{3,100}'
+      minLength: 3
+      maxLength: 100
+    DescribeEventDetailsResponse:
+      type: object
+      properties:
+        successfulSet:
+          allOf:
+          - $ref: '#/components/schemas/DescribeEventDetailsSuccessfulSet'
+          - description: Information about the events that could be retrieved.
+        failedSet:
+          allOf:
+          - $ref: '#/components/schemas/DescribeEventDetailsFailedSet'
+          - description: Error messages for any events that could not be retrieved.
+    EventDescription:
+      type: object
+      properties:
+        latestDescription:
+          allOf:
+          - $ref: '#/components/schemas/eventDescription'
+          - description: The most recent description of the event.
+      description: The detailed description of the event. Included in the information returned by the <a href="https://docs.aws.amazon.com/health/latest/APIReference/API_DescribeEventDetails.html">DescribeEventDetails</a> operation.
+    eventTypeCategory:
+      type: string
+      enum:
+      - issue
+      - accountNotification
+      - scheduledChange
+      - investigation
+      minLength: 3
+      maxLength: 255
+    Event:
+      type: object
+      properties:
+        arn:
+          allOf:
+          - $ref: '#/components/schemas/eventArn'
+          - description: <p>The unique identifier for the event. The event ARN has the <code>arn:aws:health:<i>event-region</i>::event/<i>SERVICE</i>/<i>EVENT_TYPE_CODE</i>/<i>EVENT_TYPE_PLUS_ID</i> </code> format.</p> <p>For example, an event ARN might look like the following:</p> <p> <code>arn:aws:health:us-east-1::event/EC2/EC2_INSTANCE_RETIREMENT_SCHEDULED/EC2_INSTANCE_RETIREMENT_SCHEDULED_ABC123-DEF456</code> </p>
+        service:
+          allOf:
+          - $ref: '#/components/schemas/service'
+          - description: The Amazon Web Services service that is affected by the event. For example, <code>EC2</code>, <code>RDS</code>.
+        eventTypeCode:
+          allOf:
+          - $ref: '#/components/schemas/eventTypeCode'
+          - description: The unique identifier for the event type. The format is <code>AWS_<i>SERVICE</i>_<i>DESCRIPTION</i> </code>; for example, <code>AWS_EC2_SYSTEM_MAINTENANCE_EVENT</code>.
+        eventTypeCategory:
+          allOf:
+          - $ref: '#/components/schemas/eventTypeCategory'
+          - description: A list of event type category codes. Possible values are <code>issue</code>, <code>accountNotification</code>, or <code>scheduledChange</code>. Currently, the <code>investigation</code> value isn't supported at this time.
+        region:
+          allOf:
+          - $ref: '#/components/schemas/region'
+          - description: The Amazon Web Services Region name of the event.
+        availabilityZone:
+          allOf:
+          - $ref: '#/components/schemas/availabilityZone'
+          - description: The Amazon Web Services Availability Zone of the event. For example, us-east-1a.
+        startTime:
+          allOf:
+          - $ref: '#/components/schemas/timestamp'
+          - description: The date and time that the event began.
+        endTime:
+          allOf:
+          - $ref: '#/components/schemas/timestamp'
+          - description: The date and time that the event ended.
+        lastUpdatedTime:
+          allOf:
+          - $ref: '#/components/schemas/timestamp'
+          - description: The most recent date and time that the event was updated.
+        statusCode:
+          allOf:
+          - $ref: '#/components/schemas/eventStatusCode'
+          - description: The most recent status of the event. Possible values are <code>open</code>, <code>closed</code>, and <code>upcoming</code>.
+        eventScopeCode:
+          allOf:
+          - $ref: '#/components/schemas/eventScopeCode'
+          - description: <p>This parameter specifies if the Health event is a public Amazon Web Services service event or an account-specific event.</p> <ul> <li> <p>If the <code>eventScopeCode</code> value is <code>PUBLIC</code>, then the <code>affectedAccounts</code> value is always empty.</p> </li> <li> <p>If the <code>eventScopeCode</code> value is <code>ACCOUNT_SPECIFIC</code>, then the <code>affectedAccounts</code> value lists the affected Amazon Web Services accounts in your organization. For example, if an event affects a service such as Amazon Elastic Compute Cloud and you have Amazon Web Services accounts that use that service, those account IDs appear in the response.</p> </li> <li> <p>If the <code>eventScopeCode</code> value is <code>NONE</code>, then the <code>eventArn</code> that you specified in the request is invalid or doesn't exist.</p> </li> </ul>
+      description: <p>Summary information about an Health event.</p> <p>Health events can be public or account-specific:</p> <ul> <li> <p> <i>Public events</i> might be service events that are not specific to an Amazon Web Services account. For example, if there is an issue with an Amazon Web Services Region, Health provides information about the event, even if you don't use services or resources in that Region.</p> </li> <li> <p> <i>Account-specific</i> events are specific to either your Amazon Web Services account or an account in your organization. For example, if there's an issue with Amazon Elastic Compute Cloud in a Region that you use, Health provides information about the event and the affected resources in the account.</p> </li> </ul> <p>You can determine if an event is public or account-specific by using the <code>eventScopeCode</code> parameter. For more information, see <a href="https://docs.aws.amazon.com/health/latest/APIReference/API_Event.html#AWSHealth-Type-Event-eventScopeCode">eventScopeCode</a>.</p>
+    DescribeEventDetailsSuccessfulSet:
+      type: array
+      items:
+        $ref: '#/components/schemas/EventDetails'
+    eventArnList:
+      type: array
+      items:
+        $ref: '#/components/schemas/eventArn'
+      minItems: 1
+      maxItems: 10
+    DescribeEventDetailsFailedSet:
+      type: array
+      items:
+        $ref: '#/components/schemas/EventDetailsErrorItem'
+    DescribeEventDetailsRequest:
+      type: object
+      required:
+      - eventArns
+      title: DescribeEventDetailsRequest
+      properties:
+        eventArns:
+          allOf:
+          - $ref: '#/components/schemas/eventArnList'
+          - description: 'A list of event ARNs (unique identifiers). For example: <code>"arn:aws:health:us-east-1::event/EC2/EC2_INSTANCE_RETIREMENT_SCHEDULED/EC2_INSTANCE_RETIREMENT_SCHEDULED_ABC123-CDE456", "arn:aws:health:us-west-1::event/EBS/AWS_EBS_LOST_VOLUME/AWS_EBS_LOST_VOLUME_CHI789_JKL101"</code> '
+        locale:
+          allOf:
+          - $ref: '#/components/schemas/locale'
+          - description: The locale (language) to return information in. English (en) is the default and the only supported value at this time.
+    EventDetails:
+      type: object
+      properties:
+        event:
+          allOf:
+          - $ref: '#/components/schemas/Event'
+          - description: Summary information about the event.
+        eventDescription:
+          allOf:
+          - $ref: '#/components/schemas/EventDescription'
+          - description: The most recent description of the event.
+        eventMetadata:
+          allOf:
+          - $ref: '#/components/schemas/eventMetadata'
+          - description: Additional metadata about the event.
+      description: Detailed information about an event. A combination of an <a href="https://docs.aws.amazon.com/health/latest/APIReference/API_Event.html">Event</a> object, an <a href="https://docs.aws.amazon.com/health/latest/APIReference/API_EventDescription.html">EventDescription</a> object, and additional metadata about the event. Returned by the <a href="https://docs.aws.amazon.com/health/latest/APIReference/API_DescribeEventDetails.html">DescribeEventDetails</a> operation.
+    UnsupportedLocale: {}
+    service:
+      type: string
+      pattern: '[^:/]{2,30}'
+      minLength: 2
+      maxLength: 30
+    string:
+      type: string
+    locale:
+      type: string
+      pattern: .{2,256}
+      minLength: 2
+      maxLength: 256
+    eventArn:
+      type: string
+      pattern: arn:aws(-[a-z]+(-[a-z]+)?)?:health:[^:]*:[^:]*:event(?:/[\w-]+){3}
+      maxLength: 1600
+  parameters:
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/health/
+x-hasEquivalentPaths: true

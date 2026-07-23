@@ -1,0 +1,401 @@
+openapi: 3.0.0
+info:
+  version: 2016-08-04
+  x-release: v4
+  title: 'AWS Health APIs and Notifications #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeAffectedEntities API'
+  description: <fullname>Health</fullname> <p>The Health API provides programmatic access to the Health information that appears in the <a href="https://phd.aws.amazon.com/phd/home#/">Personal Health Dashboard</a>. You can use the API operations to get information about events that might affect your Amazon Web Services services and resources.</p> <note> <ul> <li> <p>You must have a Business, Enterprise On-Ramp, or Enterprise Support plan from <a href="http://aws.amazon.com/premiumsupport/">Amazon Web Services Support</a> to use the Health API. If you call the Health API from an Amazon Web Services account that doesn't have a Business, Enterprise On-Ramp, or Enterprise Support plan, you receive a <code>SubscriptionRequiredException</code> error.</p> </li> <li> <p>You can use the Health endpoint health.us-east-1.amazonaws.com (HTTPS) to call the Health API operations. Health supports a multi-Region application architecture and has two regional endpoints in an active-passive configuration. You can use the high availability endpoint example to determine which Amazon Web Services Region is active, so that you can get the latest information from the API. For more information, see <a href="https://docs.aws.amazon.com/health/latest/ug/health-api.html">Accessing the Health API</a> in the <i>Health User Guide</i>.</p> </li> </ul> </note> <p>For authentication of requests, Health uses the <a href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4 Signing Process</a>.</p> <p>If your Amazon Web Services account is part of Organizations, you can use the Health organizational view feature. This feature provides a centralized view of Health events across all accounts in your organization. You can aggregate Health events in real time to identify accounts in your organization that are affected by an operational event or get notified of security vulnerabilities. Use the organizational view API operations to enable this feature and return event information. For more information, see <a href="https://docs.aws.amazon.com/health/latest/ug/aggregate-events.html">Aggregating Health events</a> in the <i>Health User Guide</i>.</p> <note> <p>When you use the Health API operations to return Health events, see the following recommendations:</p> <ul> <li> <p>Use the <a href="https://docs.aws.amazon.com/health/latest/APIReference/API_Event.html#AWSHealth-Type-Event-eventScopeCode">eventScopeCode</a> parameter to specify whether to return Health events that are public or account-specific.</p> </li> <li> <p>Use pagination to view all events from the response. For example, if you call the <code>DescribeEventsForOrganization</code> operation to get all events in your organization, you might receive several page results. Specify the <code>nextToken</code> in the next request to return more results.</p> </li> </ul> </note>
+  x-logo:
+    url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: health
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/health-2016-08-04.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: https://health.us-east-1.amazonaws.com
+  variables: {}
+  description: The general AWSHealth multi-region endpoint
+- url: http://health.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The AWSHealth endpoint for China (Beijing) and China (Ningxia)
+- url: https://health.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The AWSHealth endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: '#X Amz Target=AWSHealth 20160804.DescribeAffectedEntities'
+paths:
+  /#X-Amz-Target=AWSHealth_20160804.DescribeAffectedEntities:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: DescribeAffectedEntities
+      description: <p>Returns a list of entities that have been affected by the specified events, based on the specified filter criteria. Entities can refer to individual customer resources, groups of customer resources, or any other construct, depending on the Amazon Web Services service. Events that have impact beyond that of the affected entities, or where the extent of impact is unknown, include at least one entity indicating this.</p> <p>At least one event ARN is required.</p> <note> <ul> <li> <p>This API operation uses pagination. Specify the <code>nextToken</code> parameter in the next request to return more results.</p> </li> <li> <p>This operation supports resource-level permissions. You can use this operation to allow or deny access to specific Health events. For more information, see <a href="https://docs.aws.amazon.com/health/latest/ug/security_iam_id-based-policy-examples.html#resource-action-based-conditions">Resource- and action-based conditions</a> in the <i>Health User Guide</i>.</p> </li> </ul> </note>
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DescribeAffectedEntitiesResponse'
+              examples:
+                DescribeAffectedEntities200Example:
+                  summary: Default DescribeAffectedEntities 200 response
+                  x-microcks-default: true
+                  value:
+                    eventArn: arn:aws:health:us-east-1::event/EC2/AWS_EC2_INSTANCE_ISSUE/abc
+                    statusCode: open
+        '480':
+          description: InvalidPaginationToken
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidPaginationToken'
+              examples:
+                DescribeAffectedEntities480Example:
+                  summary: Default DescribeAffectedEntities 480 response
+                  x-microcks-default: true
+                  value:
+                    eventArn: arn:aws:health:us-east-1::event/EC2/AWS_EC2_INSTANCE_ISSUE/abc
+                    statusCode: open
+        '481':
+          description: UnsupportedLocale
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UnsupportedLocale'
+              examples:
+                DescribeAffectedEntities481Example:
+                  summary: Default DescribeAffectedEntities 481 response
+                  x-microcks-default: true
+                  value:
+                    eventArn: arn:aws:health:us-east-1::event/EC2/AWS_EC2_INSTANCE_ISSUE/abc
+                    statusCode: open
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DescribeAffectedEntitiesRequest'
+      parameters:
+      - name: maxResults
+        in: query
+        schema:
+          type: string
+        description: Pagination limit
+        required: false
+      - name: nextToken
+        in: query
+        schema:
+          type: string
+        description: Pagination token
+        required: false
+      - name: X-Amz-Target
+        in: header
+        required: true
+        schema:
+          type: string
+          enum:
+          - AWSHealth_20160804.DescribeAffectedEntities
+      summary: Amazon Health Dashboard Describe Affected Entities
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - '#X Amz Target=AWSHealth 20160804.DescribeAffectedEntities'
+components:
+  parameters:
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+  schemas:
+    accountId:
+      type: string
+      pattern: ^\S+$
+      maxLength: 12
+    AffectedEntity:
+      type: object
+      properties:
+        entityArn:
+          allOf:
+          - $ref: '#/components/schemas/entityArn'
+          - description: 'The unique identifier for the entity. Format: <code>arn:aws:health:<i>entity-region</i>:<i>aws-account</i>:entity/<i>entity-id</i> </code>. Example: <code>arn:aws:health:us-east-1:111222333444:entity/AVh5GGT7ul1arKr1sE1K</code> '
+        eventArn:
+          allOf:
+          - $ref: '#/components/schemas/eventArn'
+          - description: <p>The unique identifier for the event. The event ARN has the <code>arn:aws:health:<i>event-region</i>::event/<i>SERVICE</i>/<i>EVENT_TYPE_CODE</i>/<i>EVENT_TYPE_PLUS_ID</i> </code> format.</p> <p>For example, an event ARN might look like the following:</p> <p> <code>arn:aws:health:us-east-1::event/EC2/EC2_INSTANCE_RETIREMENT_SCHEDULED/EC2_INSTANCE_RETIREMENT_SCHEDULED_ABC123-DEF456</code> </p>
+        entityValue:
+          allOf:
+          - $ref: '#/components/schemas/entityValue'
+          - description: The ID of the affected entity.
+        entityUrl:
+          allOf:
+          - $ref: '#/components/schemas/entityUrl'
+          - description: The URL of the affected entity.
+        awsAccountId:
+          allOf:
+          - $ref: '#/components/schemas/accountId'
+          - description: The 12-digit Amazon Web Services account number that contains the affected entity.
+        lastUpdatedTime:
+          allOf:
+          - $ref: '#/components/schemas/timestamp'
+          - description: The most recent time that the entity was updated.
+        statusCode:
+          allOf:
+          - $ref: '#/components/schemas/entityStatusCode'
+          - description: The most recent status of the entity affected by the event. The possible values are <code>IMPAIRED</code>, <code>UNIMPAIRED</code>, and <code>UNKNOWN</code>.
+        tags:
+          allOf:
+          - $ref: '#/components/schemas/tagSet'
+          - description: <p>A map of entity tags attached to the affected entity.</p> <note> <p>Currently, the <code>tags</code> property isn't supported.</p> </note>
+      description: Information about an entity that is affected by a Health event.
+    entityValueList:
+      type: array
+      items:
+        $ref: '#/components/schemas/entityValue'
+      minItems: 1
+      maxItems: 99
+    maxResults:
+      type: integer
+      minimum: 10
+      maximum: 100
+    entityArn:
+      type: string
+      pattern: .{0,1600}
+      maxLength: 1600
+    timestamp:
+      type: string
+      format: date-time
+    tagFilter:
+      type: array
+      items:
+        $ref: '#/components/schemas/tagSet'
+      maxItems: 50
+    dateTimeRangeList:
+      type: array
+      items:
+        $ref: '#/components/schemas/DateTimeRange'
+      minItems: 1
+      maxItems: 10
+    nextToken:
+      type: string
+      pattern: '[a-zA-Z0-9=/+_.-]{4,10000}'
+      minLength: 4
+      maxLength: 10000
+    entityValue:
+      type: string
+      pattern: .{0,1224}
+      maxLength: 1224
+    EntityFilter:
+      type: object
+      required:
+      - eventArns
+      properties:
+        eventArns:
+          allOf:
+          - $ref: '#/components/schemas/eventArnList'
+          - description: 'A list of event ARNs (unique identifiers). For example: <code>"arn:aws:health:us-east-1::event/EC2/EC2_INSTANCE_RETIREMENT_SCHEDULED/EC2_INSTANCE_RETIREMENT_SCHEDULED_ABC123-CDE456", "arn:aws:health:us-west-1::event/EBS/AWS_EBS_LOST_VOLUME/AWS_EBS_LOST_VOLUME_CHI789_JKL101"</code> '
+        entityArns:
+          allOf:
+          - $ref: '#/components/schemas/entityArnList'
+          - description: A list of entity ARNs (unique identifiers).
+        entityValues:
+          allOf:
+          - $ref: '#/components/schemas/entityValueList'
+          - description: A list of IDs for affected entities.
+        lastUpdatedTimes:
+          allOf:
+          - $ref: '#/components/schemas/dateTimeRangeList'
+          - description: A list of the most recent dates and times that the entity was updated.
+        tags:
+          allOf:
+          - $ref: '#/components/schemas/tagFilter'
+          - description: <p>A map of entity tags attached to the affected entity.</p> <note> <p>Currently, the <code>tags</code> property isn't supported.</p> </note>
+        statusCodes:
+          allOf:
+          - $ref: '#/components/schemas/entityStatusCodeList'
+          - description: A list of entity status codes (<code>IMPAIRED</code>, <code>UNIMPAIRED</code>, or <code>UNKNOWN</code>).
+      description: The values to use to filter results from the <a href="https://docs.aws.amazon.com/health/latest/APIReference/API_DescribeAffectedEntities.html">DescribeAffectedEntities</a> operation.
+    DescribeAffectedEntitiesResponse:
+      type: object
+      properties:
+        entities:
+          allOf:
+          - $ref: '#/components/schemas/EntityList'
+          - description: The entities that match the filter criteria.
+        nextToken:
+          allOf:
+          - $ref: '#/components/schemas/nextToken'
+          - description: If the results of a search are large, only a portion of the results are returned, and a <code>nextToken</code> pagination token is returned in the response. To retrieve the next batch of results, reissue the search request and include the returned token. When all results have been returned, the response does not contain a pagination token value.
+    entityStatusCodeList:
+      type: array
+      items:
+        $ref: '#/components/schemas/entityStatusCode'
+      minItems: 1
+      maxItems: 3
+    DateTimeRange:
+      type: object
+      properties:
+        from:
+          allOf:
+          - $ref: '#/components/schemas/timestamp'
+          - description: The starting date and time of a time range.
+        to:
+          allOf:
+          - $ref: '#/components/schemas/timestamp'
+          - description: The ending date and time of a time range.
+      description: 'A range of dates and times that is used by the <a href="https://docs.aws.amazon.com/health/latest/APIReference/API_EventFilter.html">EventFilter</a> and <a href="https://docs.aws.amazon.com/health/latest/APIReference/API_EntityFilter.html">EntityFilter</a> objects. If <code>from</code> is set and <code>to</code> is set: match items where the timestamp (<code>startTime</code>, <code>endTime</code>, or <code>lastUpdatedTime</code>) is between <code>from</code> and <code>to</code> inclusive. If <code>from</code> is set and <code>to</code> is not set: match items where the timestamp value is equal to or after <code>from</code>. If <code>from</code> is not set and <code>to</code> is set: match items where the timestamp value is equal to or before <code>to</code>.'
+    eventArnList:
+      type: array
+      items:
+        $ref: '#/components/schemas/eventArn'
+      minItems: 1
+      maxItems: 10
+    DescribeAffectedEntitiesRequest:
+      type: object
+      required:
+      - filter
+      title: DescribeAffectedEntitiesRequest
+      properties:
+        filter:
+          allOf:
+          - $ref: '#/components/schemas/EntityFilter'
+          - description: Values to narrow the results returned. At least one event ARN is required.
+        locale:
+          allOf:
+          - $ref: '#/components/schemas/locale'
+          - description: The locale (language) to return information in. English (en) is the default and the only supported value at this time.
+        nextToken:
+          allOf:
+          - $ref: '#/components/schemas/nextToken'
+          - description: If the results of a search are large, only a portion of the results are returned, and a <code>nextToken</code> pagination token is returned in the response. To retrieve the next batch of results, reissue the search request and include the returned token. When all results have been returned, the response does not contain a pagination token value.
+        maxResults:
+          allOf:
+          - $ref: '#/components/schemas/maxResults'
+          - description: The maximum number of items to return in one batch, between 10 and 100, inclusive.
+    entityUrl:
+      type: string
+    tagSet:
+      type: object
+      maxProperties: 50
+      additionalProperties:
+        $ref: '#/components/schemas/tagValue'
+    UnsupportedLocale: {}
+    entityArnList:
+      type: array
+      items:
+        $ref: '#/components/schemas/entityArn'
+      minItems: 1
+      maxItems: 99
+    InvalidPaginationToken: {}
+    tagValue:
+      type: string
+      pattern: .{0,255}
+      maxLength: 255
+    EntityList:
+      type: array
+      items:
+        $ref: '#/components/schemas/AffectedEntity'
+    locale:
+      type: string
+      pattern: .{2,256}
+      minLength: 2
+      maxLength: 256
+    eventArn:
+      type: string
+      pattern: arn:aws(-[a-z]+(-[a-z]+)?)?:health:[^:]*:[^:]*:event(?:/[\w-]+){3}
+      maxLength: 1600
+    entityStatusCode:
+      type: string
+      enum:
+      - IMPAIRED
+      - UNIMPAIRED
+      - UNKNOWN
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/health/
+x-hasEquivalentPaths: true

@@ -4,7 +4,20 @@ description: AWS Health Dashboard provides ongoing visibility into the status of
   guidance when AWS is experiencing events that may affect your operations. It delivers personalized information about events
   that might affect your specific AWS resources and accounts.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/amazon-health-dashboard.png
 tags:
 - AWS
 - Health Monitoring
@@ -16,22 +29,392 @@ created: '2026-03-16'
 modified: '2026-05-19'
 specificationVersion: '0.19'
 apis:
-- aid: amazon-health-dashboard:aws-health-api
-  name: AWS Health API
-  description: The AWS Health API provides programmatic access to AWS Health information about events that can affect your
-    AWS infrastructure, including service outages, planned maintenance, and account-specific notifications.
+- aid: >-
+    amazon-health-dashboard:amazon-health-dashboard-x-amz-target-awshealth-20160804-describeaffectedaccountsfororganization-api
+  name: >-
+    Amazon Health Dashboard #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization API
+  description: >-
+    The #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization API from Amazon Health
+    Dashboard — 1 operation(s) for #x amz target=awshealth 20160804.describeaffectedaccountsfororganization.
   humanURL: https://aws.amazon.com/health/
   baseURL: https://health.us-east-1.amazonaws.com
   tags:
-  - Health Monitoring
-  - Notifications
-  - Operations
-  - Service Status
+  - '#X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization'
   properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeaffectedaccountsfororganization-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/health/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://docs.aws.amazon.com/health/latest/ug/getting-started-api.html
+  - type: Pricing
+    url: https://aws.amazon.com/premiumsupport/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/health/latest/APIReference/Welcome.html
+  - type: Authentication
+    url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+  - type: JSONSchema
+    url: json-schema/health-event-schema.json
+  - type: JSONLD
+    url: json-ld/amazon-health-dashboard-context.jsonld
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-health-dashboard.yaml
+- aid: >-
+    amazon-health-dashboard:amazon-health-dashboard-x-amz-target-awshealth-20160804-describeaffectedentities-api
+  name: 'Amazon Health Dashboard #X Amz Target=AWSHealth 20160804.DescribeAffectedEntities API'
+  description: >-
+    The #X Amz Target=AWSHealth 20160804.DescribeAffectedEntities API from Amazon Health Dashboard — 1
+    operation(s) for #x amz target=awshealth 20160804.describeaffectedentities.
+  humanURL: https://aws.amazon.com/health/
+  baseURL: https://health.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=AWSHealth 20160804.DescribeAffectedEntities'
+  properties:
   - type: OpenAPI
-    url: openapi/amazon-health-dashboard-openapi.yaml
+    url: >-
+      openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeaffectedentities-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/health/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://docs.aws.amazon.com/health/latest/ug/getting-started-api.html
+  - type: Pricing
+    url: https://aws.amazon.com/premiumsupport/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/health/latest/APIReference/Welcome.html
+  - type: Authentication
+    url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+  - type: JSONSchema
+    url: json-schema/health-event-schema.json
+  - type: JSONLD
+    url: json-ld/amazon-health-dashboard-context.jsonld
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-health-dashboard.yaml
+- aid: >-
+    amazon-health-dashboard:amazon-health-dashboard-x-amz-target-awshealth-20160804-describeaffectedentitiesfororganization-api
+  name: >-
+    Amazon Health Dashboard #X Amz Target=AWSHealth 20160804.DescribeAffectedEntitiesForOrganization API
+  description: >-
+    The #X Amz Target=AWSHealth 20160804.DescribeAffectedEntitiesForOrganization API from Amazon Health
+    Dashboard — 1 operation(s) for #x amz target=awshealth 20160804.describeaffectedentitiesfororganization.
+  humanURL: https://aws.amazon.com/health/
+  baseURL: https://health.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=AWSHealth 20160804.DescribeAffectedEntitiesForOrganization'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeaffectedentitiesfororganization-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/health/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://docs.aws.amazon.com/health/latest/ug/getting-started-api.html
+  - type: Pricing
+    url: https://aws.amazon.com/premiumsupport/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/health/latest/APIReference/Welcome.html
+  - type: Authentication
+    url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+  - type: JSONSchema
+    url: json-schema/health-event-schema.json
+  - type: JSONLD
+    url: json-ld/amazon-health-dashboard-context.jsonld
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-health-dashboard.yaml
+- aid: >-
+    amazon-health-dashboard:amazon-health-dashboard-x-amz-target-awshealth-20160804-describeentityaggregates-api
+  name: 'Amazon Health Dashboard #X Amz Target=AWSHealth 20160804.DescribeEntityAggregates API'
+  description: >-
+    The #X Amz Target=AWSHealth 20160804.DescribeEntityAggregates API from Amazon Health Dashboard — 1
+    operation(s) for #x amz target=awshealth 20160804.describeentityaggregates.
+  humanURL: https://aws.amazon.com/health/
+  baseURL: https://health.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=AWSHealth 20160804.DescribeEntityAggregates'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeentityaggregates-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/health/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://docs.aws.amazon.com/health/latest/ug/getting-started-api.html
+  - type: Pricing
+    url: https://aws.amazon.com/premiumsupport/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/health/latest/APIReference/Welcome.html
+  - type: Authentication
+    url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+  - type: JSONSchema
+    url: json-schema/health-event-schema.json
+  - type: JSONLD
+    url: json-ld/amazon-health-dashboard-context.jsonld
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-health-dashboard.yaml
+- aid: >-
+    amazon-health-dashboard:amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventaggregates-api
+  name: 'Amazon Health Dashboard #X Amz Target=AWSHealth 20160804.DescribeEventAggregates API'
+  description: >-
+    The #X Amz Target=AWSHealth 20160804.DescribeEventAggregates API from Amazon Health Dashboard — 1
+    operation(s) for #x amz target=awshealth 20160804.describeeventaggregates.
+  humanURL: https://aws.amazon.com/health/
+  baseURL: https://health.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=AWSHealth 20160804.DescribeEventAggregates'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventaggregates-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/health/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://docs.aws.amazon.com/health/latest/ug/getting-started-api.html
+  - type: Pricing
+    url: https://aws.amazon.com/premiumsupport/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/health/latest/APIReference/Welcome.html
+  - type: Authentication
+    url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+  - type: JSONSchema
+    url: json-schema/health-event-schema.json
+  - type: JSONLD
+    url: json-ld/amazon-health-dashboard-context.jsonld
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-health-dashboard.yaml
+- aid: >-
+    amazon-health-dashboard:amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventdetails-api
+  name: 'Amazon Health Dashboard #X Amz Target=AWSHealth 20160804.DescribeEventDetails API'
+  description: >-
+    The #X Amz Target=AWSHealth 20160804.DescribeEventDetails API from Amazon Health Dashboard — 1 operation(s)
+    for #x amz target=awshealth 20160804.describeeventdetails.
+  humanURL: https://aws.amazon.com/health/
+  baseURL: https://health.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=AWSHealth 20160804.DescribeEventDetails'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventdetails-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/health/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://docs.aws.amazon.com/health/latest/ug/getting-started-api.html
+  - type: Pricing
+    url: https://aws.amazon.com/premiumsupport/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/health/latest/APIReference/Welcome.html
+  - type: Authentication
+    url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+  - type: JSONSchema
+    url: json-schema/health-event-schema.json
+  - type: JSONLD
+    url: json-ld/amazon-health-dashboard-context.jsonld
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-health-dashboard.yaml
+- aid: >-
+    amazon-health-dashboard:amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventdetailsfororganization-api
+  name: >-
+    Amazon Health Dashboard #X Amz Target=AWSHealth 20160804.DescribeEventDetailsForOrganization API
+  description: >-
+    The #X Amz Target=AWSHealth 20160804.DescribeEventDetailsForOrganization API from Amazon Health Dashboard
+    — 1 operation(s) for #x amz target=awshealth 20160804.describeeventdetailsfororganization.
+  humanURL: https://aws.amazon.com/health/
+  baseURL: https://health.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=AWSHealth 20160804.DescribeEventDetailsForOrganization'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventdetailsfororganization-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/health/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://docs.aws.amazon.com/health/latest/ug/getting-started-api.html
+  - type: Pricing
+    url: https://aws.amazon.com/premiumsupport/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/health/latest/APIReference/Welcome.html
+  - type: Authentication
+    url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+  - type: JSONSchema
+    url: json-schema/health-event-schema.json
+  - type: JSONLD
+    url: json-ld/amazon-health-dashboard-context.jsonld
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-health-dashboard.yaml
+- aid: >-
+    amazon-health-dashboard:amazon-health-dashboard-x-amz-target-awshealth-20160804-describeevents-api
+  name: 'Amazon Health Dashboard #X Amz Target=AWSHealth 20160804.DescribeEvents API'
+  description: >-
+    The #X Amz Target=AWSHealth 20160804.DescribeEvents API from Amazon Health Dashboard — 1 operation(s)
+    for #x amz target=awshealth 20160804.describeevents.
+  humanURL: https://aws.amazon.com/health/
+  baseURL: https://health.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=AWSHealth 20160804.DescribeEvents'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeevents-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/health/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://docs.aws.amazon.com/health/latest/ug/getting-started-api.html
+  - type: Pricing
+    url: https://aws.amazon.com/premiumsupport/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/health/latest/APIReference/Welcome.html
+  - type: Authentication
+    url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+  - type: JSONSchema
+    url: json-schema/health-event-schema.json
+  - type: JSONLD
+    url: json-ld/amazon-health-dashboard-context.jsonld
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-health-dashboard.yaml
+- aid: >-
+    amazon-health-dashboard:amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventsfororganization-api
+  name: >-
+    Amazon Health Dashboard #X Amz Target=AWSHealth 20160804.DescribeEventsForOrganization API
+  description: >-
+    The #X Amz Target=AWSHealth 20160804.DescribeEventsForOrganization API from Amazon Health Dashboard
+    — 1 operation(s) for #x amz target=awshealth 20160804.describeeventsfororganization.
+  humanURL: https://aws.amazon.com/health/
+  baseURL: https://health.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=AWSHealth 20160804.DescribeEventsForOrganization'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventsfororganization-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/health/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://docs.aws.amazon.com/health/latest/ug/getting-started-api.html
+  - type: Pricing
+    url: https://aws.amazon.com/premiumsupport/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/health/latest/APIReference/Welcome.html
+  - type: Authentication
+    url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+  - type: JSONSchema
+    url: json-schema/health-event-schema.json
+  - type: JSONLD
+    url: json-ld/amazon-health-dashboard-context.jsonld
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-health-dashboard.yaml
+- aid: >-
+    amazon-health-dashboard:amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventtypes-api
+  name: 'Amazon Health Dashboard #X Amz Target=AWSHealth 20160804.DescribeEventTypes API'
+  description: >-
+    The #X Amz Target=AWSHealth 20160804.DescribeEventTypes API from Amazon Health Dashboard — 1 operation(s)
+    for #x amz target=awshealth 20160804.describeeventtypes.
+  humanURL: https://aws.amazon.com/health/
+  baseURL: https://health.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=AWSHealth 20160804.DescribeEventTypes'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventtypes-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/health/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://docs.aws.amazon.com/health/latest/ug/getting-started-api.html
+  - type: Pricing
+    url: https://aws.amazon.com/premiumsupport/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/health/latest/APIReference/Welcome.html
+  - type: Authentication
+    url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+  - type: JSONSchema
+    url: json-schema/health-event-schema.json
+  - type: JSONLD
+    url: json-ld/amazon-health-dashboard-context.jsonld
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-health-dashboard.yaml
+- aid: >-
+    amazon-health-dashboard:amazon-health-dashboard-x-amz-target-awshealth-20160804-describehealthservicestatusfororganization-api
+  name: >-
+    Amazon Health Dashboard #X Amz Target=AWSHealth 20160804.DescribeHealthServiceStatusForOrganization
+    API
+  description: >-
+    The #X Amz Target=AWSHealth 20160804.DescribeHealthServiceStatusForOrganization API from Amazon Health
+    Dashboard — 1 operation(s) for #x amz target=awshealth 20160804.describehealthservicestatusfororganization.
+  humanURL: https://aws.amazon.com/health/
+  baseURL: https://health.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=AWSHealth 20160804.DescribeHealthServiceStatusForOrganization'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describehealthservicestatusfororganization-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/health/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://docs.aws.amazon.com/health/latest/ug/getting-started-api.html
+  - type: Pricing
+    url: https://aws.amazon.com/premiumsupport/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/health/latest/APIReference/Welcome.html
+  - type: Authentication
+    url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+  - type: JSONSchema
+    url: json-schema/health-event-schema.json
+  - type: JSONLD
+    url: json-ld/amazon-health-dashboard-context.jsonld
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-health-dashboard.yaml
+- aid: >-
+    amazon-health-dashboard:amazon-health-dashboard-x-amz-target-awshealth-20160804-disablehealthserviceaccessfororganization-api
+  name: >-
+    Amazon Health Dashboard #X Amz Target=AWSHealth 20160804.DisableHealthServiceAccessForOrganization
+    API
+  description: >-
+    The #X Amz Target=AWSHealth 20160804.DisableHealthServiceAccessForOrganization API from Amazon Health
+    Dashboard — 1 operation(s) for #x amz target=awshealth 20160804.disablehealthserviceaccessfororganization.
+  humanURL: https://aws.amazon.com/health/
+  baseURL: https://health.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=AWSHealth 20160804.DisableHealthServiceAccessForOrganization'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-disablehealthserviceaccessfororganization-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/health/latest/APIReference/Welcome.html
+  - type: GettingStarted
+    url: https://docs.aws.amazon.com/health/latest/ug/getting-started-api.html
+  - type: Pricing
+    url: https://aws.amazon.com/premiumsupport/
+  - type: APIReference
+    url: https://docs.aws.amazon.com/health/latest/APIReference/Welcome.html
+  - type: Authentication
+    url: https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+  - type: JSONSchema
+    url: json-schema/health-event-schema.json
+  - type: JSONLD
+    url: json-ld/amazon-health-dashboard-context.jsonld
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-health-dashboard.yaml
+- aid: >-
+    amazon-health-dashboard:amazon-health-dashboard-x-amz-target-awshealth-20160804-enablehealthserviceaccessfororganization-api
+  name: >-
+    Amazon Health Dashboard #X Amz Target=AWSHealth 20160804.EnableHealthServiceAccessForOrganization
+    API
+  description: >-
+    The #X Amz Target=AWSHealth 20160804.EnableHealthServiceAccessForOrganization API from Amazon Health
+    Dashboard — 1 operation(s) for #x amz target=awshealth 20160804.enablehealthserviceaccessfororganization.
+  humanURL: https://aws.amazon.com/health/
+  baseURL: https://health.us-east-1.amazonaws.com
+  tags:
+  - '#X Amz Target=AWSHealth 20160804.EnableHealthServiceAccessForOrganization'
+  properties:
+  - type: OpenAPI
+    url: >-
+      openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-enablehealthserviceaccessfororganization-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/health/latest/APIReference/Welcome.html
   - type: GettingStarted
     url: https://docs.aws.amazon.com/health/latest/ug/getting-started-api.html
   - type: Pricing
@@ -47,6 +430,8 @@ apis:
   - type: X-NaftikoCapability
     url: capabilities/amazon-health-dashboard.yaml
 common:
+- type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/amazon-health-dashboard/overview
 - type: AgenticAccess
   url: agentic-access/amazon-health-dashboard-agentic-access.yml
 - type: VulnerabilityDisclosure

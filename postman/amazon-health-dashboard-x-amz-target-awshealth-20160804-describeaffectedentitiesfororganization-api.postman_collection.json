@@ -1,0 +1,442 @@
+{
+  "info": {
+    "_postman_id": "2d1430f4-ed01-44f9-9ee4-6f3e2ac9f8d5",
+    "name": "AWS Health APIs and Notifications #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeAffectedEntitiesForOrganization AP",
+    "description": "<fullname>Health</fullname> <p>The Health API provides programmatic access to the Health information that appears in the <a href=\"https://phd.aws.amazon.com/phd/home#/\">Personal Health Dashboard</a>. You can use the API operations to get information about events that might affect your Amazon Web Services services and resources.</p> <note> <ul> <li> <p>You must have a Business, Enterprise On-Ramp, or Enterprise Support plan from <a href=\"http://aws.amazon.com/premiumsupport/\">Amazon Web Services Support</a> to use the Health API. If you call the Health API from an Amazon Web Services account that doesn't have a Business, Enterprise On-Ramp, or Enterprise Support plan, you receive a <code>SubscriptionRequiredException</code> error.</p> </li> <li> <p>You can use the Health endpoint health.us-east-1.amazonaws.com (HTTPS) to call the Health API operations. Health supports a multi-Region application architecture and has two regional endpoints in an active-passive configuration. You can use the high availability endpoint example to determine which Amazon Web Services Region is active, so that you can get the latest information from the API. For more information, see <a href=\"https://docs.aws.amazon.com/health/latest/ug/health-api.html\">Accessing the Health API</a> in the <i>Health User Guide</i>.</p> </li> </ul> </note> <p>For authentication of requests, Health uses the <a href=\"https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html\">Signature Version 4 Signing Process</a>.</p> <p>If your Amazon Web Services account is part of Organizations, you can use the Health organizational view feature. This feature provides a centralized view of Health events across all accounts in your organization. You can aggregate Health events in real time to identify accounts in your organization that are affected by an operational event or get notified of security vulnerabilities. Use the organizational view API operations to enable this feature and return event information. For more information, see <a href=\"https://docs.aws.amazon.com/health/latest/ug/aggregate-events.html\">Aggregating Health events</a> in the <i>Health User Guide</i>.</p> <note> <p>When you use the Health API operations to return Health events, see the following recommendations:</p> <ul> <li> <p>Use the <a href=\"https://docs.aws.amazon.com/health/latest/APIReference/API_Event.html#AWSHealth-Type-Event-eventScopeCode\">eventScopeCode</a> parameter to specify whether to return Health events that are public or account-specific.</p> </li> <li> <p>Use pagination to view all events from the response. For example, if you call the <code>DescribeEventsForOrganization</code> operation to get all events in your organization, you might receive several page results. Specify the <code>nextToken</code> in the next request to return more results.</p> </li> </ul> </note>\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:24:33.000Z",
+    "updatedAt": "2026-07-28T10:24:33.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-2d1430f4-ed01-44f9-9ee4-6f3e2ac9f8d5"
+  },
+  "item": [
+    {
+      "name": "#X-Amz-Target=AWSHealth_20160804.DescribeAffectedEntitiesForOrganization",
+      "item": [
+        {
+          "name": "Amazon Health Dashboard Describe Affected Entities for Organization",
+          "id": "28f2d38e-6f6f-42c6-9f8a-e4bc129ce655",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "description": "(Required) ",
+                "key": "X-Amz-Target",
+                "value": "AWSHealth_20160804.DescribeAffectedEntitiesForOrganization"
+              },
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"organizationEntityFilters\": [\n    {\n      \"eventArn\": \"arn:aws:health::f^7Q_4:event/bVA_p5xAiqe/TwICCJ/c\",\n      \"awsAccountId\": \"sZ}0<VQi@\"\n    }\n  ],\n  \"locale\": \"a+{f1\\\\n1:B;Ir\\\\SraMGj9A|kw)>)f\\\\oNu$4/ayKr-TuqK-Wgm\\\"^0Jh>,Am$%\\\\T?\\\"8l}_>Z6k12`Ij+P=B5q$Ff7-|M]<C9TxU.^4!O}.I8'FY/X0CohMEpc,iIx9pPD7M1L agS=*mrW1vg<arw_<4\\\"pjZU.V=/DcLne+<ilM )Nscxx;.O6rw@DzcI3-`,<!yF?/C8'}Dcsy%=%}bA};X8n+A;\",\n  \"nextToken\": \"8V0OwwBD3XQhLWFhR-hIY+gTKBWvMiregF/+8HOoHDCECpU_9ZgkXdYfKux86QwVF_tKw+G_+fAhLyORl-kg.hWvGpPj.Jse0f__4aFDh=DKI1=f-wV/D4wdz1upT+RvPlioayjM9VJR24Sha1z-GBjY1gZRguvVYLSywPL0eL25=x5ldcurnASEsxeJLd8A8mLArXT7kcuqeTyLnU6VvlJi9e14oGxLyQzk4_tpM1VTPovj02D5ghMcllPRN1fy\",\n  \"maxResults\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/?maxResults=<string>&nextToken=<string>#X-Amz-Target=AWSHealth_20160804.DescribeAffectedEntitiesForOrganization",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "query": [
+                {
+                  "description": "Pagination limit",
+                  "key": "maxResults",
+                  "value": "<string>"
+                },
+                {
+                  "description": "Pagination token",
+                  "key": "nextToken",
+                  "value": "<string>"
+                }
+              ],
+              "hash": "X-Amz-Target=AWSHealth_20160804.DescribeAffectedEntitiesForOrganization"
+            },
+            "description": "<p>Returns a list of entities that have been affected by one or more events for one or more accounts in your organization in Organizations, based on the filter criteria. Entities can refer to individual customer resources, groups of customer resources, or any other construct, depending on the Amazon Web Services service.</p> <p>At least one event Amazon Resource Name (ARN) and account ID are required.</p> <p>Before you can call this operation, you must first enable Health to work with Organizations. To do this, call the <a href=\"https://docs.aws.amazon.com/health/latest/APIReference/API_EnableHealthServiceAccessForOrganization.html\">EnableHealthServiceAccessForOrganization</a> operation from your organization's management account.</p> <note> <ul> <li> <p>This API operation uses pagination. Specify the <code>nextToken</code> parameter in the next request to return more results.</p> </li> <li> <p>This operation doesn't support resource-level permissions. You can't use this operation to allow or deny access to specific Health events. For more information, see <a href=\"https://docs.aws.amazon.com/health/latest/ug/security_iam_id-based-policy-examples.html#resource-action-based-conditions\">Resource- and action-based conditions</a> in the <i>Health User Guide</i>.</p> </li> </ul> </note>"
+          },
+          "response": [
+            {
+              "id": "ac343bcb-a536-4de4-9749-cc7652aeb5f2",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "AWSHealth_20160804.DescribeAffectedEntitiesForOrganization"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"organizationEntityFilters\": [\n    {\n      \"eventArn\": \"arn:aws:health::f^7Q_4:event/bVA_p5xAiqe/TwICCJ/c\",\n      \"awsAccountId\": \"sZ}0<VQi@\"\n    }\n  ],\n  \"locale\": \"a+{f1\\\\n1:B;Ir\\\\SraMGj9A|kw)>)f\\\\oNu$4/ayKr-TuqK-Wgm\\\"^0Jh>,Am$%\\\\T?\\\"8l}_>Z6k12`Ij+P=B5q$Ff7-|M]<C9TxU.^4!O}.I8'FY/X0CohMEpc,iIx9pPD7M1L agS=*mrW1vg<arw_<4\\\"pjZU.V=/DcLne+<ilM )Nscxx;.O6rw@DzcI3-`,<!yF?/C8'}Dcsy%=%}bA};X8n+A;\",\n  \"nextToken\": \"8V0OwwBD3XQhLWFhR-hIY+gTKBWvMiregF/+8HOoHDCECpU_9ZgkXdYfKux86QwVF_tKw+G_+fAhLyORl-kg.hWvGpPj.Jse0f__4aFDh=DKI1=f-wV/D4wdz1upT+RvPlioayjM9VJR24Sha1z-GBjY1gZRguvVYLSywPL0eL25=x5ldcurnASEsxeJLd8A8mLArXT7kcuqeTyLnU6VvlJi9e14oGxLyQzk4_tpM1VTPovj02D5ghMcllPRN1fy\",\n  \"maxResults\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/?maxResults=<string>&nextToken=<string>#X-Amz-Target=AWSHealth_20160804.DescribeAffectedEntitiesForOrganization",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "description": "Pagination limit",
+                      "key": "maxResults",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Pagination token",
+                      "key": "nextToken",
+                      "value": "<string>"
+                    }
+                  ],
+                  "hash": "X-Amz-Target=AWSHealth_20160804.DescribeAffectedEntitiesForOrganization"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"entities\": [\n    {\n      \"entityArn\": \"I!}__=b(eY@WyA<Dfn/ev.2m,s|.0tUW4.`gi3hne$1GtC5r>DC1C3-b}AI9<4d}<2P-yh6t%dUAia2[C!MsM__omEg[sUi_Fxr|J9\\\\,O9HBkc0<e#`%>!nt+YqNR(S+n'DPC$ui\\\\;2+,M63}\\\"~'W><X{Ll@*k0/?|yt/MY[S|qk+\\\\8%?&Qgjowc';q3M=3[0]6QR\\\"<nYekt6ue;%pUD\\\\GRy8SjZ\\\\O1&b&)Jv[%P_xn(+aQ D7B}#c[1oSfEsbN!\",\n      \"eventArn\": \"arn:aws:health:bJ:IgLJ7js_:event/S/H/M7i7\",\n      \"entityValue\": \"T,c7>7gPo0'H={KPlm^Vn4:;>NcFrjS2?P8F@YxExcA'Ch=9@?DqU[F#-7|lW@yitwI]^#oxr2h!~,_8]^.!q+yzMd~ JsE 2w*r753STn 8&@HK{`j?/~jcPWlj]GSp9}|~'bsJvPP#ii6&&[Dsdf{]}vn>N]MLl7$[Fa{)?28D1'DP`)LI54-xP.KThg{l^NG<JIbt[C{y(q'<P~Ydd@Oc}?3Ix:-E>eRI<B#QdEqs4cnqJT/SWVLS!;> ^N;P\",\n      \"entityUrl\": \"<string>\",\n      \"awsAccountId\": \"g#\",\n      \"lastUpdatedTime\": \"<dateTime>\",\n      \"statusCode\": \"UNIMPAIRED\",\n      \"tags\": {\n        \"ut_ff\": \"u$aoW-2!NhYY!r;zym-x|Q)C3OJ&4{!_yv\\\\NKVJ(t:anq-C{]eTptD8Z%9j7S6)[2o\\\"..zmC7^Ie1Zc]CQgb5,jXd&E=pVtHkVpbq{18B0D{(y$*OMiQvXCp X\\\\2'8,PWw<LZdK9Np+%+W<?%tdT-M~<dH)LEv8@yHz2aH,/R=U\\\"HA{Ql3&@K1_(2_)t9x?GrGaSw7(!Q;I:!\",\n        \"cillum_6da\": \"\\\" !91++S)5,w_SQV#xrf3'+@j:1NN!H8BNDAJxxvV;<?bRPHw\\\\g<DCgJd1x8_UL@]BZI2|_JD8vU0X_\\\\Apn4ap5d+aLp]!<.,J^xA9DE\",\n        \"tempor41_\": \"3^{\\\"Y1vV\\\\w5_0p', +*C^d:^hpsur$UV_DAkd$d,L,;Ix8c,8&|`]/w4B5RJ|UKQlI|q.:Sl\\\"Mjl5}vP-Lyy'8hq=Co>uXsx#c)L8T7A$^}M2^}*Sz+GO=X\",\n        \"veniam8c7\": \"sW|V;\",\n        \"ex_bcc\": \"ihhkQ{avt5|-qu>^;Jb+\\\"y{FjD20~pz_8tb.n]Qp<G>Cn5z2u7;H{z/9S_=MncNI0:<NWj6J&j}T QgQXkTL!i/~5;VW<1\",\n        \"inba4\": \"r\\\\z93nw<gYf4dhgHsFVeLjiJ9[?87Z3gic'-FHa`(IovAu(E<#JLPvf9OBjUB,AG%Rq,v2g7O0W]#i[W0|[NP\\\"m=|(8U,X 'M+r\\\"O_6%kXb}$KN\\\\mdNoP42\\\\Y97>yH@$dj\",\n        \"esse_9\": \"mSR?XCBLU}<7CIAcL\\\"K2*|wR'Z:;fNMc_v6dHE>Rj[,[%\\\"'6At$ e*xL%=`B]Skoq#&xz`-jtO\\\"&zyQ7}XPMaU^%b=^gSW8f8#;U})P)I^[}U]fId]f[hDK)(x&v&a&I2hXXZr)i]U@D9nhiooQ.TE|f\\\\/T/JEg74>RR\\\"H3ndn9UK$!u,uFsGH/iY*W$^utnW_A+)*=c.4z#M+gd!$&<T>[-({x\",\n        \"exercitation_6f5\": \"Mjlj;hc2-\\\\E%.%#d -lkyp2{6bmF:]rOG^(hNesX'N@/Zc,mM#69oet+4|\\\"h$rn h#n5X'0N*|RmR%q/T$Osz7I6wHkeRHK\\\\y(9yvqR*lxm7Qxu3},:ejOSQzy@~o(-U`Nu/F4J2,qP~K\\\\vb-WX6q^V-B|NRv~53?T.VP`<|V@l`}h^^$dv(FlMVR>^fq](={%f,Tn[j<$h\\\\?n%} Nch>s#5+|\",\n        \"in_3\": \";7AQn[3rM-cdhk;4}x !lk:Q&TL8+YqmKK^tLahz5B\\\\OV5g+C[4So2Puq[8,<|=$)S05>uT>\",\n        \"qui_224\": \"/s*pUmB)&TQ\\\"lUR3s8t_\\\\\\\\ZfU!}\\\"_3*}Elc^xqTn_)\\\\{q(F7uHv,Y\\\\P`YU.Uz!&1or0YE=Cinxbvc8(j>3U+w$&T\\\\833+l^^,AQ#$tM#6lEB&UEcU]RuWFnkNAK[0+ipdv=DRQwCe{+Fj*F4}N `rj0f$x76,KJI}t=ZepHZitB0S|c=xx5ytKTWrSz1;qg,39AhdJI\",\n        \"nisia\": \"1=qf3(%Exc>M~+J|;p$KKFB'g1apZp)';`LN)Gj#EKFljKNHyDZ;:y9iPoq{Vx047 pYgmxxeTqB,7n!hzd#Z X^wIiGtg$>k&<&OdV=>^BpE&tQ6>~p3]]%L6ta3Ne>H:nrwb1!7vo+0n~Iuv:|x`}3J^P,'!`%\\\"tjM7)97M{_\\\\Dz]8\\\\#Y %GnzPXZO\",\n        \"do_f0\": \"L5EM_/H$i;J=3\\\\@g+E*2D+Zo0|\\\"5rc9WF|vck~HUY;7APtE.,KL>,UB: 49My#NO7trW{$W7,GI+j,IOAkS4,s=PeFE:YN@8/_LeT#Pr<[q0CD0Fc1DB(q(bC|jn*xR$HDieOg6.)_|ofs>~evzZ]j:8'h3~/KXg4#t=-R+Il2pF.t#bJA\\\"J.gqRcr,e\\\\i2/48z'rAIOZBg;`LQZaib \",\n        \"enim_e6\": \"{4OKW|P(O ?+VKSq!1YbU_B8y};UwM(lf3aQno;fCi\\\"^f56]P>61sTDP(1l%.K5W+inK[P@z(#1!H!]\",\n        \"suntcd\": \"TDEQL}3n$Ujs16-x9[v@\\\"$h7zYi} gT8bh8Skr/>jr{Y#|;\\\"B@qI?X'XuO}Y.E1H46qM3~V>}ogA:H%_-W%+z/kAg19x@95(ZaJh*hajZ?Xsx4k!``h2*\\\"+L%?\\\"u|z`:ZbNu=I#8av\\\"Nt.`tc@z,YqvRLmS u$2^{|\\\\oV,(%P)QIg-Y!(ne]h'+w28pGMg+GDU7N0/2t&]\\\\H*l0?0xqh`i?,*C\\\"w@{\\\"ql#mI9GXG',B<kK#1\",\n        \"nostrud0d\": \"F%j[Q!(?/P+AHgp2Y pM-7P1&?lr4$2_%p9]f0?3+^\\\"2)?}g\\\"*1>pkY%Lv>+KClzI)j]Dp2O`;$!Y\\\\)I\\\"K&SKWbo_z\",\n        \"exf\": \",0f!+js akO0XY1bBLZ\\\"4B)Udw3UPLgtd!^[t`z!i=hj#Z*3x`nVgNX^1\\\"L\\\"{k0N)80h3c(%e$9L{9A$V*jWKiR*Z|s|{x|y%w^|l|Egg}+ilWdue{no@qI<=YE*_f`'T?}`0MUV;/%<=.`n\\\"{LYr\",\n        \"laborum_1f\": \"1KuG^3%<R0*_}G}2gwls-D6#hjDU)q~}DWT(*^=olC5M^DCSiC[S!A)n|FR6Ud}5O?j\\\"ouGsWT59=?ohuqRSAG$vb2gWT?K0\\\\lC,&2?QfQ/EdC]Sq3Xv}xI^w4>wbq{%5t*aMII`CKc,WENNvx+E0M@4a]#sqbyGjLpeQ(ZUTE(7$s#VnGq-Jd>E;Zlf&qEGPmT 3]4y&-,}a=@qvD)xBtOec97RKCZLhdu,#MV'I2[G\",\n        \"dolore894\": \"hMv:t16<% 86-}s'Jz3@Y?o+;pZCtOBZ#2J8hN4Xz<<0ViY-#??ToHVjN0]_>1xS{B_XSQZ?zcf>+(=/-L!K~8Tk)+Y!%!sZ}pe#gA>l:*zNUMz5Z\",\n        \"amet_cc\": \"1%h)IZ;&l/]Sw5%\\\"H317j-..cvmxs oMjOP54R@a}BCS{U]j0(82V&>4B\\\\@Z&ny4NIf#RIXwXTngw#wRK{-5<Oo.`2yeas$)*Sjy)bSO>n nO]C:b*76]}VAJCJSf)>4 oeoQa\",\n        \"dolor1\": \"P^OPoFgpH,#_|*&|dg9Ad|1WYC <7tcyn^c~RZ^`K@7,\\\"ax#qtA=L6\\\\(+,`aA^LlB/:BD\\\\8x&N/jnS=eo!9R.tkry7R,mUB4}0Wv`|JykB-!.eml/O66pf}#G${'<\\\\?jN<^lI|Y/Iz_o8s:ze)O4].\\\"7iUzS\\\\zO}Y{IvWPlu?MZBNHSY p\\\\j{!'uu\",\n        \"do_9\": \"bp)c\",\n        \"Excepteur4\": \"k2lyXCJ0]_= KFzP/,%ZMK~=/nO4$o(WN ~e-c_A_8SG~@c;VE` fq#P8H^bRJfIVqN;A.\\\"@ujs!WFo;;S&zAtHAIJC)+=MHO~3L`b}g'\",\n        \"voluptate_789\": \"V#qh~8P-N/a8+4`ljA}>Ee1fz%jK0),@\\\\2I$&Gw(.4f6E}w*T3&24-yyH[uGr3]n[C5pTtuI\\\"<fS/u|t1GIE'&UAaOf~*){C\\\"@',Gu&h7YMe~JIfV4-J]w[T?%PO]#i|;Jd\\\\\",\n        \"exercitation_9a\": \"s\\\\MYtIS\",\n        \"deserunt_1\": \"A4?'ZjSS*4(^)6X$:\\\\&5L\",\n        \"ullamco_0b\": \";q]TJfb!|).-Qr\\\"=2/Y-g{Eu&9^Vm!-|k>k'wk[;P@A.I\\\\bQt`}~KxF:mK/&?>%.WGd?:V3n#z7|!c^&k$C.H^ttyPcr@#g:=-k*h.raBKZG[O-cL=k#o_V=\\\"w*Wxq_C;%nWsJ>a-O9G5_ s`/uI_`\\\\U4~RP!f0wN*|E>MBnfswqEbt-Hd70=q74caE\\\\;rJG4/@|Da()+A6oU<`j/v<fkSxT=\\\"~I#m,l,Li6h?Zavn{;!uR\",\n        \"velit3\": \"wMnq+cO%{,O,u|x||<L3&~NkfSox+^@&J'r]4s%=YYhEjLL5\\\\T;Qc5F$v.vXVB'\\\\V(fU@s8SR4CgU)t9'[}V%Z8<Ppmt>gQcP`AW[=AW=Dtp7JMa'D68SLAASj,w1i_]-YM%*p9jpikZ[Jg6EXgi/jq9H)2JNduNGp/d1lbG{.5P0`D39e,b`>`rZ@B,-(8;|>h~NW_ \\\"0+k8N;rn!Owv<FteQ-u-~|Z .7<6}A v}OWk.dRn3@i]>U]w@{L[26\",\n        \"eu_9a\": \"V#0\\\"WY!IBG\\\"fN;x6'#N4aikL>2A,RHaF5{m/GldNl;7x:6\\\\?F\\\\E<J%V8JgLBE\",\n        \"cillum_e\": \"bS> 0LElMuDV.^mJH~Q?N^aw,>D}h]'x#iJ:Kv7%yoZU[y~R~zPuxU8`x*I[h9iLPm\\\\vPa)m4g$mIifNjuT=NX4(YG#ILW;n/?2!jE$8NN@;>g>a'[&R6\",\n        \"incididunt_3b5\": \"wu-HAgM}ieqw7$wyYpx~#($'}.\\\"S.*/nSJK=N,s{?p}r@j5E9*{%}hZG,[G~yN|sh>joOMz-q?\\\"sv.GW{bnptL#xr)'l+/1U;;m6%!{bBby#`RWvK1)Q^5m?`Avz!;A|\\\"[RZGnch~#$xx F`Z}?x1 }G\\\\p\\\"VIJ\",\n        \"est_fb\": \"N+j>VjQ0xU>%{LBh\\\\cN\\\"J96(ulnaXZ:Oaz_k%Yt$&pwT-= odn<46\\\"JVIsRj5SXzN%XeVB#g**]m+Hl)/Z(M9M:SzOuI^Q3{=iVd\",\n        \"dolore7\": \"Z0<msgrY>tRRzF#Y3m`d'/!~7$)<(f4|\\\\Z!BsdV52cx-W;\\\"-#_mFHU]3@&E$+nWvUs^!S.j0&s}JQ5ej~)t';4guYPy<sg>EUZ)8W+cXfw=d\\\\KQlT<)2]L}*1\\\\UJC4nU'Djs!&8M0Mt-^\",\n        \"laboris_b_\": \"`1GQ\\\"tnON?R\\\\r|r%JJ\",\n        \"tempor_c0\": \"{>%!x Z/V#@D4QT8`.2g$NH(>{-qS5L*Op;a~@>0+Lx-p<_3H(\\\\F)J2)>.vLOo$_/_]eZNAx^c1~j6H%V1+u7{p,N;YQV,~OX$YLwtBjC&tji;.W_~l|d,.9t3$}h&5ww#G*v$y;]PC`:O:xPj;5!g~\\\\i#(8,Nx6hj[>Um]Xf'JuyhPgt`h|Xhit#MP8q%#iwj*jWTuC<{W(<`;Y~uBQ7ne`w:&)\",\n        \"proident_73\": \"ip'J|~iuFG!)28>g=e$XR!UnmXfx9^/=oOj4I`]r<#'!}8LkkXnT!yNI++]u'L<fDq?oGl?A C<iPO4y;vPlX2F&@{N!Hb2w{,ELT&?|!<Kg5Qp$n8K%50</\\\\g#Tt~?dxCR(=32ZC$WR,lUWeh`(L.:|3!6#MB1!+BS L#{\\\":3^T]Vf]qu eTs>)E:;]R7C8nda!a&|a;LMkY*CAOSes\",\n        \"Lorem_d\": \"7zUvU5\\\\ipoW.Q?v=[S&cRV\\\\fKm>>s\\\"w'bktV!d-%}l$hjKf]):yVrd V^<%P4C3s[$lb 'ha_~z@R2Whp)\",\n        \"ex64\": \"2u8\\\"4K:{,n^ZFOFA#ys`EI|ufJ7qsa9^vxQ5 \\\".QKQ4|:'Z.l6zQE-lMgnJ:)0d!UC_l;;JrmBIhh9QXtRI#}.KiV)AQ6`~>$'?Yd__\\\",2Yr]>KYF7Rlg(i_XG6aB'~viCd>(oFex;{@\"\n      }\n    },\n    {\n      \"entityArn\": \":C1Y&\\\"+|b K@6i(LL\\\\u3jY/PFoS`aYn{y *v,@fhbDP&xs|q&'Oo}oaT`xMFp)s<iX<+!sU(^`k.( db<OKr#hSMAUf1L/o<:%1J[}*}*ih{s~VEGgQOjFnlJ_{#-'Ym=t(q1RH/P7sl'LeR\\\\t)p dN7TkIi<t-P!OYK{HU5:dG#h!H:Su7K~U%BZ@xe>fukYBAQXUQu/Hgj_\\\\GZxg5mbejuXs$%GsGVLsd=-:^1n1)d3]B$_&[>vF[D!sp7Gk9;\",\n      \"eventArn\": \"arn:aws:health:(:,qY/12go:event/OoNuTSQ2G/E3yrr_XU-/aeJwoYN\",\n      \"entityValue\": \"J>DgweEH$Z:SRxMp&EdxN\\\"rHnNY=*w\\\\R;-4+`tpb\\\\5sMf=(L,bh=-j1uK1nWj,CVxi~$Mp6);1Z1Rw*9)d@J~vBNPZX<3M'#|[V841%HaVh]k@t?z8/?6+UxR,X9y>n,#(x`Wc*d_8S=iAz6o>jDKi&u\\\\`peC;.!MGd[\\\"ttNr4j6f(['h?9!Ol4^Vr`B)28[DpgB58t:WjKp,N`]Sy(7m^ z-y;\\\"[[]0{oh\\\"\\\\/`6<AX9X{9Ra/l@uAUnwF:]]]yf\",\n      \"entityUrl\": \"<string>\",\n      \"awsAccountId\": \"d[j8\",\n      \"lastUpdatedTime\": \"<dateTime>\",\n      \"statusCode\": \"UNIMPAIRED\",\n      \"tags\": {\n        \"consequat5e7\": \"4'PdEC}vH\\\\43=*FO#}VB$Z`B3M(7mR2a{./px5UF(xJZ:OV$izrp`Dle=YL,yWa;^4wFEW#v#=mwwOp2ZOZDS|2$&\\\"Mt\\\\enx0//>3H\\\\]oyTc|#$EjrL;n88|&V^J@fk@-$]^Iv7Z[lUt02Xbld:(]V3>N@%Q5ix.b7`8z8jfZ=Lo1JGL|?'@S;U[I]ZV47nfK$GB2<]JPpYF6y8Pj~.jAB\\\\\",\n        \"non__7c\": \" L@*B+vO_\",\n        \"reprehenderit9b1\": \"/U/Ri;K59^Eq}cM9M\\\\o,!gW_TwZSTE9A$=bWoA23yYI.m(j8Ki!.eXGL`O6vxPbE05`J)w$oUkk\\\\$q-v+|NxPTniSv=r.}{ ZsxMQ` YTy,KM2g-`7T^|.,0+b[E=lHM$mv@|,G^\",\n        \"incididunt_76d\": \"2#H0{>1Om'')*lOHrflsM^L,&]L-bU$U`2N+\\\\qA*OpOvPc^,9gG%'('!l'@x#QA~$9RMlanS@Da1V\\\\nWM(~@Mz%WCw>Pe/S=-<9.r?p^d==l+f$J_O_[f(.P/d\\\\%;>l0r@;Z7-Eio*{qc-8bSVF.EX?{o-j_RD\\\"8FK2_CRUjZ7An,ct%2ec[T84kyJB)q<Y&JVHq.`z~\",\n        \"enim_4\": \"q;\",\n        \"aute_6\": \"fcz#1Zr2>ajd:jevJtPkIf&2=)uCf-=EiJjp+<&%~oF%1J>t\\\"e7-y@d's\\\"5\\\"DB~#V#Rl9n|c,~:3MX8uGN`psT`Dh:wnro=)Bjj5\\\"[lOVa,4d:+M4CT&1P7>Kt!YH{L`R#xkE(^>j]'0;Z99qr!{_e-y[ /dF%<vW;\\\"6R,(!ssmW@ _%jS]r`o\",\n        \"in_b\": \"~YsN*]oEgERFA^,\\\",5g.!o0ELeDBSiuQnkYu(\",\n        \"culpa_c\": \"4\\\\\\\" <ER0'sI>D!i-t]Ivyk41HGGOG8!z0l4bU2[+0YY>VBP:UbfBp'Zy1Ny^L1_Mj&!{&<N._4vvUfWNy509X}0QRS5l ){8me)igIW7\\\"1T>R4{-1qw;8sH|8bK+%DG5ZJ=lFC J2u\",\n        \"ut_8\": \"<&SJ=bW=m($WLQOy?_$bh.#^r9h:]tX.mX2VWH%lnU qAOgB@\\\\a(6:*Fu6D<;\\\"dcZy1o#+ !,(A(b+eSA]^LVdjJ=KM\",\n        \"consecteture5_\": \"zj3 V9%DO`kpe|j&k)AH/J6>amo4KYzKB)iP?+H%xW1q$Cf|* Hr>Ttz(;)iEATu:EnHSltmK/-m]V-/$/C`pzQ_>cc?wb5tZ5U-RhX4HEhK+5Qk9O#)m7hZ~z|(Fwp8#|-[ 1;?nBMDz8aT(~ KX29w81X>*m 1@_o6o-|H{L.zqm_\\\\&Oy2CcWV9=@vlm#@XoZoJz|_3JP|\\\";c~_@!)U|4J*l][92wCSShn\",\n        \"commodo__\": \"Nw4QYcxS/(*a:W25ivt-4Hu^qL*+myZLK28xHI$ClG,0 UsUY<]Q$1CrT* ]TYEaoI<B7`!0!VkP?Li:e2f9Oec<{)J!Oq8h^UTO1AQ7G}P`?m#<l]y1,pPc(:6RA>2I2nl3LIq{M'SZ^iXJhW=a.DC2$[e QrY7?ovH1H0Z2_XDp=U(HogckCkVkjP6^2#.*~@]V:Mofg~7q6QRQa#XkVS%wo\\\\PVO*ji5Vu![5_@L10SO!'7qYjN&R\",\n        \"idf5c\": \"xG7xe\\\\q&`n`\\\"&^b$U`>_@p?nK#QGQ^{Qo$?Iv$9~Dz,yplzpq+X^NP9=Jj10L)dZ)uOi=wAFLn3RHi\\\\c,Qus0zA[Y272[P#Wo;Y%en):{3.}4\",\n        \"qui_ece\": \"hGJXhu=T2YLen`>6bo;,OR*7O0?4ohqyK0=BCH=(/MpXrSh`!DaN&Pc\\\"HVx'h]SW]C)@a}d,/?/MuEqs-1h#u$eoEuzb~WF:\\\"H!y35F6245>>Kk#O6Mc_A+RJ8_Qb9eJz(,gAPD* e2Q;u}:XD*&KjSo84's}:5R4ztP*sJEv#R^{*H)|H8|aWsu(w.8E:y\",\n        \"velit_a2d\": \"cf4c&!r#mmT_%d \\\"uM tRbI,r'p#?p+_jVsB:pome<0\\\\*qlg9h6O&`5W<-[uY.|9P_O\\\\d@\\\"\\\"tjzeoue#A>J*k# _8-@k7wo/$l%}% -~Pl!;H!|a6\\\"Nt!EP54&O+Y!6C1Key-?9]zSd!bx&,:}~H\\\\4A]$-XuWh?<@wZ0N&`;p=`i!0u}SVvFQ#t3cH}[f\\\\~ml)^;=Q|V:j'!{T;Ju*/Mi[^D\",\n        \"laboris7a\": \"pu@1{!oJnlg^B3dQMYq@7A]z(ppFhS_|h[@k+<#qO\\\"x\"\n      }\n    }\n  ],\n  \"failedSet\": [\n    {\n      \"awsAccountId\": \"Df:o=_d\",\n      \"eventArn\": \"arn:aws:health:xXTILXAqhg:VeX5|L-9:event/v1k7xz9N/2e/1FKx0x5-73m\",\n      \"errorName\": \"<string>\",\n      \"errorMessage\": \"<string>\"\n    },\n    {\n      \"awsAccountId\": \"s\",\n      \"eventArn\": \"arn:aws:health:_:B x:event/jADomq/j6yLnqFdb/g8FHp5t\",\n      \"errorName\": \"<string>\",\n      \"errorMessage\": \"<string>\"\n    }\n  ],\n  \"nextToken\": \"SZyQLs/ogOmFTO0Wdn=1=z4tA7VGi7mzPAC1x=jEFtiI7LQ/ubMgbw36iVa6cCeMtYRG2ekJhO91tCuymSYUcR-t9Urwitvdb3d4/SE0DL/yWgpBU32+5RX7VEZ2C7VUEkt+ORPNPq/C_Br9+IPJaylvoc7o9lsDi_U0jVP31_1nJN=4iGsk8altCVR+vB_0Bjr-b3H=Mb1F3O/caBypXE-B0CoDV4Te73q/X3aPc+4Ak-93Ilt0vK9ZSX2t_X_h\"\n}",
+              "createdAt": "2026-07-28T10:24:33.000Z",
+              "updatedAt": "2026-07-28T10:24:33.000Z",
+              "uid": "35240-ac343bcb-a536-4de4-9749-cc7652aeb5f2"
+            },
+            {
+              "id": "164351a1-719c-4076-a70f-88c3cf9a1af2",
+              "name": "InvalidPaginationToken",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "AWSHealth_20160804.DescribeAffectedEntitiesForOrganization"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"organizationEntityFilters\": [\n    {\n      \"eventArn\": \"arn:aws:health::f^7Q_4:event/bVA_p5xAiqe/TwICCJ/c\",\n      \"awsAccountId\": \"sZ}0<VQi@\"\n    }\n  ],\n  \"locale\": \"a+{f1\\\\n1:B;Ir\\\\SraMGj9A|kw)>)f\\\\oNu$4/ayKr-TuqK-Wgm\\\"^0Jh>,Am$%\\\\T?\\\"8l}_>Z6k12`Ij+P=B5q$Ff7-|M]<C9TxU.^4!O}.I8'FY/X0CohMEpc,iIx9pPD7M1L agS=*mrW1vg<arw_<4\\\"pjZU.V=/DcLne+<ilM )Nscxx;.O6rw@DzcI3-`,<!yF?/C8'}Dcsy%=%}bA};X8n+A;\",\n  \"nextToken\": \"8V0OwwBD3XQhLWFhR-hIY+gTKBWvMiregF/+8HOoHDCECpU_9ZgkXdYfKux86QwVF_tKw+G_+fAhLyORl-kg.hWvGpPj.Jse0f__4aFDh=DKI1=f-wV/D4wdz1upT+RvPlioayjM9VJR24Sha1z-GBjY1gZRguvVYLSywPL0eL25=x5ldcurnASEsxeJLd8A8mLArXT7kcuqeTyLnU6VvlJi9e14oGxLyQzk4_tpM1VTPovj02D5ghMcllPRN1fy\",\n  \"maxResults\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/?maxResults=<string>&nextToken=<string>#X-Amz-Target=AWSHealth_20160804.DescribeAffectedEntitiesForOrganization",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "description": "Pagination limit",
+                      "key": "maxResults",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Pagination token",
+                      "key": "nextToken",
+                      "value": "<string>"
+                    }
+                  ],
+                  "hash": "X-Amz-Target=AWSHealth_20160804.DescribeAffectedEntitiesForOrganization"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:24:33.000Z",
+              "updatedAt": "2026-07-28T10:24:33.000Z",
+              "uid": "35240-164351a1-719c-4076-a70f-88c3cf9a1af2"
+            },
+            {
+              "id": "e80851b8-683a-4169-96ec-965c96d70a48",
+              "name": "UnsupportedLocale",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "AWSHealth_20160804.DescribeAffectedEntitiesForOrganization"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"organizationEntityFilters\": [\n    {\n      \"eventArn\": \"arn:aws:health::f^7Q_4:event/bVA_p5xAiqe/TwICCJ/c\",\n      \"awsAccountId\": \"sZ}0<VQi@\"\n    }\n  ],\n  \"locale\": \"a+{f1\\\\n1:B;Ir\\\\SraMGj9A|kw)>)f\\\\oNu$4/ayKr-TuqK-Wgm\\\"^0Jh>,Am$%\\\\T?\\\"8l}_>Z6k12`Ij+P=B5q$Ff7-|M]<C9TxU.^4!O}.I8'FY/X0CohMEpc,iIx9pPD7M1L agS=*mrW1vg<arw_<4\\\"pjZU.V=/DcLne+<ilM )Nscxx;.O6rw@DzcI3-`,<!yF?/C8'}Dcsy%=%}bA};X8n+A;\",\n  \"nextToken\": \"8V0OwwBD3XQhLWFhR-hIY+gTKBWvMiregF/+8HOoHDCECpU_9ZgkXdYfKux86QwVF_tKw+G_+fAhLyORl-kg.hWvGpPj.Jse0f__4aFDh=DKI1=f-wV/D4wdz1upT+RvPlioayjM9VJR24Sha1z-GBjY1gZRguvVYLSywPL0eL25=x5ldcurnASEsxeJLd8A8mLArXT7kcuqeTyLnU6VvlJi9e14oGxLyQzk4_tpM1VTPovj02D5ghMcllPRN1fy\",\n  \"maxResults\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/?maxResults=<string>&nextToken=<string>#X-Amz-Target=AWSHealth_20160804.DescribeAffectedEntitiesForOrganization",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "description": "Pagination limit",
+                      "key": "maxResults",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Pagination token",
+                      "key": "nextToken",
+                      "value": "<string>"
+                    }
+                  ],
+                  "hash": "X-Amz-Target=AWSHealth_20160804.DescribeAffectedEntitiesForOrganization"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:24:33.000Z",
+              "updatedAt": "2026-07-28T10:24:33.000Z",
+              "uid": "35240-e80851b8-683a-4169-96ec-965c96d70a48"
+            }
+          ],
+          "createdAt": "2026-07-28T10:24:33.000Z",
+          "updatedAt": "2026-07-28T10:24:33.000Z",
+          "uid": "35240-28f2d38e-6f6f-42c6-9f8a-e4bc129ce655"
+        }
+      ],
+      "id": "4e56e001-11a3-44c9-82fd-4f21c09d65a0",
+      "createdAt": "2026-07-28T10:24:33.000Z",
+      "updatedAt": "2026-07-28T10:24:33.000Z",
+      "uid": "35240-4e56e001-11a3-44c9-82fd-4f21c09d65a0"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://health.us-east-1.amazonaws.com"
+    }
+  ]
+}

@@ -1,0 +1,442 @@
+{
+  "info": {
+    "_postman_id": "9af1a55d-dd51-41d7-93cc-91d75650e9a7",
+    "name": "AWS Health APIs and Notifications #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeEventsForOrganization API",
+    "description": "<fullname>Health</fullname> <p>The Health API provides programmatic access to the Health information that appears in the <a href=\"https://phd.aws.amazon.com/phd/home#/\">Personal Health Dashboard</a>. You can use the API operations to get information about events that might affect your Amazon Web Services services and resources.</p> <note> <ul> <li> <p>You must have a Business, Enterprise On-Ramp, or Enterprise Support plan from <a href=\"http://aws.amazon.com/premiumsupport/\">Amazon Web Services Support</a> to use the Health API. If you call the Health API from an Amazon Web Services account that doesn't have a Business, Enterprise On-Ramp, or Enterprise Support plan, you receive a <code>SubscriptionRequiredException</code> error.</p> </li> <li> <p>You can use the Health endpoint health.us-east-1.amazonaws.com (HTTPS) to call the Health API operations. Health supports a multi-Region application architecture and has two regional endpoints in an active-passive configuration. You can use the high availability endpoint example to determine which Amazon Web Services Region is active, so that you can get the latest information from the API. For more information, see <a href=\"https://docs.aws.amazon.com/health/latest/ug/health-api.html\">Accessing the Health API</a> in the <i>Health User Guide</i>.</p> </li> </ul> </note> <p>For authentication of requests, Health uses the <a href=\"https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html\">Signature Version 4 Signing Process</a>.</p> <p>If your Amazon Web Services account is part of Organizations, you can use the Health organizational view feature. This feature provides a centralized view of Health events across all accounts in your organization. You can aggregate Health events in real time to identify accounts in your organization that are affected by an operational event or get notified of security vulnerabilities. Use the organizational view API operations to enable this feature and return event information. For more information, see <a href=\"https://docs.aws.amazon.com/health/latest/ug/aggregate-events.html\">Aggregating Health events</a> in the <i>Health User Guide</i>.</p> <note> <p>When you use the Health API operations to return Health events, see the following recommendations:</p> <ul> <li> <p>Use the <a href=\"https://docs.aws.amazon.com/health/latest/APIReference/API_Event.html#AWSHealth-Type-Event-eventScopeCode\">eventScopeCode</a> parameter to specify whether to return Health events that are public or account-specific.</p> </li> <li> <p>Use pagination to view all events from the response. For example, if you call the <code>DescribeEventsForOrganization</code> operation to get all events in your organization, you might receive several page results. Specify the <code>nextToken</code> in the next request to return more results.</p> </li> </ul> </note>\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:24:39.000Z",
+    "updatedAt": "2026-07-28T10:24:39.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-9af1a55d-dd51-41d7-93cc-91d75650e9a7"
+  },
+  "item": [
+    {
+      "name": "#X-Amz-Target=AWSHealth_20160804.DescribeEventsForOrganization",
+      "item": [
+        {
+          "name": "Amazon Health Dashboard Describe Events for Organization",
+          "id": "d7793b40-650d-4533-a10c-ba5fd7c3e5c6",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "description": "(Required) ",
+                "key": "X-Amz-Target",
+                "value": "AWSHealth_20160804.DescribeEventsForOrganization"
+              },
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"filter\": {\n    \"eventTypeCodes\": [\n      \"L3\\\\F,E+H}5X\\\"Hc-6'~>~SKXDf6tb;ye>[\"\n    ],\n    \"awsAccountIds\": [\n      \"nR21\"\n    ],\n    \"services\": [\n      \"\\\"Mcqt^w2];@H'*ha|OHD%8~JX\"\n    ],\n    \"regions\": [\n      \"GMfdVvn=N|oe\"\n    ],\n    \"startTime\": {\n      \"from\": \"<dateTime>\",\n      \"to\": \"<dateTime>\"\n    },\n    \"endTime\": {\n      \"from\": \"<dateTime>\",\n      \"to\": \"<dateTime>\"\n    },\n    \"lastUpdatedTime\": {\n      \"from\": \"<dateTime>\",\n      \"to\": \"<dateTime>\"\n    },\n    \"entityArns\": [\n      \"D;I,`[A,hw2YFp^!ALu8@t~0=[\\\\G!ws~|+mU3Jt\\\"65ZVA7\\\"WU+L`6~n3IESw:y5As5qpV/X>Y`q>h1PY9&<t'g)tg`k$#bW^ gp&I01(4SEC./xv<V7zvk0eie=SLr j~VwMRNTQ[Y?R+/7E'`Os\"\n    ],\n    \"entityValues\": [\n      \"UjvGwp>{^3H{1mY;;2I<O~~4xSk@K-yjU2F;QEn\\\\QHp7VofXmM$u2BCpCp%%HSoje9u@nG<~T nPD&{QJzfcoRIIjM?p}BReH<k1\\\"$'!L6.d0SYs\\\\=}0cm\"\n    ],\n    \"eventTypeCategories\": [\n      \"scheduledChange\"\n    ],\n    \"eventStatusCodes\": [\n      \"upcoming\"\n    ]\n  },\n  \"nextToken\": \"lQSv2RdP3za+g5wftnkPBPIeg-pyp1OFF0cRfpBNkaIWv5sbt-1y1FWA3LUPYvpsABAWttCaYVbqrL-7hZkEuyDbzvLdxB-I0kMcRtt_o25Tv1zUp==jXCoVs_JJ-.ZN9O5T8Pk_o5HfUB/a=2mWFTJjtwObYOTE_xoXSLFZziocTD1d7osK5KDxX9B.k9SMoZnGz.Ouw3VJvb/8tspgcivuRb1=qC+Btwb=4qhb0Z3rHTCcgRyyFYab+KU+s=Wb\",\n  \"maxResults\": \"<integer>\",\n  \"locale\": \"J/X_qi>wG^]GA/Vr%`ofB\\\"cn-&i^O:Aadkabvuzu;UTb;W|T%1U&i=x*{8\\\".B$Vg}=d-3v~#-,B$f4_h5F_}^W,}LqP@cqo#nC,R2SWzj%;H?3\\\\wG0q6TE~B\\\"-f)H&p6<)6Cln_u@fY0dc?Ie(0\\\"1G+.7^dS}(Y#O)-|=`xvp~$O$2Scw+\\\\\"\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/?maxResults=<string>&nextToken=<string>#X-Amz-Target=AWSHealth_20160804.DescribeEventsForOrganization",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "query": [
+                {
+                  "description": "Pagination limit",
+                  "key": "maxResults",
+                  "value": "<string>"
+                },
+                {
+                  "description": "Pagination token",
+                  "key": "nextToken",
+                  "value": "<string>"
+                }
+              ],
+              "hash": "X-Amz-Target=AWSHealth_20160804.DescribeEventsForOrganization"
+            },
+            "description": "<p>Returns information about events across your organization in Organizations. You can use the<code>filters</code> parameter to specify the events that you want to return. Events are returned in a summary form and don't include the affected accounts, detailed description, any additional metadata that depends on the event type, or any affected resources. To retrieve that information, use the following operations:</p> <ul> <li> <p> <a href=\"https://docs.aws.amazon.com/health/latest/APIReference/API_DescribeAffectedAccountsForOrganization.html\">DescribeAffectedAccountsForOrganization</a> </p> </li> <li> <p> <a href=\"https://docs.aws.amazon.com/health/latest/APIReference/API_DescribeEventDetailsForOrganization.html\">DescribeEventDetailsForOrganization</a> </p> </li> <li> <p> <a href=\"https://docs.aws.amazon.com/health/latest/APIReference/API_DescribeAffectedEntitiesForOrganization.html\">DescribeAffectedEntitiesForOrganization</a> </p> </li> </ul> <p>If you don't specify a <code>filter</code>, the <code>DescribeEventsForOrganizations</code> returns all events across your organization. Results are sorted by <code>lastModifiedTime</code>, starting with the most recent event. </p> <p>For more information about the different types of Health events, see <a href=\"https://docs.aws.amazon.com/health/latest/APIReference/API_Event.html\">Event</a>.</p> <p>Before you can call this operation, you must first enable Health to work with Organizations. To do this, call the <a href=\"https://docs.aws.amazon.com/health/latest/APIReference/API_EnableHealthServiceAccessForOrganization.html\">EnableHealthServiceAccessForOrganization</a> operation from your organization's management account.</p> <note> <p>This API operation uses pagination. Specify the <code>nextToken</code> parameter in the next request to return more results.</p> </note>"
+          },
+          "response": [
+            {
+              "id": "e0e51409-6ed4-47ef-9b6a-cbf714d47586",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "AWSHealth_20160804.DescribeEventsForOrganization"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"filter\": {\n    \"eventTypeCodes\": [\n      \"L3\\\\F,E+H}5X\\\"Hc-6'~>~SKXDf6tb;ye>[\"\n    ],\n    \"awsAccountIds\": [\n      \"nR21\"\n    ],\n    \"services\": [\n      \"\\\"Mcqt^w2];@H'*ha|OHD%8~JX\"\n    ],\n    \"regions\": [\n      \"GMfdVvn=N|oe\"\n    ],\n    \"startTime\": {\n      \"from\": \"<dateTime>\",\n      \"to\": \"<dateTime>\"\n    },\n    \"endTime\": {\n      \"from\": \"<dateTime>\",\n      \"to\": \"<dateTime>\"\n    },\n    \"lastUpdatedTime\": {\n      \"from\": \"<dateTime>\",\n      \"to\": \"<dateTime>\"\n    },\n    \"entityArns\": [\n      \"D;I,`[A,hw2YFp^!ALu8@t~0=[\\\\G!ws~|+mU3Jt\\\"65ZVA7\\\"WU+L`6~n3IESw:y5As5qpV/X>Y`q>h1PY9&<t'g)tg`k$#bW^ gp&I01(4SEC./xv<V7zvk0eie=SLr j~VwMRNTQ[Y?R+/7E'`Os\"\n    ],\n    \"entityValues\": [\n      \"UjvGwp>{^3H{1mY;;2I<O~~4xSk@K-yjU2F;QEn\\\\QHp7VofXmM$u2BCpCp%%HSoje9u@nG<~T nPD&{QJzfcoRIIjM?p}BReH<k1\\\"$'!L6.d0SYs\\\\=}0cm\"\n    ],\n    \"eventTypeCategories\": [\n      \"scheduledChange\"\n    ],\n    \"eventStatusCodes\": [\n      \"upcoming\"\n    ]\n  },\n  \"nextToken\": \"lQSv2RdP3za+g5wftnkPBPIeg-pyp1OFF0cRfpBNkaIWv5sbt-1y1FWA3LUPYvpsABAWttCaYVbqrL-7hZkEuyDbzvLdxB-I0kMcRtt_o25Tv1zUp==jXCoVs_JJ-.ZN9O5T8Pk_o5HfUB/a=2mWFTJjtwObYOTE_xoXSLFZziocTD1d7osK5KDxX9B.k9SMoZnGz.Ouw3VJvb/8tspgcivuRb1=qC+Btwb=4qhb0Z3rHTCcgRyyFYab+KU+s=Wb\",\n  \"maxResults\": \"<integer>\",\n  \"locale\": \"J/X_qi>wG^]GA/Vr%`ofB\\\"cn-&i^O:Aadkabvuzu;UTb;W|T%1U&i=x*{8\\\".B$Vg}=d-3v~#-,B$f4_h5F_}^W,}LqP@cqo#nC,R2SWzj%;H?3\\\\wG0q6TE~B\\\"-f)H&p6<)6Cln_u@fY0dc?Ie(0\\\"1G+.7^dS}(Y#O)-|=`xvp~$O$2Scw+\\\\\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/?maxResults=<string>&nextToken=<string>#X-Amz-Target=AWSHealth_20160804.DescribeEventsForOrganization",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "description": "Pagination limit",
+                      "key": "maxResults",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Pagination token",
+                      "key": "nextToken",
+                      "value": "<string>"
+                    }
+                  ],
+                  "hash": "X-Amz-Target=AWSHealth_20160804.DescribeEventsForOrganization"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"events\": [\n    {\n      \"arn\": \"arn:aws:health:{:QvTXHpNeB:event/jTNfa_YU/uaOgs3Xj/6\",\n      \"service\": \"a2Fc^jT\",\n      \"eventTypeCode\": \"9Sbp5Kv7tblewqWYvmmRgDeq4\",\n      \"eventTypeCategory\": \"issue\",\n      \"eventScopeCode\": \"ACCOUNT_SPECIFIC\",\n      \"region\": \"y}5;\",\n      \"startTime\": \"<dateTime>\",\n      \"endTime\": \"<dateTime>\",\n      \"lastUpdatedTime\": \"<dateTime>\",\n      \"statusCode\": \"open\"\n    },\n    {\n      \"arn\": \"arn:aws-i:health:O]I07%a5:{:event/kYrHZb3bLNw/stHV/kTD0AyIp\",\n      \"service\": \"z0'Yb2As%-\\\"'!\",\n      \"eventTypeCode\": \"jsXINo4O2FEZYymnA06fZfK0S8bhOKYtWuFAFBFOorlJTA7\",\n      \"eventTypeCategory\": \"accountNotification\",\n      \"eventScopeCode\": \"PUBLIC\",\n      \"region\": \"^5noP)=d7z\",\n      \"startTime\": \"<dateTime>\",\n      \"endTime\": \"<dateTime>\",\n      \"lastUpdatedTime\": \"<dateTime>\",\n      \"statusCode\": \"closed\"\n    }\n  ],\n  \"nextToken\": \"uEcDvO75v/7QApjH2wI0zPfq49D4u4LkQB40D.GR+PuAMLwqXPW+ESwfjU2hVG8Nb2VIYqK1Rwt0w_g3d+/bK6G/941hOT0ekdsPwTgEN9KCs3Rt7A2=bB1fqjw1yrZ=mBSI2sfLQOO=XFeqnUJ4Kt_mHSUGW/uIqk-OYwrBPdB_M+J_G/kzGlE/nI609BBVLzwdsiRslR2NU0Xgj+2mxHNZyy=vHUNkF-nq4H1atv03PaQWblgD9EZDd9L/SqS=\"\n}",
+              "createdAt": "2026-07-28T10:24:39.000Z",
+              "updatedAt": "2026-07-28T10:24:39.000Z",
+              "uid": "35240-e0e51409-6ed4-47ef-9b6a-cbf714d47586"
+            },
+            {
+              "id": "a7338141-d35b-4cf2-a67e-fd880e362e00",
+              "name": "InvalidPaginationToken",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "AWSHealth_20160804.DescribeEventsForOrganization"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"filter\": {\n    \"eventTypeCodes\": [\n      \"L3\\\\F,E+H}5X\\\"Hc-6'~>~SKXDf6tb;ye>[\"\n    ],\n    \"awsAccountIds\": [\n      \"nR21\"\n    ],\n    \"services\": [\n      \"\\\"Mcqt^w2];@H'*ha|OHD%8~JX\"\n    ],\n    \"regions\": [\n      \"GMfdVvn=N|oe\"\n    ],\n    \"startTime\": {\n      \"from\": \"<dateTime>\",\n      \"to\": \"<dateTime>\"\n    },\n    \"endTime\": {\n      \"from\": \"<dateTime>\",\n      \"to\": \"<dateTime>\"\n    },\n    \"lastUpdatedTime\": {\n      \"from\": \"<dateTime>\",\n      \"to\": \"<dateTime>\"\n    },\n    \"entityArns\": [\n      \"D;I,`[A,hw2YFp^!ALu8@t~0=[\\\\G!ws~|+mU3Jt\\\"65ZVA7\\\"WU+L`6~n3IESw:y5As5qpV/X>Y`q>h1PY9&<t'g)tg`k$#bW^ gp&I01(4SEC./xv<V7zvk0eie=SLr j~VwMRNTQ[Y?R+/7E'`Os\"\n    ],\n    \"entityValues\": [\n      \"UjvGwp>{^3H{1mY;;2I<O~~4xSk@K-yjU2F;QEn\\\\QHp7VofXmM$u2BCpCp%%HSoje9u@nG<~T nPD&{QJzfcoRIIjM?p}BReH<k1\\\"$'!L6.d0SYs\\\\=}0cm\"\n    ],\n    \"eventTypeCategories\": [\n      \"scheduledChange\"\n    ],\n    \"eventStatusCodes\": [\n      \"upcoming\"\n    ]\n  },\n  \"nextToken\": \"lQSv2RdP3za+g5wftnkPBPIeg-pyp1OFF0cRfpBNkaIWv5sbt-1y1FWA3LUPYvpsABAWttCaYVbqrL-7hZkEuyDbzvLdxB-I0kMcRtt_o25Tv1zUp==jXCoVs_JJ-.ZN9O5T8Pk_o5HfUB/a=2mWFTJjtwObYOTE_xoXSLFZziocTD1d7osK5KDxX9B.k9SMoZnGz.Ouw3VJvb/8tspgcivuRb1=qC+Btwb=4qhb0Z3rHTCcgRyyFYab+KU+s=Wb\",\n  \"maxResults\": \"<integer>\",\n  \"locale\": \"J/X_qi>wG^]GA/Vr%`ofB\\\"cn-&i^O:Aadkabvuzu;UTb;W|T%1U&i=x*{8\\\".B$Vg}=d-3v~#-,B$f4_h5F_}^W,}LqP@cqo#nC,R2SWzj%;H?3\\\\wG0q6TE~B\\\"-f)H&p6<)6Cln_u@fY0dc?Ie(0\\\"1G+.7^dS}(Y#O)-|=`xvp~$O$2Scw+\\\\\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/?maxResults=<string>&nextToken=<string>#X-Amz-Target=AWSHealth_20160804.DescribeEventsForOrganization",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "description": "Pagination limit",
+                      "key": "maxResults",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Pagination token",
+                      "key": "nextToken",
+                      "value": "<string>"
+                    }
+                  ],
+                  "hash": "X-Amz-Target=AWSHealth_20160804.DescribeEventsForOrganization"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:24:39.000Z",
+              "updatedAt": "2026-07-28T10:24:39.000Z",
+              "uid": "35240-a7338141-d35b-4cf2-a67e-fd880e362e00"
+            },
+            {
+              "id": "313a9724-ec04-41d6-8b1e-3b4e11e9d645",
+              "name": "UnsupportedLocale",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "description": "(Required) ",
+                    "key": "X-Amz-Target",
+                    "value": "AWSHealth_20160804.DescribeEventsForOrganization"
+                  },
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"filter\": {\n    \"eventTypeCodes\": [\n      \"L3\\\\F,E+H}5X\\\"Hc-6'~>~SKXDf6tb;ye>[\"\n    ],\n    \"awsAccountIds\": [\n      \"nR21\"\n    ],\n    \"services\": [\n      \"\\\"Mcqt^w2];@H'*ha|OHD%8~JX\"\n    ],\n    \"regions\": [\n      \"GMfdVvn=N|oe\"\n    ],\n    \"startTime\": {\n      \"from\": \"<dateTime>\",\n      \"to\": \"<dateTime>\"\n    },\n    \"endTime\": {\n      \"from\": \"<dateTime>\",\n      \"to\": \"<dateTime>\"\n    },\n    \"lastUpdatedTime\": {\n      \"from\": \"<dateTime>\",\n      \"to\": \"<dateTime>\"\n    },\n    \"entityArns\": [\n      \"D;I,`[A,hw2YFp^!ALu8@t~0=[\\\\G!ws~|+mU3Jt\\\"65ZVA7\\\"WU+L`6~n3IESw:y5As5qpV/X>Y`q>h1PY9&<t'g)tg`k$#bW^ gp&I01(4SEC./xv<V7zvk0eie=SLr j~VwMRNTQ[Y?R+/7E'`Os\"\n    ],\n    \"entityValues\": [\n      \"UjvGwp>{^3H{1mY;;2I<O~~4xSk@K-yjU2F;QEn\\\\QHp7VofXmM$u2BCpCp%%HSoje9u@nG<~T nPD&{QJzfcoRIIjM?p}BReH<k1\\\"$'!L6.d0SYs\\\\=}0cm\"\n    ],\n    \"eventTypeCategories\": [\n      \"scheduledChange\"\n    ],\n    \"eventStatusCodes\": [\n      \"upcoming\"\n    ]\n  },\n  \"nextToken\": \"lQSv2RdP3za+g5wftnkPBPIeg-pyp1OFF0cRfpBNkaIWv5sbt-1y1FWA3LUPYvpsABAWttCaYVbqrL-7hZkEuyDbzvLdxB-I0kMcRtt_o25Tv1zUp==jXCoVs_JJ-.ZN9O5T8Pk_o5HfUB/a=2mWFTJjtwObYOTE_xoXSLFZziocTD1d7osK5KDxX9B.k9SMoZnGz.Ouw3VJvb/8tspgcivuRb1=qC+Btwb=4qhb0Z3rHTCcgRyyFYab+KU+s=Wb\",\n  \"maxResults\": \"<integer>\",\n  \"locale\": \"J/X_qi>wG^]GA/Vr%`ofB\\\"cn-&i^O:Aadkabvuzu;UTb;W|T%1U&i=x*{8\\\".B$Vg}=d-3v~#-,B$f4_h5F_}^W,}LqP@cqo#nC,R2SWzj%;H?3\\\\wG0q6TE~B\\\"-f)H&p6<)6Cln_u@fY0dc?Ie(0\\\"1G+.7^dS}(Y#O)-|=`xvp~$O$2Scw+\\\\\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/?maxResults=<string>&nextToken=<string>#X-Amz-Target=AWSHealth_20160804.DescribeEventsForOrganization",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "description": "Pagination limit",
+                      "key": "maxResults",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Pagination token",
+                      "key": "nextToken",
+                      "value": "<string>"
+                    }
+                  ],
+                  "hash": "X-Amz-Target=AWSHealth_20160804.DescribeEventsForOrganization"
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:24:39.000Z",
+              "updatedAt": "2026-07-28T10:24:39.000Z",
+              "uid": "35240-313a9724-ec04-41d6-8b1e-3b4e11e9d645"
+            }
+          ],
+          "createdAt": "2026-07-28T10:24:39.000Z",
+          "updatedAt": "2026-07-28T10:24:39.000Z",
+          "uid": "35240-d7793b40-650d-4533-a10c-ba5fd7c3e5c6"
+        }
+      ],
+      "id": "0dc4ade3-09d0-4ea0-96bc-c9caf8e26445",
+      "createdAt": "2026-07-28T10:24:39.000Z",
+      "updatedAt": "2026-07-28T10:24:39.000Z",
+      "uid": "35240-0dc4ade3-09d0-4ea0-96bc-c9caf8e26445"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://health.us-east-1.amazonaws.com"
+    }
+  ]
+}

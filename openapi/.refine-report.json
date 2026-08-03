@@ -1,0 +1,38 @@
+{
+  "provider": "amazon-health-dashboard",
+  "sources": [
+    "amazon-health-dashboard-x-amz-target-awshealth-20160804-describeaffectedaccountsfororganization-api-openapi.yml",
+    "amazon-health-dashboard-x-amz-target-awshealth-20160804-describeaffectedentities-api-openapi.yml",
+    "amazon-health-dashboard-x-amz-target-awshealth-20160804-describeaffectedentitiesfororganization-api-openapi.yml",
+    "amazon-health-dashboard-x-amz-target-awshealth-20160804-describeentityaggregates-api-openapi.yml",
+    "amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventaggregates-api-openapi.yml",
+    "amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventdetails-api-openapi.yml",
+    "amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventdetailsfororganization-api-openapi.yml",
+    "amazon-health-dashboard-x-amz-target-awshealth-20160804-describeevents-api-openapi.yml",
+    "amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventsfororganization-api-openapi.yml",
+    "amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventtypes-api-openapi.yml",
+    "amazon-health-dashboard-x-amz-target-awshealth-20160804-describehealthservicestatusfororganization-api-openapi.yml",
+    "amazon-health-dashboard-x-amz-target-awshealth-20160804-disablehealthserviceaccessfororganization-api-openapi.yml",
+    "amazon-health-dashboard-x-amz-target-awshealth-20160804-enablehealthserviceaccessfororganization-api-openapi.yml"
+  ],
+  "outputs": [
+    "amazon-health-dashboard-x-amz-target-awshealth-20160804-describeaffectedaccountsfororganization-api-openapi.yml",
+    "amazon-health-dashboard-x-amz-target-awshealth-20160804-describeaffectedentities-api-openapi.yml",
+    "amazon-health-dashboard-x-amz-target-awshealth-20160804-describeaffectedentitiesfororganization-api-openapi.yml",
+    "amazon-health-dashboard-x-amz-target-awshealth-20160804-describeentityaggregates-api-openapi.yml",
+    "amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventaggregates-api-openapi.yml",
+    "amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventdetails-api-openapi.yml",
+    "amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventdetailsfororganization-api-openapi.yml",
+    "amazon-health-dashboard-x-amz-target-awshealth-20160804-describeevents-api-openapi.yml",
+    "amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventsfororganization-api-openapi.yml",
+    "amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventtypes-api-openapi.yml",
+    "amazon-health-dashboard-x-amz-target-awshealth-20160804-describehealthservicestatusfororganization-api-openapi.yml",
+    "amazon-health-dashboard-x-amz-target-awshealth-20160804-disablehealthserviceaccessfororganization-api-openapi.yml",
+    "amazon-health-dashboard-x-amz-target-awshealth-20160804-enablehealthserviceaccessfororganization-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

@@ -58,8 +58,6 @@ apis:
     url: json-schema/health-event-schema.json
   - type: JSONLD
     url: json-ld/amazon-health-dashboard-context.jsonld
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-health-dashboard.yaml
 - aid: >-
     amazon-health-dashboard:amazon-health-dashboard-x-amz-target-awshealth-20160804-describeaffectedentities-api
   name: 'Amazon Health Dashboard #X Amz Target=AWSHealth 20160804.DescribeAffectedEntities API'
@@ -88,8 +86,6 @@ apis:
     url: json-schema/health-event-schema.json
   - type: JSONLD
     url: json-ld/amazon-health-dashboard-context.jsonld
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-health-dashboard.yaml
 - aid: >-
     amazon-health-dashboard:amazon-health-dashboard-x-amz-target-awshealth-20160804-describeaffectedentitiesfororganization-api
   name: >-
@@ -119,8 +115,6 @@ apis:
     url: json-schema/health-event-schema.json
   - type: JSONLD
     url: json-ld/amazon-health-dashboard-context.jsonld
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-health-dashboard.yaml
 - aid: >-
     amazon-health-dashboard:amazon-health-dashboard-x-amz-target-awshealth-20160804-describeentityaggregates-api
   name: 'Amazon Health Dashboard #X Amz Target=AWSHealth 20160804.DescribeEntityAggregates API'
@@ -149,8 +143,6 @@ apis:
     url: json-schema/health-event-schema.json
   - type: JSONLD
     url: json-ld/amazon-health-dashboard-context.jsonld
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-health-dashboard.yaml
 - aid: >-
     amazon-health-dashboard:amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventaggregates-api
   name: 'Amazon Health Dashboard #X Amz Target=AWSHealth 20160804.DescribeEventAggregates API'
@@ -179,8 +171,6 @@ apis:
     url: json-schema/health-event-schema.json
   - type: JSONLD
     url: json-ld/amazon-health-dashboard-context.jsonld
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-health-dashboard.yaml
 - aid: >-
     amazon-health-dashboard:amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventdetails-api
   name: 'Amazon Health Dashboard #X Amz Target=AWSHealth 20160804.DescribeEventDetails API'
@@ -209,8 +199,6 @@ apis:
     url: json-schema/health-event-schema.json
   - type: JSONLD
     url: json-ld/amazon-health-dashboard-context.jsonld
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-health-dashboard.yaml
 - aid: >-
     amazon-health-dashboard:amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventdetailsfororganization-api
   name: >-
@@ -240,8 +228,6 @@ apis:
     url: json-schema/health-event-schema.json
   - type: JSONLD
     url: json-ld/amazon-health-dashboard-context.jsonld
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-health-dashboard.yaml
 - aid: >-
     amazon-health-dashboard:amazon-health-dashboard-x-amz-target-awshealth-20160804-describeevents-api
   name: 'Amazon Health Dashboard #X Amz Target=AWSHealth 20160804.DescribeEvents API'
@@ -270,8 +256,6 @@ apis:
     url: json-schema/health-event-schema.json
   - type: JSONLD
     url: json-ld/amazon-health-dashboard-context.jsonld
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-health-dashboard.yaml
 - aid: >-
     amazon-health-dashboard:amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventsfororganization-api
   name: >-
@@ -301,8 +285,6 @@ apis:
     url: json-schema/health-event-schema.json
   - type: JSONLD
     url: json-ld/amazon-health-dashboard-context.jsonld
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-health-dashboard.yaml
 - aid: >-
     amazon-health-dashboard:amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventtypes-api
   name: 'Amazon Health Dashboard #X Amz Target=AWSHealth 20160804.DescribeEventTypes API'
@@ -331,8 +313,6 @@ apis:
     url: json-schema/health-event-schema.json
   - type: JSONLD
     url: json-ld/amazon-health-dashboard-context.jsonld
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-health-dashboard.yaml
 - aid: >-
     amazon-health-dashboard:amazon-health-dashboard-x-amz-target-awshealth-20160804-describehealthservicestatusfororganization-api
   name: >-
@@ -363,8 +343,6 @@ apis:
     url: json-schema/health-event-schema.json
   - type: JSONLD
     url: json-ld/amazon-health-dashboard-context.jsonld
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-health-dashboard.yaml
 - aid: >-
     amazon-health-dashboard:amazon-health-dashboard-x-amz-target-awshealth-20160804-disablehealthserviceaccessfororganization-api
   name: >-
@@ -395,8 +373,6 @@ apis:
     url: json-schema/health-event-schema.json
   - type: JSONLD
     url: json-ld/amazon-health-dashboard-context.jsonld
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-health-dashboard.yaml
 - aid: >-
     amazon-health-dashboard:amazon-health-dashboard-x-amz-target-awshealth-20160804-enablehealthserviceaccessfororganization-api
   name: >-
@@ -427,8 +403,6 @@ apis:
     url: json-schema/health-event-schema.json
   - type: JSONLD
     url: json-ld/amazon-health-dashboard-context.jsonld
-  - type: X-NaftikoCapability
-    url: capabilities/amazon-health-dashboard.yaml
 common:
 - type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/amazon-health-dashboard/overview

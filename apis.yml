@@ -21,6 +21,11 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/amazon-hea
 tags:
 - AWS
 - Health Monitoring
+- Notification
+- Service Status
+tags_raw:
+- AWS
+- Health Monitoring
 - Notifications
 - Operations
 - Service Status
@@ -38,7 +43,8 @@ apis:
     Dashboard — 1 operation(s) for #x amz target=awshealth 20160804.describeaffectedaccountsfororganization.
   humanURL: https://aws.amazon.com/health/
   baseURL: https://health.us-east-1.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization'
   properties:
   - type: OpenAPI
@@ -95,7 +101,8 @@ apis:
     Dashboard — 1 operation(s) for #x amz target=awshealth 20160804.describeaffectedentitiesfororganization.
   humanURL: https://aws.amazon.com/health/
   baseURL: https://health.us-east-1.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=AWSHealth 20160804.DescribeAffectedEntitiesForOrganization'
   properties:
   - type: OpenAPI
@@ -208,7 +215,8 @@ apis:
     — 1 operation(s) for #x amz target=awshealth 20160804.describeeventdetailsfororganization.
   humanURL: https://aws.amazon.com/health/
   baseURL: https://health.us-east-1.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=AWSHealth 20160804.DescribeEventDetailsForOrganization'
   properties:
   - type: OpenAPI
@@ -265,7 +273,8 @@ apis:
     — 1 operation(s) for #x amz target=awshealth 20160804.describeeventsfororganization.
   humanURL: https://aws.amazon.com/health/
   baseURL: https://health.us-east-1.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=AWSHealth 20160804.DescribeEventsForOrganization'
   properties:
   - type: OpenAPI
@@ -323,7 +332,8 @@ apis:
     Dashboard — 1 operation(s) for #x amz target=awshealth 20160804.describehealthservicestatusfororganization.
   humanURL: https://aws.amazon.com/health/
   baseURL: https://health.us-east-1.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=AWSHealth 20160804.DescribeHealthServiceStatusForOrganization'
   properties:
   - type: OpenAPI
@@ -353,7 +363,8 @@ apis:
     Dashboard — 1 operation(s) for #x amz target=awshealth 20160804.disablehealthserviceaccessfororganization.
   humanURL: https://aws.amazon.com/health/
   baseURL: https://health.us-east-1.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=AWSHealth 20160804.DisableHealthServiceAccessForOrganization'
   properties:
   - type: OpenAPI
@@ -383,7 +394,8 @@ apis:
     Dashboard — 1 operation(s) for #x amz target=awshealth 20160804.enablehealthserviceaccessfororganization.
   humanURL: https://aws.amazon.com/health/
   baseURL: https://health.us-east-1.amazonaws.com
-  tags:
+  tags: []
+  tags_raw:
   - '#X Amz Target=AWSHealth 20160804.EnableHealthServiceAccessForOrganization'
   properties:
   - type: OpenAPI

@@ -1,8 +1,8 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  version: "1.0.0"
+  version: 1.0.0
   x-release: v4
-  title: 'AWS Health APIs and Notifications #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeEventAggregates API'
+  title: 'AWS Health APIs and Notifications #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeEventAggregates #X Amz Target=AWSHealth 20160804.DescribeEventAggregates #X Amz Target=AWSHealth 20160804.DescribeEventAggregates API'
   description: <fullname>Health</fullname> <p>The Health API provides programmatic access to the Health information that appears in the <a href="https://phd.aws.amazon.com/phd/home#/">Personal Health Dashboard</a>. You can use the API operations to get information about events that might affect your Amazon Web Services services and resources.</p> <note> <ul> <li> <p>You must have a Business, Enterprise On-Ramp, or Enterprise Support plan from <a href="http://aws.amazon.com/premiumsupport/">Amazon Web Services Support</a> to use the Health API. If you call the Health API from an Amazon Web Services account that doesn't have a Business, Enterprise On-Ramp, or Enterprise Support plan, you receive a <code>SubscriptionRequiredException</code> error.</p> </li> <li> <p>You can use the Health endpoint health.us-east-1.amazonaws.com (HTTPS) to call the Health API operations. Health supports a multi-Region application architecture and has two regional endpoints in an active-passive configuration. You can use the high availability endpoint example to determine which Amazon Web Services Region is active, so that you can get the latest information from the API. For more information, see <a href="https://docs.aws.amazon.com/health/latest/ug/health-api.html">Accessing the Health API</a> in the <i>Health User Guide</i>.</p> </li> </ul> </note> <p>For authentication of requests, Health uses the <a href="https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4 Signing Process</a>.</p> <p>If your Amazon Web Services account is part of Organizations, you can use the Health organizational view feature. This feature provides a centralized view of Health events across all accounts in your organization. You can aggregate Health events in real time to identify accounts in your organization that are affected by an operational event or get notified of security vulnerabilities. Use the organizational view API operations to enable this feature and return event information. For more information, see <a href="https://docs.aws.amazon.com/health/latest/ug/aggregate-events.html">Aggregating Health events</a> in the <i>Health User Guide</i>.</p> <note> <p>When you use the Health API operations to return Health events, see the following recommendations:</p> <ul> <li> <p>Use the <a href="https://docs.aws.amazon.com/health/latest/APIReference/API_Event.html#AWSHealth-Type-Event-eventScopeCode">eventScopeCode</a> parameter to specify whether to return Health events that are public or account-specific.</p> </li> <li> <p>Use pagination to view all events from the response. For example, if you call the <code>DescribeEventsForOrganization</code> operation to get all events in your organization, you might receive several page results. Specify the <code>nextToken</code> in the next request to return more results.</p> </li> </ul> </note>
   x-logo:
     url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
@@ -128,101 +128,102 @@ paths:
       tags:
       - '#X Amz Target=AWSHealth 20160804.DescribeEventAggregates'
 components:
-  parameters:
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
   schemas:
-    aggregateValue:
+    eventArn:
       type: string
+      pattern: arn:aws(-[a-z]+(-[a-z]+)?)?:health:[^:]*:[^:]*:event(?:/[\w-]+){3}
+      maxLength: 1600
+    entityArnList:
+      type: array
+      items:
+        $ref: '#/components/schemas/entityArn'
+      minItems: 1
+      maxItems: 99
+    tagSet:
+      type: object
+      maxProperties: 50
+      additionalProperties:
+        $ref: '#/components/schemas/tagValue'
     availabilityZone:
       type: string
       pattern: '[a-z]{2}\-[0-9a-z\-]{4,16}'
       minLength: 6
       maxLength: 18
-    eventStatusCode:
+    eventAggregateField:
       type: string
       enum:
-      - open
-      - closed
-      - upcoming
+      - eventTypeCategory
+    eventArnList:
+      type: array
+      items:
+        $ref: '#/components/schemas/eventArn'
+      minItems: 1
+      maxItems: 10
+    EventAggregateList:
+      type: array
+      items:
+        $ref: '#/components/schemas/EventAggregate'
+    eventStatusCodeList:
+      type: array
+      items:
+        $ref: '#/components/schemas/eventStatusCode'
+      minItems: 1
+      maxItems: 6
+    entityValue:
+      type: string
+      pattern: .{0,1224}
+      maxLength: 1224
+    DateTimeRange:
+      type: object
+      properties:
+        from:
+          allOf:
+          - $ref: '#/components/schemas/timestamp'
+          - description: The starting date and time of a time range.
+        to:
+          allOf:
+          - $ref: '#/components/schemas/timestamp'
+          - description: The ending date and time of a time range.
+      description: 'A range of dates and times that is used by the <a href="https://docs.aws.amazon.com/health/latest/APIReference/API_EventFilter.html">EventFilter</a> and <a href="https://docs.aws.amazon.com/health/latest/APIReference/API_EntityFilter.html">EntityFilter</a> objects. If <code>from</code> is set and <code>to</code> is set: match items where the timestamp (<code>startTime</code>, <code>endTime</code>, or <code>lastUpdatedTime</code>) is between <code>from</code> and <code>to</code> inclusive. If <code>from</code> is set and <code>to</code> is not set: match items where the timestamp value is equal to or after <code>from</code>. If <code>from</code> is not set and <code>to</code> is set: match items where the timestamp value is equal to or before <code>to</code>.'
+    eventType:
+      type: string
+      pattern: '[^:/]{3,100}'
+      minLength: 3
+      maxLength: 100
+    region:
+      type: string
+      pattern: '[^:/]{2,25}'
+      minLength: 2
+      maxLength: 25
     entityValueList:
       type: array
       items:
         $ref: '#/components/schemas/entityValue'
       minItems: 1
       maxItems: 99
-    maxResults:
-      type: integer
-      minimum: 10
-      maximum: 100
-    eventAggregateField:
-      type: string
-      enum:
-      - eventTypeCategory
-    eventTypeList:
-      type: array
-      items:
-        $ref: '#/components/schemas/eventType'
-      minItems: 1
-      maxItems: 10
-    entityArn:
-      type: string
-      pattern: .{0,1600}
-      maxLength: 1600
-    timestamp:
-      type: string
-      format: date-time
-    tagFilter:
-      type: array
-      items:
-        $ref: '#/components/schemas/tagSet'
-      maxItems: 50
     dateTimeRangeList:
       type: array
       items:
         $ref: '#/components/schemas/DateTimeRange'
       minItems: 1
       maxItems: 10
+    tagValue:
+      type: string
+      pattern: .{0,255}
+      maxLength: 255
+    nextToken:
+      type: string
+      pattern: '[a-zA-Z0-9=/+_.-]{4,10000}'
+      minLength: 4
+      maxLength: 10000
+    serviceList:
+      type: array
+      items:
+        $ref: '#/components/schemas/service'
+      minItems: 1
+      maxItems: 10
+    count:
+      type: integer
     EventFilter:
       type: object
       properties:
@@ -279,11 +280,15 @@ components:
           - $ref: '#/components/schemas/eventStatusCodeList'
           - description: A list of event status codes.
       description: The values to use to filter results from the <a href="https://docs.aws.amazon.com/health/latest/APIReference/API_DescribeEvents.html">DescribeEvents</a> and <a href="https://docs.aws.amazon.com/health/latest/APIReference/API_DescribeEventAggregates.html">DescribeEventAggregates</a> operations.
-    region:
+    timestamp:
       type: string
-      pattern: '[^:/]{2,25}'
-      minLength: 2
-      maxLength: 25
+      format: date-time
+    regionList:
+      type: array
+      items:
+        $ref: '#/components/schemas/region'
+      minItems: 1
+      maxItems: 10
     eventTypeCategory:
       type: string
       enum:
@@ -293,39 +298,41 @@ components:
       - investigation
       minLength: 3
       maxLength: 255
-    nextToken:
-      type: string
-      pattern: '[a-zA-Z0-9=/+_.-]{4,10000}'
-      minLength: 4
-      maxLength: 10000
-    entityValue:
-      type: string
-      pattern: .{0,1224}
-      maxLength: 1224
-    serviceList:
+    availabilityZones:
       type: array
       items:
-        $ref: '#/components/schemas/service'
-      minItems: 1
-      maxItems: 10
-    DateTimeRange:
+        $ref: '#/components/schemas/availabilityZone'
+    DescribeEventAggregatesResponse:
       type: object
       properties:
-        from:
+        eventAggregates:
           allOf:
-          - $ref: '#/components/schemas/timestamp'
-          - description: The starting date and time of a time range.
-        to:
+          - $ref: '#/components/schemas/EventAggregateList'
+          - description: The number of events in each category that meet the optional filter criteria.
+        nextToken:
           allOf:
-          - $ref: '#/components/schemas/timestamp'
-          - description: The ending date and time of a time range.
-      description: 'A range of dates and times that is used by the <a href="https://docs.aws.amazon.com/health/latest/APIReference/API_EventFilter.html">EventFilter</a> and <a href="https://docs.aws.amazon.com/health/latest/APIReference/API_EntityFilter.html">EntityFilter</a> objects. If <code>from</code> is set and <code>to</code> is set: match items where the timestamp (<code>startTime</code>, <code>endTime</code>, or <code>lastUpdatedTime</code>) is between <code>from</code> and <code>to</code> inclusive. If <code>from</code> is set and <code>to</code> is not set: match items where the timestamp value is equal to or after <code>from</code>. If <code>from</code> is not set and <code>to</code> is set: match items where the timestamp value is equal to or before <code>to</code>.'
-    eventArnList:
+          - $ref: '#/components/schemas/nextToken'
+          - description: If the results of a search are large, only a portion of the results are returned, and a <code>nextToken</code> pagination token is returned in the response. To retrieve the next batch of results, reissue the search request and include the returned token. When all results have been returned, the response does not contain a pagination token value.
+    aggregateValue:
+      type: string
+    eventTypeCategoryList:
       type: array
       items:
-        $ref: '#/components/schemas/eventArn'
+        $ref: '#/components/schemas/eventTypeCategory'
       minItems: 1
       maxItems: 10
+    eventTypeList:
+      type: array
+      items:
+        $ref: '#/components/schemas/eventType'
+      minItems: 1
+      maxItems: 10
+    eventStatusCode:
+      type: string
+      enum:
+      - open
+      - closed
+      - upcoming
     DescribeEventAggregatesRequest:
       type: object
       required:
@@ -348,75 +355,16 @@ components:
           allOf:
           - $ref: '#/components/schemas/nextToken'
           - description: If the results of a search are large, only a portion of the results are returned, and a <code>nextToken</code> pagination token is returned in the response. To retrieve the next batch of results, reissue the search request and include the returned token. When all results have been returned, the response does not contain a pagination token value.
-    regionList:
-      type: array
-      items:
-        $ref: '#/components/schemas/region'
-      minItems: 1
-      maxItems: 10
-    eventType:
-      type: string
-      pattern: '[^:/]{3,100}'
-      minLength: 3
-      maxLength: 100
-    availabilityZones:
-      type: array
-      items:
-        $ref: '#/components/schemas/availabilityZone'
-    eventStatusCodeList:
-      type: array
-      items:
-        $ref: '#/components/schemas/eventStatusCode'
-      minItems: 1
-      maxItems: 6
-    eventTypeCategoryList:
-      type: array
-      items:
-        $ref: '#/components/schemas/eventTypeCategory'
-      minItems: 1
-      maxItems: 10
-    count:
-      type: integer
-    EventAggregateList:
-      type: array
-      items:
-        $ref: '#/components/schemas/EventAggregate'
-    tagSet:
-      type: object
-      maxProperties: 50
-      additionalProperties:
-        $ref: '#/components/schemas/tagValue'
-    tagValue:
-      type: string
-      pattern: .{0,255}
-      maxLength: 255
-    entityArnList:
-      type: array
-      items:
-        $ref: '#/components/schemas/entityArn'
-      minItems: 1
-      maxItems: 99
+    InvalidPaginationToken: {}
     service:
       type: string
       pattern: '[^:/]{2,30}'
       minLength: 2
       maxLength: 30
-    InvalidPaginationToken: {}
-    DescribeEventAggregatesResponse:
-      type: object
-      properties:
-        eventAggregates:
-          allOf:
-          - $ref: '#/components/schemas/EventAggregateList'
-          - description: The number of events in each category that meet the optional filter criteria.
-        nextToken:
-          allOf:
-          - $ref: '#/components/schemas/nextToken'
-          - description: If the results of a search are large, only a portion of the results are returned, and a <code>nextToken</code> pagination token is returned in the response. To retrieve the next batch of results, reissue the search request and include the returned token. When all results have been returned, the response does not contain a pagination token value.
-    eventArn:
-      type: string
-      pattern: arn:aws(-[a-z]+(-[a-z]+)?)?:health:[^:]*:[^:]*:event(?:/[\w-]+){3}
-      maxLength: 1600
+    maxResults:
+      type: integer
+      minimum: 10
+      maximum: 100
     EventAggregate:
       type: object
       properties:
@@ -429,6 +377,58 @@ components:
           - $ref: '#/components/schemas/count'
           - description: The number of events of the associated issue type.
       description: The number of events of each issue type. Returned by the <a href="https://docs.aws.amazon.com/health/latest/APIReference/API_DescribeEventAggregates.html">DescribeEventAggregates</a> operation.
+    entityArn:
+      type: string
+      pattern: .{0,1600}
+      maxLength: 1600
+    tagFilter:
+      type: array
+      items:
+        $ref: '#/components/schemas/tagSet'
+      maxItems: 50
+  parameters:
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
   securitySchemes:
     hmac:
       type: apiKey

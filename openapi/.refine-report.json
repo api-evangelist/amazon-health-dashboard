@@ -6,9 +6,7 @@
   "outputs": [
     "amazon-health-dashboard-aws-health-apis-and-notifications-api-openapi.yml"
   ],
-  "archived": [
-    "deleted 13 superseded output(s) from the previous generation"
-  ],
+  "archived": [],
   "errors": [],
   "warnings": [],
   "notes": [
@@ -28,22 +26,9 @@
     "amazon-health-dashboard-openapi.yaml: tagged paths POST /#X-Amz-Target=AWSHealth_20160804.DisableHealthServiceAccessForOrganization -> AWS Health APIs And Notifications",
     "amazon-health-dashboard-openapi.yaml: tagged paths POST /#X-Amz-Target=AWSHealth_20160804.EnableHealthServiceAccessForOrganization -> AWS Health APIs And Notifications",
     "amazon-health-dashboard-openapi.yaml: declared missing tag: AWS Health APIs And Notifications",
-    "superseded outputs removed: amazon-health-dashboard-x-amz-target-awshealth-20160804-describeaffectedaccountsfororganization-api-openapi.yml, amazon-health-dashboard-x-amz-target-awshealth-20160804-describeaffectedentities-api-openapi.yml, amazon-health-dashboard-x-amz-target-awshealth-20160804-describeaffectedentitiesfororganization-api-openapi.yml, amazon-health-dashboard-x-amz-target-awshealth-20160804-describeentityaggregates-api-openapi.yml, amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventaggregates-api-openapi.yml \u2026",
-    "apis.yml register: written (+1 apis, 1 total)"
+    "apis.yml register: already-registered"
   ],
   "skipped": [
-    "amazon-health-dashboard-x-amz-target-awshealth-20160804-describeaffectedaccountsfororganization-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-health-dashboard-x-amz-target-awshealth-20160804-describeaffectedentities-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-health-dashboard-x-amz-target-awshealth-20160804-describeaffectedentitiesfororganization-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-health-dashboard-x-amz-target-awshealth-20160804-describeentityaggregates-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventaggregates-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventdetails-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventdetailsfororganization-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-health-dashboard-x-amz-target-awshealth-20160804-describeevents-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventsfororganization-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventtypes-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-health-dashboard-x-amz-target-awshealth-20160804-describehealthservicestatusfororganization-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-health-dashboard-x-amz-target-awshealth-20160804-disablehealthserviceaccessfororganization-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-health-dashboard-x-amz-target-awshealth-20160804-enablehealthserviceaccessfororganization-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+    "amazon-health-dashboard-aws-health-apis-and-notifications-api-openapi.yml: previously refined output, superseded by openapi/_original/"
   ]
 }

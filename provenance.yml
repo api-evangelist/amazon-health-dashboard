@@ -10,83 +10,83 @@ artifacts:
     method: derived
     evidence: declared in the artifact
   ? collections/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeaffectedaccountsfororganization-api.opencollection.json
-  : method: derived
-    evidence: openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeaffectedaccountsfororganization-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeaffectedaccountsfororganization-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeaffectedaccountsfororganization-api
+  : method: unknown
+    evidence: no authorship recorded
   collections/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeaffectedentities-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeaffectedentities-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeaffectedentities-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeaffectedentities-api
+    method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeaffectedentitiesfororganization-api.opencollection.json
-  : method: derived
-    evidence: openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeaffectedentitiesfororganization-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeaffectedentitiesfororganization-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeaffectedentitiesfororganization-api
+  : method: unknown
+    evidence: no authorship recorded
   collections/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeentityaggregates-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeentityaggregates-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeentityaggregates-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeentityaggregates-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventaggregates-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventaggregates-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventaggregates-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventaggregates-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventdetails-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventdetails-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventdetails-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventdetails-api
+    method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventdetailsfororganization-api.opencollection.json
-  : method: derived
-    evidence: openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventdetailsfororganization-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventdetailsfororganization-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventdetailsfororganization-api
+  : method: unknown
+    evidence: no authorship recorded
   collections/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeevents-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeevents-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeevents-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeevents-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventsfororganization-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventsfororganization-api
+    method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventsfororganization-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventsfororganization-api
+  : method: unknown
+    evidence: no authorship recorded
   collections/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventtypes-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventtypes-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventtypes-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventtypes-api
+    method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-health-dashboard-x-amz-target-awshealth-20160804-describehealthservicestatusfororganization-api.opencollection.json
-  : method: derived
-    evidence: openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describehealthservicestatusfororganization-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-health-dashboard-x-amz-target-awshealth-20160804-describehealthservicestatusfororganization-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describehealthservicestatusfororganization-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-health-dashboard-x-amz-target-awshealth-20160804-disablehealthserviceaccessfororganization-api.opencollection.json
-  : method: derived
-    evidence: openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-disablehealthserviceaccessfororganization-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-health-dashboard-x-amz-target-awshealth-20160804-disablehealthserviceaccessfororganization-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-disablehealthserviceaccessfororganization-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-health-dashboard-x-amz-target-awshealth-20160804-enablehealthserviceaccessfororganization-api.opencollection.json
-  : method: derived
-    evidence: openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-enablehealthserviceaccessfororganization-api
+  : method: unknown
+    evidence: no authorship recorded
   ? collections/amazon-health-dashboard-x-amz-target-awshealth-20160804-enablehealthserviceaccessfororganization-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-enablehealthserviceaccessfororganization-api
+  : method: unknown
+    evidence: no authorship recorded
   examples/health-account-id-example.json:
     method: unknown
     evidence: no authorship recorded
@@ -987,127 +987,7 @@ artifacts:
   json-structure/health-unsupported-locale-structure.json:
     method: unknown
     evidence: no authorship recorded
-  kin/checks-2026-09-24T161608.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-25T125852.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-25T133943.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-25T143147.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-25T154045.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-26T215308.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-27T094438.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-27T103455.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-27T123021.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-27T132314.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-27T140727.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-28T221322.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-29T213958.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-29T230545.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-30T203505.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-30T220315.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-31T223420.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-01T063623.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-01T210448.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-01T222808.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-02T211804.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-02T224043.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-03T161828.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-03T174231.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-04T062714.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-04T212454.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-04T224856.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-05T055819.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-05T072335.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-05T144739.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-05T195450.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-05T211839.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-06T011047.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-06T211804.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-06T224210.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-07T200636.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-07T213054.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-08T214843.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-08T232836.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-10T204815.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-09-10T222408.yml:
+  kin/checks-2026-10-11T110117.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
   kin/score-2026-09-12T062655.yml:
@@ -1191,91 +1071,70 @@ artifacts:
   kin/score-2026-09-24T161608.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-25T210408.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-25T232841.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-10-03T000835.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-10-03T024842.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-10-11T110117.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
   openapi/_original/amazon-health-dashboard-openapi.yaml:
     method: harvested
     evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
       to the provider's source is unverified
-  openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeaffectedaccountsfororganization-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeaffectedentities-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeaffectedentitiesfororganization-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeentityaggregates-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventaggregates-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventdetails-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventdetailsfororganization-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeevents-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventsfororganization-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventtypes-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describehealthservicestatusfororganization-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-disablehealthserviceaccessfororganization-api-openapi.yml:
-    method: derived
-    evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-enablehealthserviceaccessfororganization-api-openapi.yml:
+  openapi/amazon-health-dashboard-aws-health-apis-and-notifications-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
   plans/amazon-health-dashboard-plans-pricing.yml:
     method: generated
     evidence: declared in the artifact
   ? postman/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeaffectedaccountsfororganization-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeaffectedaccountsfororganization-api
+  : method: unknown
+    evidence: no authorship recorded
   postman/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeaffectedentities-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeaffectedentities-api
+    method: unknown
+    evidence: no authorship recorded
   ? postman/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeaffectedentitiesfororganization-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeaffectedentitiesfororganization-api
+  : method: unknown
+    evidence: no authorship recorded
   postman/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeentityaggregates-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeentityaggregates-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventaggregates-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventaggregates-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventdetails-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventdetails-api
+    method: unknown
+    evidence: no authorship recorded
   ? postman/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventdetailsfororganization-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventdetailsfororganization-api
+  : method: unknown
+    evidence: no authorship recorded
   postman/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeevents-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeevents-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventsfororganization-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventsfororganization-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventtypes-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventtypes-api
+    method: unknown
+    evidence: no authorship recorded
   ? postman/amazon-health-dashboard-x-amz-target-awshealth-20160804-describehealthservicestatusfororganization-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-describehealthservicestatusfororganization-api
+  : method: unknown
+    evidence: no authorship recorded
   ? postman/amazon-health-dashboard-x-amz-target-awshealth-20160804-disablehealthserviceaccessfororganization-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-disablehealthserviceaccessfororganization-api
+  : method: unknown
+    evidence: no authorship recorded
   ? postman/amazon-health-dashboard-x-amz-target-awshealth-20160804-enablehealthserviceaccessfororganization-api.postman_collection.json
-  : method: derived
-    evidence: openapi/amazon-health-dashboard-x-amz-target-awshealth-20160804-enablehealthserviceaccessfororganization-api
+  : method: unknown
+    evidence: no authorship recorded
   rate-limits/amazon-health-dashboard-rate-limits.yml:
     method: generated
     evidence: declared in the artifact

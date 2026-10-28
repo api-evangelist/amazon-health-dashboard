@@ -1,4 +1,4 @@
-# Amazon Health Dashboard (amazon-health-dashboard)
+# Amazon Health Dashboard
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,120 +66,260 @@
 
 AWS Health Dashboard provides ongoing visibility into the status of your AWS services, and alerts and remediation guidance when AWS is experiencing events that may affect your operations. It delivers personalized information about events that might affect your specific AWS resources and accounts.
 
-**URL:** [https://aws.amazon.com/health/](https://aws.amazon.com/health/)
+**Areas:** AWS · Health Monitoring · Notification · Service Status
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## Amazon Health Dashboard on APIs.io
 
-## Tags:
+Everything profiled for Amazon Health Dashboard is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/amazon-health-dashboard/](https://apis.io/providers/amazon-health-dashboard/)** — or go straight to one of the APIs or properties below.
 
- - AWS, Health Monitoring, Notifications, Operations, Service Status
+### APIs (2)
 
-## Timestamps
+- [Amazon Health Dashboard AWS Health APIs And Notifications API](https://apis.io/apis/amazon-health-dashboard/amazon-health-dashboard-aws-health-apis-and-notifications-api/) — The AWS Health APIs And Notifications API from Amazon Health Dashboard — 13 operation(s) for aws health apis and notifications.
+- [Amazon Health Dashboard Health Dashboard Operations API](https://apis.io/apis/amazon-health-dashboard/amazon-health-dashboard-operations-api/) — The Health Dashboard Operations API from Amazon Health Dashboard — 2 operation(s) for health dashboard operations.
 
-- **Created:** 2026-03-16
-- **Modified:** 2026-04-19
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### AWS Health API
-The AWS Health API provides programmatic access to AWS Health information about events that can affect your AWS infrastructure, including service outages, planned maintenance, and account-specific notifications.
+#### Agentic access (1)
 
-**Human URL:** [https://aws.amazon.com/health/](https://aws.amazon.com/health/)
+Which operations an agent can call, which act, and which need a human in the loop.
 
-#### Properties
+- [Amazon Health Dashboard Agentic Access](https://apis.io/agentic-access/amazon-health-dashboard/amazon-health-dashboard-agentic-access/)
 
-- [Documentation](https://docs.aws.amazon.com/health/latest/APIReference/Welcome.html)
-- [OpenAPI](openapi/amazon-health-dashboard-openapi.yaml)
-- [GettingStarted](https://docs.aws.amazon.com/health/latest/ug/getting-started-api.html)
-- [APIReference](https://docs.aws.amazon.com/health/latest/APIReference/Welcome.html)
-- [JSONSchema](json-schema/health-event-schema.json)
-- [JSONLD](json-ld/amazon-health-dashboard-context.jsonld)
+#### JSON Schema (99)
 
-## Common Properties
+The data models the API reads and writes.
 
-- [Portal](https://health.aws.amazon.com/health/home)
+- [accountId](https://apis.io/schemas/amazon-health-dashboard/health-account-id/)
+- [affectedAccountsList](https://apis.io/schemas/amazon-health-dashboard/health-affected-accounts-list/)
+- [AffectedEntity](https://apis.io/schemas/amazon-health-dashboard/health-affected-entity/)
+- [aggregateValue](https://apis.io/schemas/amazon-health-dashboard/health-aggregate-value/)
+- [availabilityZone](https://apis.io/schemas/amazon-health-dashboard/health-availability-zone/)
+- [availabilityZones](https://apis.io/schemas/amazon-health-dashboard/health-availability-zones/)
+- [awsAccountIdsList](https://apis.io/schemas/amazon-health-dashboard/health-aws-account-ids-list/)
+- [ConcurrentModificationException](https://apis.io/schemas/amazon-health-dashboard/health-concurrent-modification-exception/)
+- [count](https://apis.io/schemas/amazon-health-dashboard/health-count/)
+- [DateTimeRange](https://apis.io/schemas/amazon-health-dashboard/health-date-time-range/)
+- [dateTimeRangeList](https://apis.io/schemas/amazon-health-dashboard/health-date-time-range-list/)
+- [DescribeAffectedAccountsForOrganizationRequest](https://apis.io/schemas/amazon-health-dashboard/health-describe-affected-accounts-for-organization-request/)
+- [DescribeAffectedAccountsForOrganizationResponse](https://apis.io/schemas/amazon-health-dashboard/health-describe-affected-accounts-for-organization-response/)
+- [DescribeAffectedEntitiesForOrganizationFailedSet](https://apis.io/schemas/amazon-health-dashboard/health-describe-affected-entities-for-organization-failed-set/)
+- [DescribeAffectedEntitiesForOrganizationRequest](https://apis.io/schemas/amazon-health-dashboard/health-describe-affected-entities-for-organization-request/)
+- [DescribeAffectedEntitiesForOrganizationResponse](https://apis.io/schemas/amazon-health-dashboard/health-describe-affected-entities-for-organization-response/)
+- [DescribeAffectedEntitiesRequest](https://apis.io/schemas/amazon-health-dashboard/health-describe-affected-entities-request/)
+- [DescribeAffectedEntitiesResponse](https://apis.io/schemas/amazon-health-dashboard/health-describe-affected-entities-response/)
+- [DescribeEntityAggregatesRequest](https://apis.io/schemas/amazon-health-dashboard/health-describe-entity-aggregates-request/)
+- [DescribeEntityAggregatesResponse](https://apis.io/schemas/amazon-health-dashboard/health-describe-entity-aggregates-response/)
+- [DescribeEventAggregatesRequest](https://apis.io/schemas/amazon-health-dashboard/health-describe-event-aggregates-request/)
+- [DescribeEventAggregatesResponse](https://apis.io/schemas/amazon-health-dashboard/health-describe-event-aggregates-response/)
+- [DescribeEventDetailsFailedSet](https://apis.io/schemas/amazon-health-dashboard/health-describe-event-details-failed-set/)
+- [DescribeEventDetailsForOrganizationFailedSet](https://apis.io/schemas/amazon-health-dashboard/health-describe-event-details-for-organization-failed-set/)
+- [DescribeEventDetailsForOrganizationRequest](https://apis.io/schemas/amazon-health-dashboard/health-describe-event-details-for-organization-request/)
+- …and 74 more published on APIs.io
+
+#### JSON Structure (99)
+
+Data models expressed in JSON Structure.
+
+- [Health Account Id Structure](https://apis.io/json-structure/amazon-health-dashboard/health-account-id-structure/)
+- [Health Affected Accounts List Structure](https://apis.io/json-structure/amazon-health-dashboard/health-affected-accounts-list-structure/)
+- [Health Affected Entity Structure](https://apis.io/json-structure/amazon-health-dashboard/health-affected-entity-structure/)
+- [Health Aggregate Value Structure](https://apis.io/json-structure/amazon-health-dashboard/health-aggregate-value-structure/)
+- [Health Availability Zone Structure](https://apis.io/json-structure/amazon-health-dashboard/health-availability-zone-structure/)
+- [Health Availability Zones Structure](https://apis.io/json-structure/amazon-health-dashboard/health-availability-zones-structure/)
+- [Health Aws Account Ids List Structure](https://apis.io/json-structure/amazon-health-dashboard/health-aws-account-ids-list-structure/)
+- [Health Concurrent Modification Exception Structure](https://apis.io/json-structure/amazon-health-dashboard/health-concurrent-modification-exception-structure/)
+- [Health Count Structure](https://apis.io/json-structure/amazon-health-dashboard/health-count-structure/)
+- [Health Date Time Range List Structure](https://apis.io/json-structure/amazon-health-dashboard/health-date-time-range-list-structure/)
+- [Health Date Time Range Structure](https://apis.io/json-structure/amazon-health-dashboard/health-date-time-range-structure/)
+- [Health Describe Affected Accounts For Organization Request Structure](https://apis.io/json-structure/amazon-health-dashboard/health-describe-affected-accounts-for-organization-request-structure/)
+- [Health Describe Affected Accounts For Organization Response Structure](https://apis.io/json-structure/amazon-health-dashboard/health-describe-affected-accounts-for-organization-response-structure/)
+- [Health Describe Affected Entities For Organization Failed Set Structure](https://apis.io/json-structure/amazon-health-dashboard/health-describe-affected-entities-for-organization-failed-set-structure/)
+- [Health Describe Affected Entities For Organization Request Structure](https://apis.io/json-structure/amazon-health-dashboard/health-describe-affected-entities-for-organization-request-structure/)
+- [Health Describe Affected Entities For Organization Response Structure](https://apis.io/json-structure/amazon-health-dashboard/health-describe-affected-entities-for-organization-response-structure/)
+- [Health Describe Affected Entities Request Structure](https://apis.io/json-structure/amazon-health-dashboard/health-describe-affected-entities-request-structure/)
+- [Health Describe Affected Entities Response Structure](https://apis.io/json-structure/amazon-health-dashboard/health-describe-affected-entities-response-structure/)
+- [Health Describe Entity Aggregates Request Structure](https://apis.io/json-structure/amazon-health-dashboard/health-describe-entity-aggregates-request-structure/)
+- [Health Describe Entity Aggregates Response Structure](https://apis.io/json-structure/amazon-health-dashboard/health-describe-entity-aggregates-response-structure/)
+- [Health Describe Event Aggregates Request Structure](https://apis.io/json-structure/amazon-health-dashboard/health-describe-event-aggregates-request-structure/)
+- [Health Describe Event Aggregates Response Structure](https://apis.io/json-structure/amazon-health-dashboard/health-describe-event-aggregates-response-structure/)
+- [Health Describe Event Details Failed Set Structure](https://apis.io/json-structure/amazon-health-dashboard/health-describe-event-details-failed-set-structure/)
+- [Health Describe Event Details For Organization Failed Set Structure](https://apis.io/json-structure/amazon-health-dashboard/health-describe-event-details-for-organization-failed-set-structure/)
+- [Health Describe Event Details For Organization Request Structure](https://apis.io/json-structure/amazon-health-dashboard/health-describe-event-details-for-organization-request-structure/)
+- …and 74 more published on APIs.io
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Amazon Health Dashboard Context](https://apis.io/jsonld/amazon-health-dashboard/amazon-health-dashboard-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [Amazon Health Dashboard Vocabulary](https://apis.io/vocabularies/amazon-health-dashboard/amazon-health-dashboard-vocabulary/)
+
+#### Examples (40)
+
+Example requests and responses.
+
+- [Health Affected Entity Example](https://apis.io/examples/amazon-health-dashboard/health-affected-entity-example/)
+- [Health Date Time Range Example](https://apis.io/examples/amazon-health-dashboard/health-date-time-range-example/)
+- [Health Describe Affected Accounts For Organization Request Example](https://apis.io/examples/amazon-health-dashboard/health-describe-affected-accounts-for-organization-request-example/)
+- [Health Describe Affected Accounts For Organization Response Example](https://apis.io/examples/amazon-health-dashboard/health-describe-affected-accounts-for-organization-response-example/)
+- [Health Describe Affected Entities For Organization Request Example](https://apis.io/examples/amazon-health-dashboard/health-describe-affected-entities-for-organization-request-example/)
+- [Health Describe Affected Entities For Organization Response Example](https://apis.io/examples/amazon-health-dashboard/health-describe-affected-entities-for-organization-response-example/)
+- [Health Describe Affected Entities Request Example](https://apis.io/examples/amazon-health-dashboard/health-describe-affected-entities-request-example/)
+- [Health Describe Affected Entities Response Example](https://apis.io/examples/amazon-health-dashboard/health-describe-affected-entities-response-example/)
+- [Health Describe Entity Aggregates Request Example](https://apis.io/examples/amazon-health-dashboard/health-describe-entity-aggregates-request-example/)
+- [Health Describe Entity Aggregates Response Example](https://apis.io/examples/amazon-health-dashboard/health-describe-entity-aggregates-response-example/)
+- [Health Describe Event Aggregates Request Example](https://apis.io/examples/amazon-health-dashboard/health-describe-event-aggregates-request-example/)
+- [Health Describe Event Aggregates Response Example](https://apis.io/examples/amazon-health-dashboard/health-describe-event-aggregates-response-example/)
+- [Health Describe Event Details For Organization Request Example](https://apis.io/examples/amazon-health-dashboard/health-describe-event-details-for-organization-request-example/)
+- [Health Describe Event Details For Organization Response Example](https://apis.io/examples/amazon-health-dashboard/health-describe-event-details-for-organization-response-example/)
+- [Health Describe Event Details Request Example](https://apis.io/examples/amazon-health-dashboard/health-describe-event-details-request-example/)
+- [Health Describe Event Details Response Example](https://apis.io/examples/amazon-health-dashboard/health-describe-event-details-response-example/)
+- [Health Describe Event Types Request Example](https://apis.io/examples/amazon-health-dashboard/health-describe-event-types-request-example/)
+- [Health Describe Event Types Response Example](https://apis.io/examples/amazon-health-dashboard/health-describe-event-types-response-example/)
+- [Health Describe Events For Organization Request Example](https://apis.io/examples/amazon-health-dashboard/health-describe-events-for-organization-request-example/)
+- [Health Describe Events For Organization Response Example](https://apis.io/examples/amazon-health-dashboard/health-describe-events-for-organization-response-example/)
+- [Health Describe Events Request Example](https://apis.io/examples/amazon-health-dashboard/health-describe-events-request-example/)
+- [Health Describe Events Response Example](https://apis.io/examples/amazon-health-dashboard/health-describe-events-response-example/)
+- [Health Describe Health Service Status For Organization Response Example](https://apis.io/examples/amazon-health-dashboard/health-describe-health-service-status-for-organization-response-example/)
+- [Health Entity Aggregate Example](https://apis.io/examples/amazon-health-dashboard/health-entity-aggregate-example/)
+- [Health Entity Filter Example](https://apis.io/examples/amazon-health-dashboard/health-entity-filter-example/)
+- …and 15 more published on APIs.io
+
+#### Collections (26)
+
+Postman and Open Collection request collections.
+
+- [AWS Health APIs and Notifications #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization API](https://apis.io/collections/amazon-health-dashboard/open-amazon-health-dashboard-x-amz-target-awshealth-20160804-describeaffectedaccountsfororganization-api/)
+- [AWS Health APIs and Notifications #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeAffectedEntities API](https://apis.io/collections/amazon-health-dashboard/open-amazon-health-dashboard-x-amz-target-awshealth-20160804-describeaffectedentities-api/)
+- [AWS Health APIs and Notifications #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeAffectedEntitiesForOrganization API](https://apis.io/collections/amazon-health-dashboard/open-amazon-health-dashboard-x-amz-target-awshealth-20160804-describeaffectedentitiesfororganization-api/)
+- [AWS Health APIs and Notifications #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeEntityAggregates API](https://apis.io/collections/amazon-health-dashboard/open-amazon-health-dashboard-x-amz-target-awshealth-20160804-describeentityaggregates-api/)
+- [AWS Health APIs and Notifications #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeEventAggregates API](https://apis.io/collections/amazon-health-dashboard/open-amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventaggregates-api/)
+- [AWS Health APIs and Notifications #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeEventDetails API](https://apis.io/collections/amazon-health-dashboard/open-amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventdetails-api/)
+- [AWS Health APIs and Notifications #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeEventDetailsForOrganization API](https://apis.io/collections/amazon-health-dashboard/open-amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventdetailsfororganization-api/)
+- [AWS Health APIs and Notifications #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeEvents API](https://apis.io/collections/amazon-health-dashboard/open-amazon-health-dashboard-x-amz-target-awshealth-20160804-describeevents-api/)
+- [AWS Health APIs and Notifications #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeEventsForOrganization API](https://apis.io/collections/amazon-health-dashboard/open-amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventsfororganization-api/)
+- [AWS Health APIs and Notifications #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeEventTypes API](https://apis.io/collections/amazon-health-dashboard/open-amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventtypes-api/)
+- [AWS Health APIs and Notifications #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeHealthServiceStatusForOrganization API](https://apis.io/collections/amazon-health-dashboard/open-amazon-health-dashboard-x-amz-target-awshealth-20160804-describehealthservicestatusfororganization-api/)
+- [AWS Health APIs and Notifications #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DisableHealthServiceAccessForOrganization API](https://apis.io/collections/amazon-health-dashboard/open-amazon-health-dashboard-x-amz-target-awshealth-20160804-disablehealthserviceaccessfororganization-api/)
+- [AWS Health APIs and Notifications #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.EnableHealthServiceAccessForOrganization API](https://apis.io/collections/amazon-health-dashboard/open-amazon-health-dashboard-x-amz-target-awshealth-20160804-enablehealthserviceaccessfororganization-api/)
+- [AWS Health APIs and Notifications #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization AP](https://apis.io/collections/amazon-health-dashboard/postman-amazon-health-dashboard-x-amz-target-awshealth-20160804-describeaffectedaccountsfororganization-api/)
+- [AWS Health APIs and Notifications #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeAffectedEntities API](https://apis.io/collections/amazon-health-dashboard/postman-amazon-health-dashboard-x-amz-target-awshealth-20160804-describeaffectedentities-api/)
+- [AWS Health APIs and Notifications #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeAffectedEntitiesForOrganization AP](https://apis.io/collections/amazon-health-dashboard/postman-amazon-health-dashboard-x-amz-target-awshealth-20160804-describeaffectedentitiesfororganization-api/)
+- [AWS Health APIs and Notifications #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeEntityAggregates API](https://apis.io/collections/amazon-health-dashboard/postman-amazon-health-dashboard-x-amz-target-awshealth-20160804-describeentityaggregates-api/)
+- [AWS Health APIs and Notifications #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeEventAggregates API](https://apis.io/collections/amazon-health-dashboard/postman-amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventaggregates-api/)
+- [AWS Health APIs and Notifications #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeEventDetails API](https://apis.io/collections/amazon-health-dashboard/postman-amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventdetails-api/)
+- [AWS Health APIs and Notifications #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeEventDetailsForOrganization API](https://apis.io/collections/amazon-health-dashboard/postman-amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventdetailsfororganization-api/)
+- [AWS Health APIs and Notifications #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeEvents API](https://apis.io/collections/amazon-health-dashboard/postman-amazon-health-dashboard-x-amz-target-awshealth-20160804-describeevents-api/)
+- [AWS Health APIs and Notifications #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeEventsForOrganization API](https://apis.io/collections/amazon-health-dashboard/postman-amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventsfororganization-api/)
+- [AWS Health APIs and Notifications #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeEventTypes API](https://apis.io/collections/amazon-health-dashboard/postman-amazon-health-dashboard-x-amz-target-awshealth-20160804-describeeventtypes-api/)
+- [AWS Health APIs and Notifications #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeHealthServiceStatusForOrganization](https://apis.io/collections/amazon-health-dashboard/postman-amazon-health-dashboard-x-amz-target-awshealth-20160804-describehealthservicestatusfororganization-api/)
+- [AWS Health APIs and Notifications #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DescribeAffectedAccountsForOrganization #X Amz Target=AWSHealth 20160804.DisableHealthServiceAccessForOrganization](https://apis.io/collections/amazon-health-dashboard/postman-amazon-health-dashboard-x-amz-target-awshealth-20160804-disablehealthserviceaccessfororganization-api/)
+- …and 1 more published on APIs.io
+
+#### Governance rules (2)
+
+Spectral rulesets for the provider's contracts.
+
+- [Amazon Health Dashboard — jsonschema rules](https://apis.io/rules/amazon-health-dashboard/amazon-health-dashboard-jsonschema-spectral-rules/)
+- [Amazon Health Dashboard API Rules](https://apis.io/rules/amazon-health-dashboard/amazon-health-dashboard-spectral-rules/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Amazon Health Dashboard Authentication](https://apis.io/security/amazon-health-dashboard/amazon-health-dashboard-authentication/)
+- [Amazon Health Dashboard Domain Security](https://apis.io/security/amazon-health-dashboard/amazon-health-dashboard-domain-security/)
+- [Amazon Health Dashboard Vulnerability Disclosure](https://apis.io/security/amazon-health-dashboard/amazon-health-dashboard-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Amazon Health Dashboard Plans Pricing](https://apis.io/plans/amazon-health-dashboard/amazon-health-dashboard-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Amazon Health Dashboard Rate Limits](https://apis.io/rate-limits/amazon-health-dashboard/amazon-health-dashboard-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Amazon Health Dashboard Finops](https://apis.io/finops/amazon-health-dashboard/amazon-health-dashboard-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://aws.amazon.com/premiumsupport/technology/aws-health/)
 - [Documentation](https://docs.aws.amazon.com/health/)
-- [TermsOfService](https://aws.amazon.com/service-terms/)
-- [PrivacyPolicy](https://aws.amazon.com/privacy/)
 - [Support](https://aws.amazon.com/premiumsupport/)
 - [Blog](https://aws.amazon.com/blogs/mt/)
-- [GitHubOrganization](https://github.com/aws)
-- [Console](https://console.aws.amazon.com/health/)
+- [Terms of service](https://aws.amazon.com/service-terms/)
+- [Privacy policy](https://aws.amazon.com/privacy/)
+- [GitHub](https://github.com/aws)
+- [Status](https://health.aws.amazon.com/health/status)
 
-## Features
+## API Evangelist rating
 
-| Name | Description |
-|------|-------------|
-| Personalized Health Notifications | Alerts tailored to the AWS services and resources in your accounts. |
-| Proactive Event Notifications | Advance notice of planned maintenance, deprecations, and changes. |
-| Remediation Guidance | Specific guidance on what actions to take to minimize impact. |
-| Organization-Wide Visibility | View events across all accounts in an AWS Organization. |
-| Affected Resource Identification | Identify exactly which EC2 instances or RDS databases are impacted. |
-| Event History | Access up to 90 days of event history. |
+**Kin Score 55.5** — strong · rubric 0.25.0 · scored 2026-10-23
 
-## Use Cases
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 65.6 |
+| Contract governance | 27.3 |
+| Operational transparency | 36.8 |
+| Developer ergonomics | 68.6 |
+| Access clarity | 52.6 |
 
-| Name | Description |
-|------|-------------|
-| Operations Monitoring | Monitor AWS service health in real-time to detect and respond to events. |
-| Automated Incident Response | Trigger automated runbooks when health events affect resources. |
-| Change Management | Track planned maintenance to coordinate deployments. |
-| Compliance Reporting | Maintain records of AWS service events for compliance. |
+**Agent readiness 30.2** — agent-ready
 
-## Integrations
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | verified |
+| OpenAPI Examples | verified |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
 
-| Name | Description |
-|------|-------------|
-| Amazon EventBridge | Receive health events as EventBridge events for automated responses. |
-| AWS Organizations | View events across all member accounts. |
-| AWS Support | Health events link directly to AWS Support cases. |
-| Amazon CloudWatch | Create CloudWatch alarms based on health event metrics. |
-| AWS Chatbot | Receive notifications in Slack or Chime. |
+**Regulatory alignment 24.2** — Health
 
-## Artifacts
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/amazon-health-dashboard/](https://apis.io/providers/amazon-health-dashboard/).
 
-### OpenAPI
+## How this profile is made
 
-- [Amazon Health Dashboard OpenAPI](openapi/amazon-health-dashboard-openapi.yaml)
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-### JSON Schema
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Amazon Health Dashboard: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-103 schema files in [json-schema/](json-schema/)
+## Open an issue
 
-### JSON Structure
-
-99 structure files in [json-structure/](json-structure/)
-
-### JSON-LD
-
-- [Amazon Health Dashboard Context](json-ld/amazon-health-dashboard-context.jsonld)
-
-### Examples
-
-99 example files in [examples/](examples/)
-
-## Capabilities
-
-### Shared Per-API Definitions
-
-- [Amazon Health Dashboard](capabilities/shared/amazon-health-dashboard.yaml) — 5 operations for health event monitoring
-
-### Workflow Capabilities
-
-| Workflow | APIs Combined | Tools | Persona |
-|----------|--------------|-------|---------|
-| [Amazon Health Dashboard Operations Monitoring](capabilities/amazon-health-dashboard-operations-monitoring.yaml) | Amazon Health Dashboard | 7 | Operations Engineer, DevOps Engineer, Cloud Administrator |
-
-## Vocabulary
-
-- [Amazon Health Dashboard Vocabulary](vocabulary/amazon-health-dashboard-vocabulary.yaml) — Unified taxonomy mapping 4 resources, 2 actions, 1 workflow, and 3 personas
-
-## Rules
-
-- [Amazon Health Dashboard Spectral Rules](rules/amazon-health-dashboard-spectral-rules.yml) — 7 rules enforcing Amazon Health Dashboard API conventions
-
-## Maintainers
-
-**FN:** Kin Lane
-
-**Email:** kin@apievangelist.com
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/amazon-health-dashboard/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).

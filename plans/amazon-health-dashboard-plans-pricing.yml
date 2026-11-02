@@ -1,0 +1,61 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-10-28'
+method: searched
+source: https://aws.amazon.com/premiumsupport/
+sources:
+- https://aws.amazon.com/premiumsupport/
+provenance:
+  tool: engine/economics/harvest_pricing.py
+  run: 20261028T161713
+  grounding: every price_text was found verbatim in the fetched page text
+audience: business-product
+pricing_basis: tiered-subscription
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-10-28'
+published: false
+note: No numeric price is published on the pricing page; AWS Support overview page lists three named support
+  plans but shows no numeric prices; links to a separate pricing page. No dollar amounts on this page.
+plan_count: 3
+plans:
+- name: AWS Business Support+
+  price_text: Learn more
+  period: none
+  included_quota: 24/7 AI-powered assistance, engagement with AWS experts for critical issues in under
+    30 minutes
+- name: AWS Enterprise Support
+  price_text: Learn more
+  period: none
+  included_quota: Designated TAMs, strategic guidance across resiliency, cost, efficiency, and security
+- name: AWS Unified Operations
+  price_text: Learn more
+  period: none
+  included_quota: Designated experts, architecture reviews, testing, optimization
+x-canonical:
+  generated: '2026-11-01'
+  vocabulary: engine/economics/plans-canonical.yml
+  models: []
+  units: []
+  plans:
+  - name: AWS Business Support+
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods:
+    - none
+  - name: AWS Enterprise Support
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods:
+    - none
+  - name: AWS Unified Operations
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods:
+    - none
